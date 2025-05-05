@@ -113,12 +113,13 @@
             align-items: flex-start;
             gap: 30px;
             margin-bottom: 0px;
+            margin-top: 30px; /* Added significant space above */
         }
 
         .profile-pic-container {
             flex: 0 0 220px;
             text-align: center;
-            margin-top: 5px; /* Added slight top margin to push pic down */
+            /* Removed top margin here, handled by section margin */
         }
 
         .profile-pic {
@@ -189,7 +190,7 @@
 
         /* Page Navigation */
         .page-nav {
-            margin-top: 20px; /* Increased space before nav links */
+            margin-top: 20px;
             margin-bottom: 40px;
             padding: 10px 0;
             border-top: 1px solid #eef1f2;
@@ -285,7 +286,7 @@
          .comment-text br {
              content: "";
              display: block;
-             margin-bottom: 0.3em;
+             margin-bottom: 0.1em; /* Reduced space after explicit <br> */
         }
 
 
@@ -326,13 +327,13 @@
                 align-items: center;
                 gap: 25px;
                 margin-bottom: 15px;
+                margin-top: 20px; /* Adjust top margin for mobile */
             }
 
             .profile-pic-container {
                 flex-basis: auto;
                 width: 60%;
                 max-width: 200px;
-                margin-top: 0; /* Reset top margin for mobile */
             }
 
             .profile-bio {
@@ -350,7 +351,7 @@
                   margin-bottom: 5px;
             }
             .page-nav {
-                margin-top: 15px; /* Adjust nav spacing on mobile */
+                margin-top: 15px;
             }
 
         }
