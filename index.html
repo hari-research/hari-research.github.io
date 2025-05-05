@@ -112,12 +112,13 @@
             flex-wrap: wrap;
             align-items: flex-start;
             gap: 30px;
-            margin-bottom: 10px; /* Further reduced space after profile info */
+            margin-bottom: 0px;
         }
 
         .profile-pic-container {
             flex: 0 0 220px;
             text-align: center;
+            margin-top: 5px; /* Added slight top margin to push pic down */
         }
 
         .profile-pic {
@@ -134,23 +135,28 @@
             min-width: 250px;
         }
 
-        /* Ensure paragraphs inside profile-bio have consistent spacing */
         .profile-bio p {
             margin-bottom: 15px;
         }
 
         /* Styling for Links section (now includes research themes) */
         .links {
-             margin-bottom: 10px; /* Further reduced margin before nav */
-             padding-bottom: 0; /* Remove padding if section margin is small */
+             margin-top: 10px;
+             margin-bottom: 10px;
+             padding-bottom: 0;
         }
         .links p {
-            margin-bottom: 8px; /* Further tighten spacing for paragraphs */
+            margin-bottom: 8px;
         }
         .links ul {
-             margin-bottom: 10px; /* Tighten margin below list */
-             margin-top: 4px; /* Further reduce space above list */
+             margin-bottom: 10px;
+             margin-top: 4px;
         }
+        .links .hobby-text {
+            margin-top: 1.2em;
+            margin-bottom: 0;
+        }
+
 
         section > p { /* General paragraph spacing in other sections */
              margin-bottom: 15px;
@@ -165,10 +171,10 @@
         }
 
         section ul li, .links ul li {
-            margin-bottom: 5px; /* Further tighten spacing between list items */
-            padding-left: 18px; /* Slightly reduce padding */
+            margin-bottom: 5px;
+            padding-left: 18px;
             position: relative;
-            line-height: 1.6; /* Slightly reduce line height for list items */
+            line-height: 1.6;
         }
 
         section ul li::before, .links ul li::before {
@@ -178,12 +184,12 @@
             display: inline-block;
             position: absolute;
             left: 0;
-            top: 1px; /* Adjust alignment */
+            top: 1px;
         }
 
         /* Page Navigation */
         .page-nav {
-            margin-top: 5px; /* Further reduced top margin */
+            margin-top: 20px; /* Increased space before nav links */
             margin-bottom: 40px;
             padding: 10px 0;
             border-top: 1px solid #eef1f2;
@@ -274,12 +280,12 @@
             margin-top: 12px;
             padding-left: 0;
             border-left: none;
-            line-height: 1.6; /* Keep line height reasonable */
+            line-height: 1.6;
         }
-         .comment-text br { /* Remove extra spacing for explicit <br> */
-             content: normal;
-             display: inline;
-             margin-bottom: 0;
+         .comment-text br {
+             content: "";
+             display: block;
+             margin-bottom: 0.3em;
         }
 
 
@@ -319,13 +325,14 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 25px;
-                margin-bottom: 15px; /* Adjust mobile spacing too */
+                margin-bottom: 15px;
             }
 
             .profile-pic-container {
                 flex-basis: auto;
                 width: 60%;
                 max-width: 200px;
+                margin-top: 0; /* Reset top margin for mobile */
             }
 
             .profile-bio {
@@ -340,8 +347,12 @@
             }
             .links ul li {
                   padding-left: 18px;
-                  margin-bottom: 5px; /* Further tighten list on mobile */
+                  margin-bottom: 5px;
             }
+            .page-nav {
+                margin-top: 15px; /* Adjust nav spacing on mobile */
+            }
+
         }
 
         @media (max-width: 480px) {
@@ -363,6 +374,9 @@
             }
              .comment-text {
                  font-size: 0.88em;
+            }
+             .links .hobby-text {
+                 margin-top: 1em;
             }
 
         }
@@ -405,10 +419,7 @@
                  </ul>
                  <p>In the past, I have worked on applying machine learning techniques for the design of auctions and other economic mechanisms.</p>
 
-                 <p>
-                    You can find my resume <a href="documents/resume.pdf">here</a> (updated on 01/31/2023).
-                 </p>
-                 <p>
+                 <p class="hobby-text">
                     Outside of work, I enjoy <a href="https://www.instagram.com/stories/highlights/18044521994263313/">baking</a>, and have recently taken to amateur theatre.
                  </p>
             </section>
@@ -537,7 +548,7 @@
                     <br>
                     <em>Nature Communications</em>, 6:6169, 2015.
                     [<a href="http://www.nature.com/ncomms/2015/150227/ncomms7169/pdf/ncomms7169.pdf" rel="nofollow">paper</a>]
-                    <br><span class="comment-text">[Featured in <a href="http://www.businesswire.com/news/home/20150302006933/en/Mitra-Biotech-CANScript-Platform-Validated-Personalized-Cancer#.VYawzqBzOfQ" rel="nofollow">Business Wire</a>, <a href="https://www.genomeweb.com/companion-diagnostics/paper-describes-development-validation-mitra-biotechs-ex-vivo-platform" rel="nofollow">Genome Web</a>, <a href="http://www.cio.com.au/article/569280/machine-learning-used-predict-clinical-response-anti-cancer-drugs/" rel="nofollow">CIO</a>, <a href="http://www.telegraphindia.com/1150228/jsp/nation/story_5990.jsp#.VUEI8N9sabl" rel="nofollow">The Telegraph</a>]</span> <!-- Removed <br> before next comment -->
+                    <br><span class="comment-text" style="margin-top: 8px; margin-bottom: 8px;">[Featured in <a href="http://www.businesswire.com/news/home/20150302006933/en/Mitra-Biotech-CANScript-Platform-Validated-Personalized-Cancer#.VYawzqBzOfQ" rel="nofollow">Business Wire</a>, <a href="https://www.genomeweb.com/companion-diagnostics/paper-describes-development-validation-mitra-biotechs-ex-vivo-platform" rel="nofollow">Genome Web</a>, <a href="http://www.cio.com.au/article/569280/machine-learning-used-predict-clinical-response-anti-cancer-drugs/" rel="nofollow">CIO</a>, <a href="http://www.telegraphindia.com/1150228/jsp/nation/story_5990.jsp#.VUEI8N9sabl" rel="nofollow">The Telegraph</a>]</span>
                     <span class="comment-text">
                     A real-world application of the algorithms we developed for <em>ranking with (partial) AUC</em> in <a href="http://proceedings.mlr.press/v28/narasimhan13.pdf">ICML 2013</a>, <a href="https://dl.acm.org/doi/10.1145/2487575.2487674">KDD 2013</a>, <a href="https://direct.mit.edu/neco/article-abstract/29/7/1919/8293/Support-Vector-Algorithms-for-Optimizing-the?redirectedFrom=fulltext">NeuralComp 2017</a>.<br> Feel free to also see <a href="https://papers.nips.cc/paper_files/paper/2013/file/05311655a15b75fab86956663e1819cd-Paper.pdf">NeurIPS 2013</a> (<span class="highlight-spotlight">Spotlight</span>), <a href="https://arxiv.org/pdf/2504.11284">ICML 2025</a>.
                     </span></p>
