@@ -1,497 +1,698 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://schema.org/WebPage">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-<script type="text/javascript">/* Copyright 2008 Google. */ (function() { /*
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Homepage of Harikrishna Narasimhan (Hari), Staff Research Scientist at Google Research.">
+    <title>Harikrishna Narasimhan (Hari)</title>
+    <link rel="shortcut icon" type="image/x-icon" href="//www.google.com/images/icons/product/sites-16.ico" />
+    <link rel="apple-touch-icon" href="https://ssl.gstatic.com/sites/p/89dd68/system/app/images/apple-touch-icon.png" type="image/png" />
 
-Copyright The Closure Library Authors.
-SPDX-License-Identifier: Apache-2.0
-*/
-(function(){function e(g){this.t={};this.tick=function(h,k,f){this.t[h]=[void 0!=f?f:(new Date).getTime(),k];if(void 0==f)try{window.console.timeStamp("CSI/"+h)}catch(m){}};this.getStartTickTime=function(){return this.t.start[0]};this.tick("start",null,g)}var a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var l=0<d?new e(d):new e;window.jstiming={Timer:e,load:l};if(a){var b=a.navigationStart;0<b&&d>=b&&(window.jstiming.srt=d-b)}if(a){var c=window.jstiming.load;0<b&&d>=
-b&&(c.tick("_wtsrt",void 0,b),c.tick("wtsrt_","_wtsrt",d),c.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),c&&0<b&&(c.tick("_tbnd",void 0,window.chrome.csi().startE),c.tick("tbnd_","_tbnd",b))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,c&&0<b&&(c.tick("_tbnd",void 0,window.external.startE),c.tick("tbnd_","_tbnd",b))),a&&(window.jstiming.pt=a)}catch(g){}})(); })()
-</script>
-<link rel="shortcut icon" type="image/x-icon" href="//www.google.com/images/icons/product/sites-16.ico" />
-<link rel="apple-touch-icon" href="https://ssl.gstatic.com/sites/p/89dd68/system/app/images/apple-touch-icon.png" type="image/png" />
-<script type="text/javascript">/* Copyright 2008 Google. */ (function() { function d(a){return document.getElementById(a)}window.byId=d;function g(a){return a.replace(/^\s+|\s+$/g,"")}window.trim=g;var h=[],k=0;window.JOT_addListener=function(a,b,c){var f=new String(k++);a={eventName:a,handler:b,compId:c,key:f};h.push(a);return f};window.JOT_removeListenerByKey=function(a){for(var b=0;b<h.length;b++)if(h[b].key==a){h.splice(b,1);break}};window.JOT_removeAllListenersForName=function(a){for(var b=0;b<h.length;b++)h[b].eventName==a&&h.splice(b,1)};
-window.JOT_postEvent=function(a,b,c){var f={eventName:a,eventSrc:b||{},payload:c||{}};if(window.JOT_fullyLoaded)for(b=h.length,c=0;c<b&&c<h.length;c++){var e=h[c];e&&e.eventName==a&&(f.listenerCompId=e.compId||"",(e="function"==typeof e.handler?e.handler:window[e.handler])&&e(f))}else window.JOT_delayedEvents.push({eventName:a,eventSrc:b,payload:c})};window.JOT_delayedEvents=[];window.JOT_fullyLoaded=!1;
-window.JOT_formatRelativeToNow=function(a,b){a=((new Date).getTime()-a)/6E4;if(1440<=a||0>a)return null;var c=0;60<=a&&(a/=60,c=2);2<=a&&c++;return b?window.JOT_siteRelTimeStrs[c].replace("__duration__",Math.floor(a)):window.JOT_userRelTimeStrs[c].replace("__duration__",Math.floor(a))}; })()
-</script>
-<script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
-  
+    <style>
+        /* Basic Reset & Body Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  var breadcrumbs = [{"path":"/a/g.harvard.edu/harikrishna-narasimhan/home","deleted":false,"title":"Hari(krishna) Narasimhan (\u0bb9\u0bb0\u0bbf\u0b95\u0bbf\u0bb0\u0bc1\u0bb7\u0bcd\u0ba3\u0bbe \u0ba8\u0bb0\u0b9a\u0bbf\u0bae\u0bcd\u0bae\u0ba9\u0bcd)","dir":"ltr"}];
-  var JOT_clearDotPath = 'https://ssl.gstatic.com/sites/p/89dd68/system/app/images/cleardot.gif';
+        html {
+             scroll-behavior: smooth;
+             scroll-padding-top: 20px;
+        }
 
-  
-  var JOT_userRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.7;
+            color: #444;
+            background-color: #f4f7f6;
+            padding: 1em;
+            font-size: 16px;
+        }
 
-  
-  
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
 
-  
+        /* Header */
+        header h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
 
-  var webspace = {"gvizGstaticVersion":"current","enableAnalytics":false,"pageSharingId":"jotspot_page","codeembeds":{"outerIframeSrc":"https://www.gstatic.com/jotspot/embeds/code/0f08d42392f2000e7e3f3daf5b427a43/outer_iframe.html","innerIframeSrc":"https://650998469-jotspot-embeds.googleusercontent.com/code/8d87fa64604b2a11fae2ed06104c58d3/inner_iframe.html"},"enableUniversalAnalytics":false,"sharingPolicy":"OPENED_WITH_INDICATOR","siteTitle":"
-		  ","jot2atari":{"eligibility":"ineligible"},"onepickUrl":"https://docs.google.com/picker","adsensePublisherId":null,"features":{"moreMobileStyleImprovements":null,"subscriptionDataMigrationInProgress":null,"plusBadge":false},"isPublic":true,"newSitesBaseUrl":"https://sites.google.com","isConsumer":false,"serverFlags":{"jot2AtariLearnMoreUrl":"https://support.google.com/sites/answer/7035197"},"domainAnalyticsAccountId":"UA-25218216-3","plusPageId":"","signInUrl":"https://accounts.google.com/AccountChooser?continue\u003dhttps://sites.google.com/a/g.harvard.edu/harikrishna-narasimhan/home\u0026service\u003djotspot","analyticsAccountId":"","scottyUrl":"/_/upload","homePath":"/","siteNoticeUrlEnabled":null,"plusPageUrl":"","adsensePromoClickedOrSiteIneligible":true,"csiReportUri":"https://gg.google.com/csi","sharingId":"jotspot","termsUrl":"//www.google.com/intl/en/policies/terms/","gvizVersion":1,"editorResources":{"sitelayout":["https://ssl.gstatic.com/sites/p/89dd68/system/app/css/sitelayouteditor.css"],"text":["https://ssl.gstatic.com/sites/p/89dd68/system/js/codemirror.js","https://ssl.gstatic.com/sites/p/89dd68/system/app/css/codemirror_css.css","https://ssl.gstatic.com/sites/p/89dd68/system/js/trog_edit__en.js","https://ssl.gstatic.com/sites/p/89dd68/system/app/css/trogedit.css","/a/g.harvard.edu/harikrishna-narasimhan/_/rsrc/1613636397000/system/app/css/editor.css","https://ssl.gstatic.com/sites/p/89dd68/system/app/css/codeeditor.css","/a/g.harvard.edu/harikrishna-narasimhan/_/rsrc/1613636397000/system/app/css/camelot/editor-jfk.css"]},"sharingUrlPrefix":"/_/sharing","isAdsenseEnabled":true,"domain":"g.harvard.edu","baseUri":"/a/g.harvard.edu/harikrishna-narasimhan","name":"harikrishna-narasimhan","siteTemplateId":false,"siteNoticeRevision":null,"siteNoticeUrlAddress":null,"siteNoticeMessage":null,"page":{"isRtlLocale":false,"canDeleteWebspace":false,"isPageDraft":null,"parentPath":null,"parentWuid":null,"siteLocale":"en","timeZone":"America/Los_Angeles","type":"text","title":"Hari(krishna) Narasimhan (\u0bb9\u0bb0\u0bbf\u0b95\u0bbf\u0bb0\u0bc1\u0bb7\u0bcd\u0ba3\u0bbe \u0ba8\u0bb0\u0b9a\u0bbf\u0bae\u0bcd\u0bae\u0ba9\u0bcd)","locale":"en","wuid":"wuid:gx:eb3b31bc0e4b7fb","revision":79,"path":"/home","isSiteRtlLocale":false,"pageInheritsPermissions":null,"name":"home","canChangePath":false,"state":"","properties":{},"bidiEnabled":false,"currentTemplate":{"path":"/system/app/pagetemplates/text","title":"Web Page"}},"canPublishScriptToAnyone":true,"user":{"keyboardShortcuts":true,"sessionIndex":0,"onePickToken":"000770F203A574A40270A5D36A87F831D7BDF20F0DAB17482A::1614636366821","guest_":false,"displayNameOrEmail":"Hari(krishna) Narasimhan","userName":"hnarasimhan","uid":"03194013453448133468","domainUser":false,"renderMobile":false,"domain":null,"namespace":"google.com","hasWriteAccess":false,"namespaceUser":true,"primaryEmail":"hnarasimhan@google.com","hasAdminAccess":false},"gadgets":{"baseUri":"/a/g.harvard.edu/harikrishna-narasimhan/system/app/pages/gadgets"}};
-  webspace.page.breadcrumbs = breadcrumbs;
+        /* Links */
+        a {
+            color: #0056b3;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
 
-  
-  var JOT_siteRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+        a:hover {
+            text-decoration: none;
+            color: #003d82;
+        }
 
-</script>
-<script type="text/javascript">
-                window.jstiming.load.tick('scl');
-              </script>
-<meta name="title" content="Hari(krishna) Narasimhan" />
-<meta itemprop="name" content="Hari(krishna) Narasimhan" />
-<meta property="og:title" content="Hari(krishna) Narasimhan" />
-<style type="text/css">
-</style>
-<link rel="stylesheet" type="text/css" href="https://ssl.gstatic.com/sites/p/89dd68/system/app/themes/simple/standard-css-simple-ltr-ltr.css" />
-<link rel="stylesheet" type="text/css" href="/a/g.harvard.edu/harikrishna-narasimhan/_/rsrc/1613636397000/system/app/css/overlay.css?cb=simple150goog-ws-nonenone30themedefaultstandard" />
-<link rel="stylesheet" type="text/css" href="/a/g.harvard.edu/harikrishna-narasimhan/_/rsrc/1613636397000/system/app/css/camelot/allthemes-view.css" />
-<!--[if IE]>
-          <link rel="stylesheet" type="text/css" href="/a/g.harvard.edu/harikrishna%2dnarasimhan/system/app/css/camelot/allthemes%2die.css" />
-        <![endif]-->
-<title>Harikrishna Narasimhan (Hari)</title>
-<meta itemprop="image" content="images/profile_pic_2025.jpg?height=300&amp;width=auto" />
-<meta property="og:image" content="images/profile_pic_2025.jpg?height=300&amp;width=auto" />
-<script type="text/javascript">
-                window.jstiming.load.tick('cl');
-              </script>
+        /* Sections */
+        section {
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #eef1f2;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            font-weight: 700;
+        }
+
+        h4 {
+             color: #555;
+             margin-top: 25px;
+             margin-bottom: 12px;
+             font-size: 1.15em;
+             font-weight: 700;
+        }
+
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #eef1f2;
+            margin: 40px 0;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 10px; /* Further reduced space after profile info */
+        }
+
+        .profile-pic-container {
+            flex: 0 0 220px;
+            text-align: center;
+        }
+
+        .profile-pic {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #eee;
+        }
+
+        .profile-bio {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        /* Ensure paragraphs inside profile-bio have consistent spacing */
+        .profile-bio p {
+            margin-bottom: 15px;
+        }
+
+        /* Styling for Links section (now includes research themes) */
+        .links {
+             margin-bottom: 10px; /* Further reduced margin before nav */
+             padding-bottom: 0; /* Remove padding if section margin is small */
+        }
+        .links p {
+            margin-bottom: 8px; /* Further tighten spacing for paragraphs */
+        }
+        .links ul {
+             margin-bottom: 10px; /* Tighten margin below list */
+             margin-top: 4px; /* Further reduce space above list */
+        }
+
+        section > p { /* General paragraph spacing in other sections */
+             margin-bottom: 15px;
+        }
+
+
+        /* Lists (General styling applied via section or .links) */
+        section ul, .links ul {
+            list-style: none;
+            padding-left: 0;
+            margin-left: 20px;
+        }
+
+        section ul li, .links ul li {
+            margin-bottom: 5px; /* Further tighten spacing between list items */
+            padding-left: 18px; /* Slightly reduce padding */
+            position: relative;
+            line-height: 1.6; /* Slightly reduce line height for list items */
+        }
+
+        section ul li::before, .links ul li::before {
+            content: '•';
+            color: #0056b3;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 1px; /* Adjust alignment */
+        }
+
+        /* Page Navigation */
+        .page-nav {
+            margin-top: 5px; /* Further reduced top margin */
+            margin-bottom: 40px;
+            padding: 10px 0;
+            border-top: 1px solid #eef1f2;
+            border-bottom: 1px solid #eef1f2;
+        }
+
+        .page-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px 15px;
+        }
+
+        .page-nav li {
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+         .page-nav li::before {
+            content: none;
+        }
+
+        .page-nav a {
+            display: inline-block;
+            padding: 5px 10px;
+            color: #34495e;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .page-nav a:hover {
+            background-color: #eef1f2;
+            color: #0056b3;
+        }
+
+
+        /* Publications & Highlights */
+        .publications p, .preprints p {
+             margin-bottom: 18px;
+             padding-bottom: 15px;
+             border-bottom: 1px solid #f0f0f0;
+        }
+        .publications p:last-child, .preprints p:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /* More spacing specifically for Selected Publications items */
+        #selected-pubs .publication-item p {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+        }
+        #selected-pubs .publication-item:last-child p {
+             border-bottom: none;
+             margin-bottom: 0;
+             padding-bottom: 0;
+        }
+
+
+        /* Unified Highlighting Style */
+        .highlight-award,
+        .highlight-oral,
+        .highlight-spotlight {
+            font-weight: bold;
+            padding: 3px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 3px 3px 5px 0;
+            color: #004d40;
+            background-color: #e0f2f1;
+        }
+
+
+        .highlight-review {
+             color: #2e7d32;
+             font-style: italic;
+        }
+
+        /* Comment Text Styling */
+        .comment-text {
+            color: #667;
+            font-size: 0.9em;
+            display: block;
+            margin-top: 12px;
+            padding-left: 0;
+            border-left: none;
+            line-height: 1.6; /* Keep line height reasonable */
+        }
+         .comment-text br { /* Remove extra spacing for explicit <br> */
+             content: normal;
+             display: inline;
+             margin-bottom: 0;
+        }
+
+
+        em {
+            font-style: italic;
+            color: #555;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+                padding: 0.5em;
+            }
+            .container {
+                padding: 20px 25px;
+                margin: 15px auto;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.6em;
+            }
+             h3 {
+                font-size: 1.3em;
+            }
+             h4 {
+                font-size: 1.1em;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+                margin-bottom: 15px; /* Adjust mobile spacing too */
+            }
+
+            .profile-pic-container {
+                flex-basis: auto;
+                width: 60%;
+                max-width: 200px;
+            }
+
+            .profile-bio {
+               width: 100%;
+            }
+
+             .page-nav ul {
+                justify-content: flex-start;
+            }
+            .links ul {
+                 margin-left: 15px;
+            }
+            .links ul li {
+                  padding-left: 18px;
+                  margin-bottom: 5px; /* Further tighten list on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+             .container {
+                padding: 15px 20px;
+             }
+             header h1 {
+                font-size: 1.8em;
+            }
+             h2 {
+                font-size: 1.4em;
+            }
+             .page-nav a {
+                padding: 5px 8px;
+                font-size: 0.95em;
+            }
+             .page-nav ul {
+                gap: 3px 10px;
+            }
+             .comment-text {
+                 font-size: 0.88em;
+            }
+
+        }
+
+    </style>
 </head>
-<body xmlns="http://www.google.com/ns/jotspot" id="body" class=" en            ">
-<div id="sites-page-toolbar" class="sites-header-divider">
-<div xmlns="http://www.w3.org/1999/xhtml" id="sites-status" class="sites-status" style="display:none;"><div id="sites-notice" class="sites-notice" role="status" aria-live="assertive"> </div></div>
-</div>
-<div id="sites-chrome-everything-scrollbar">
-<div id="sites-chrome-everything" class="">
-<div id="sites-chrome-page-wrapper" style="direction: ltr">
-<div id="sites-chrome-page-wrapper-inside">
-<div xmlns="http://www.w3.org/1999/xhtml" id="sites-chrome-header-wrapper" style="">
-<table id="sites-chrome-header" class="sites-layout-hbox" cellspacing="0" style="">
-<tr class="sites-header-primary-row" id="sites-chrome-userheader">
-</tr>
-<tr class="sites-header-secondary-row" id="sites-chrome-horizontal-nav">
-<td colspan="2" id="sites-chrome-header-horizontal-nav-container" role="navigation">
-</td>
-</tr>
-</table>
-</div>
-<div id="sites-chrome-main-wrapper">
-<div id="sites-chrome-main-wrapper-inside">
-<table id="sites-chrome-main" class="sites-layout-hbox" cellspacing="0" cellpadding="{scmCellpadding}" border="0">
-<tr>
-<td id="sites-chrome-sidebar-left" class="sites-layout-sidebar-left" style="display: none; width: 150px">
-</td>
-<td id="sites-canvas-wrapper">
-<div id="sites-canvas" role="main">
-<div id="goog-ws-editor-toolbar-container"> </div>
-<div xmlns="http://www.w3.org/1999/xhtml" id="title-crumbs" style="">
-</div>
-<h3 xmlns="http://www.w3.org/1999/xhtml" id="sites-page-title-header" style="" align="left">
-<span id="sites-page-title" dir="ltr" tabindex="-1" style="outline: none">Harikrishna Narasimhan (Hari)</span>
-</h3>
-<div id="sites-canvas-main" class="sites-canvas-main">
-<div id="sites-canvas-main-content">
-<table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr">
-<div>
-<h1><a name="TOC-1"></a><span style="background-color:transparent;font-size:10pt;font-weight:normal"><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"></div><div style="display:block;text-align:left"></div><div style="display:block;text-align:center;margin:5px auto 0px"><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href="https://sites.google.com/a/g.harvard.edu/harikrishna-narasimhan/home/main_profile_new.jpg?attredirects=0" imageanchor="1"></a><div style="display:inline;text-align:center;margin:5px 0px 0px 10px"><a href="https://sites.google.com/a/g.harvard.edu/harikrishna-narasimhan/home/main_profile_new.jpg?attredirects=0" imageanchor="1"></a><a href="https://sites.google.com/a/g.harvard.edu/harikrishna-narasimhan/home/professional_photo_3.jpg?attredirects=0" imageanchor="1"></a><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href="https://sites.google.com/a/g.harvard.edu/harikrishna-narasimhan/home/professional_photo_3.jpg?attredirects=0" imageanchor="1"></a><div style="display:block;text-align:left"><img border="0" height="300" src="images/profile_pic_2025.jpg?height=300&amp;width=200" style="display:block;margin:5px auto 0px;text-align:center;width:auto;" /></div></div><br /></div></div></div></span></h1><h1><a name="TOC-I-am-a-post-doctoral-researcher-at-IACS-Harvard-University-since-September-2015-working-with-David-C.-Parkes.-You-can-contact-me-at-h__________-seas.harvard.edu-please-replace-the-dashes-with-my-last-name-.-"></a><span style="font-size:10pt;font-weight:normal;background-color:transparent"><font size="2" </span></h1>
-<center>
-<div>
-<p align="left">
-I am a Staff Research Scientist at <a href="https://research.google/">Google Research</a> in Mountain View, USA. I am broadly interested in the design of principled and practical algorithms for machine learning, with the goal of improving both training and inference efficiency.
-<br><br>
-Prior to joining Google, I was a post-doctoral researcher at </font></span><a href="https://www.seas.harvard.edu/" style="font-size:10pt;font-weight:normal" rel="nofollow">SEAS, Harvard University</a><span style="font-size:10pt;font-weight:normal;background-color:transparent"><font size="2"> from 2015-2018, working with </font></span><a href="http://www.eecs.harvard.edu/%7Eparkes/" style="font-size:10pt;font-weight:normal" rel="nofollow">David C. Parkes</a><span style="background-color:transparent;font-size:10pt;font-weight:normal">. 
-I completed my PhD in Computer Science from the <a href="https://www.csa.iisc.ac.in/" rel="nofollow">Indian Institute of Science (IISc), Bangalore</a> during 2012-2015, working with <a href="https://shivaniagarwal.net" rel="nofollow">Shivani Agarwal</a>, and supported by a <i>Google India PhD Fellowship</i>. 
-During the summer of 2014, I interned at <a href="http://research.microsoft.com/en-us/labs/india/" rel="nofollow">Microsoft Research, Bangalore</a> with <a href="https://www.prateekjain.org/" rel="nofollow">Prateek Jain</a>.
+<body>
 
-<p align="left">
-You can contact me at h__________@google.com (please replace the dashes with my last name).
+    <div class="container">
+        <header>
+             <h1>Harikrishna Narasimhan (Hari)</h1>
+        </header>
 
-<br />
-<br /><span style="font-size:10pt;text-align:left;background-color:transparent"> The following are some research themes I am excited about:</span></p><span style="background-color:transparent;text-align:left"><div style="text-align:left"><ul>
-<li style="font-size:10pt"><span style="font-size:10pt;background-color:transparent">Fast inference algorithms for large language models (LLMs).</span></li>
-<li style="font-size:10pt"><span style="font-size:10pt;background-color:transparent">Design of loss functions for ranking, retrieval, and other real-world objectives.</span></li>
-<li style="font-size:10pt"><span style="font-size:10pt;background-color:transparent">Constrained optimization with application to fairness.</span></li>
-</ul>
-In the past, I have worked on applying machine learning techniques for the design of auctions and other economic mechanisms.
-</div></span></div></center></div>
-<div><center><div><p align="justify">
-<span style="font-size:10pt;background-color:transparent;text-align:left">You can find my resume </span><a href="documents/resume.pdf">here</a>
-<span style="font-size:10pt;background-color:transparent;text-align:left"> (updated on 01/31/2023).</span></p>
-</div>
-<div><center><div><p align="justify">
-<span style="font-size:10pt;background-color:transparent;text-align:left">Feel free to check out my instagram <a href="https://www.instagram.com/hari.narasimhan/">page</a><span style="font-size:10pt;background-color:transparent;text-align:left"> for details of my personal hobbies. Of late, I've taken to baking; here are some of my recent <a href="https://www.instagram.com/stories/highlights/18044521994263313/">cakes</a>.</span></p>
-</div>
-<br>
-	
-<hr>
-<h3 align="left">News/Highlights</h3>
-<hr>
-<p align="justify"> 👉 ICLR 2025 Outstanding Paper <a href="https://blog.iclr.cc/2025/04/22/announcing-the-outstanding-paper-awards-at-iclr-2025/">Honorable Mention Award</a> for our paper <i>"Faster cascades via speculative decoding"</i>, 2025.
-<p align="justify"> 👉 New patent on <i>"Performing classification tasks using post-hoc estimators for expert deferral"</i>, 2024. [<a href="https://patents.google.com/patent/US20240135254A1/">US20240135254A1</a>]
-<p align="justify"> 👉 Invited talk on <i>"Learning to abstain and beyond"</i> at the <a href="https://sites.google.com/corp/view/dai-2023">1st AAAI Workshop on Deployable AI (DAI)</a>, 2023. [<a href="documents/slides_learning_to_abstain_dai_aaai_23.pdf">slides</a>]
-<p align="justify"> 👉 New patent on <i>"Systems and Methods for Implicit Rate-Constrained Optimization of Non-Decomposable Objectives"</i>, 2022. [<a href="https://patents.google.com/patent/US20220398506A1">US20220398506A1</a>]
-<p align="justify"> 👉 Co-organized <a href="https://libauc.org/cvpr2022/">tutorial</a> on <i>"Deep AUC Maximization: From Algorithms to Practice"</i> at CVPR 2022.
-<p align="justify"> 👉 Co-authored Google <a href = "https://ai.googleblog.com/2020/02/setting-fairness-goals-with-tensorflow.html">blogpost</a> on <i>"Setting Fairness Goals with the TensorFlow Constrained Optimization Library"</i></a>.
-<hr>
-<br>
-	
-<hr>
-<h3 align="left">Professional Service</h3>
-<hr>
-<p align="justify"> <i>Senior Area Chair:</i> NeurIPS 2024, 2025
-<p align="justify"> <i>Area Chair</i>: ICML 2023, 2024, 2025; NeurIPS 2021, 2022, 2023
-<p align="justify"> <i>Conference Reviewing</i>: NeurIPS 2018 (<i>top 200</i>), 2019 (<i>top 400</i>), 2020 (<i>top 10%</i>); ICML 2020 (<i>top 33%</i>); ICLR 2021, 2022, 2023, 2024; FAccT 2021, 2022
-<p align="justify"> <i>Journal Reviewing</i>: JMLR, TPAMI, TEAC, TMLR, JAIR, TKDE, Artificial Intelligence, Pattern Recognition Letters
-<hr>
-<br>
+        <main>
+            <section class="profile-section">
+                <div class="profile-pic-container">
+                    <img src="images/profile_pic_2025.jpg" alt="Profile picture of Harikrishna Narasimhan" class="profile-pic">
+                </div>
+                <div class="profile-bio">
+                    <p>
+                        I am a Staff Research Scientist at <a href="https://research.google/">Google Research</a> in Mountain View, USA. I am broadly interested in the design of principled and practical algorithms for machine learning, with the goal of improving both training and inference efficiency.
+                    </p>
+                    <p>
+                        Prior to joining Google, I was a post-doctoral researcher at <a href="https://www.seas.harvard.edu/" rel="nofollow">SEAS, Harvard University</a> from 2015-2018, working with <a href="http://www.eecs.harvard.edu/%7Eparkes/" rel="nofollow">David C. Parkes</a>.
+                        I completed my PhD in Computer Science from the <a href="https://www.csa.iisc.ac.in/" rel="nofollow">Indian Institute of Science (IISc), Bangalore</a> during 2012-2015, working with <a href="https://shivaniagarwal.net" rel="nofollow">Shivani Agarwal</a>, and supported by a <em>Google India PhD Fellowship</em>.
+                        During the summer of 2014, I interned at <a href="http://research.microsoft.com/en-us/labs/india/" rel="nofollow">Microsoft Research, Bangalore</a> with <a href="https://www.prateekjain.org/" rel="nofollow">Prateek Jain</a>.
+                    </p>
+                    <p>
+                        You can contact me at h__________@google.com (please replace the dashes with my last name).
+                    </p>
+                </div>
+            </section>
 
-<hr>
-<h3 align="left">Selected Publications</h3>
-<hr>
-<p align="justify"><b>Faster Cascades via Speculative Decoding</b>. 
-<br>
-Narasimhan, H., Jitkrittum, W., Rawat, A.S., Kim, S., Gupta, N., Menon, A.K. and Kumar, S. 
-<br>
-In the <i>13th International Conference on Learning Representations (ICLR)</i>, 2025. [<a href="https://openreview.net/pdf?id=vo9t20wsmd">pdf</a>]
-<br><font color="#FFA500">Outstanding Paper Honorable Mention Award.</font>
-<br>
-<font color="gray">
-Part of recent work on <i >speeding up inference with LLMs</i > (<a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/bc8f76d9caadd48f77025b1c889d2e2d-Paper-Conference.pdf">NeurIPS 2022</a>, <a href="https://openreview.net/pdf?id=4KZhZJSPYU">NeurIPS 2023</a>, <a href="https://openreview.net/pdf?id=KgaBScZ4VI">ICLR 2024a</a>).
-<br>
-Required revisiting the classical problem of <i>learning to abstain</i> for modern settings (<a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/bc8f76d9caadd48f77025b1c889d2e2d-Paper-Conference.pdf">NeurIPS 2022</a>, <a href="https://openreview.net/pdf?id=ta26LtNq2r">ICLR 2024b</a> <font color="#FFA500">Spotlight</font>, <a href="https://openreview.net/pdf?id=DASh78rJ7g">ICLR 2024c</a>).
-</font>
-	
-<p align="justify">  <b>Robust Optimization for Fairness with Noisy Protected Groups</b>. 
-<br>
-Wang, S., Guo, W., Narasimhan, H., Cotter, A., Gupta, M. and Jordan, M.I. 
-<br>
-In <i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2020. [<a href="https://proceedings.neurips.cc/paper/2020/file/37d097caf1299d9aa79c2c2b843d2d78-Paper.pdf?id=vo9t20wsmd">pdf</a>]
-<br>
-<font color="gray">
-Part of work on <i >robust algorithms for fairness and long-tail</i > settings.
-<br>
-Feel free to also see <a href="https://papers.neurips.cc/paper_files/paper/2021/file/9713faa264b94e2bf346a1bb52587fd8-Paper.pdf">NeurIPS 2021</a>, <a href="https://openreview.net/pdf?id=HbtFCX2PLq0">ICLR 2022</a> (<font color="#FFA500">Spotlight</font>), <a href="https://openreview.net/pdf?id=3KUfbI9_DQE">ICLR 2023</a>, <a href="https://proceedings.mlr.press/v216/wang23e/wang23e.pdf">UAI 2023</a>.
-</font>
+            <section class="links">
+                 <p>The following are some research themes I am excited about:</p>
+                 <ul>
+                     <li>Fast inference algorithms for large language models (LLMs).</li>
+                     <li>Design of loss functions for ranking, retrieval, and other real-world objectives.</li>
+                     <li>Constrained optimization with application to fairness.</li>
+                 </ul>
+                 <p>In the past, I have worked on applying machine learning techniques for the design of auctions and other economic mechanisms.</p>
 
-<p align="justify"> <b>On Making Stochastic Classifiers Deterministic</b>. 
-<br>
-Cotter, A., Narasimhan, H., and Gupta, M. 
-<br>
-In <i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2019. [<a href="https://papers.nips.cc/paper_files/paper/2019/file/5fc34ed307aac159a30d81181c99847e-Paper.pdf">pdf</a>]
-<br><font color="#FFA500">Oral presentation.</font>
-<br>
-<font color="gray">
-One of my favorite papers from work on <i >constrained optimization</i > for ML training (open-sourced as the <a href="https://github.com/google-research/tensorflow_constrained_optimization/blob/master/README.md">TFCO</a> library).
-<br>
-Feel free to also see <a href="https://papers.nips.cc/paper_files/paper/2019/file/3ce257b311e5acf849992f5a675188e8-Paper.pdf">NeruIPS 2019b</a> (<font color="#FFA500">Oral</font>), <a href="https://proceedings.neurips.cc/paper_files/paper/2020/file/62db9e3397c76207a687c360e0243317-Paper.pdf">NeurIPS 2020</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/5970/5826">AAAI 2020</a>.
-</font>
+                 <p>
+                    You can find my resume <a href="documents/resume.pdf">here</a> (updated on 01/31/2023).
+                 </p>
+                 <p>
+                    Outside of work, I enjoy <a href="https://www.instagram.com/stories/highlights/18044521994263313/">baking</a>, and have recently taken to amateur theatre.
+                 </p>
+            </section>
 
-<p align="justify"><b>Optimal Auctions through Deep Learning</b>. 
-<br>	
-Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S. 
-<br>	
-In Proceedings of the <i>36th International Conference on Machine Learning (ICML)</i>, 2019. [<a href="https://proceedings.mlr.press/v97/duetting19a/duetting19a.pdf">pdf</a>]
-<br>
-<font color="#FFA500">Oral Presentation.</font>
-<br>
-Invited Research Highlight, <i>Communications of the ACM (CACM)</i>, 64(8):109-116, 2021. 
-<br>
-Longer version in the <i>Journal of the ACM (JACM)</i>, 71(1): 1-53, 2024. [<a href="https://arxiv.org/pdf/1706.03459">pdf</a>]
-<br>
-<font color="gray">
-Culmination of work on <i >machine learning for mechanism design</i > (e.g., <a href="https://papers.nips.cc/paper_files/paper/2015/file/4a2ddf148c5a9c42151a529e8cbdcc06-Paper.pdf">NeurIPS 2015</a>, <a href="https://dl.acm.org/doi/abs/10.5555/3237383.3237439">AAMAS 2018</a>).
-</font>
-
-<p align="justify"> <b>Learning with Complex Loss Functions and Constraints</b>. 
-<br>
-Narasimhan, H.
-<br>
-In <i>Proceedings  of  the  21st  International  Conference  on  Artificial  Intelligence  and  Statistics (AISTATS)</i>, 2018. [<a href="https://proceedings.mlr.press/v84/narasimhan18a/narasimhan18a.pdf">pdf</a>]
-<br>
-<font color="#FFA500">Oral presentation.</font>
-<br>
-Longer version in the <i>Journal of Machine Learning Research (JMLR)</i>, 25(367):1−81, 2024. [<a href="https://www.jmlr.org/papers/volume25/22-1137/22-1137.pdf">pdf</a>]
-<br>
-<font color="gray">
-Culmination of work on <i >consistent algorithms for complex classification tasks</i >.
-<br>
-Feel free to also see <a href="https://proceedings.neurips.cc/paper_files/paper/2014/file/3644e33a5161ec5f3997a6acb98d4447-Paper.pdf">NeurIPS 2014</a>, <a href="https://proceedings.mlr.press/v37/narasimhanb15.pdf">ICML 2015</a>, <a href="https://proceedings.neurips.cc/paper/2020/file/eab1bceaa6c5823d7ed86cfc7a8bd824-Paper.pdf">NeurIPS 2020</a>.
-</font>
-
-<p align="justify"><b>Optimizing Non-decomposable Performance Measures: A Tale of Two Classes</b>. 
-<br>
-Narasimhan, H., Kar, P.,  and Jain, P.
-<br>
-In <i>Proceedings of the 32nd International Conference on Machine Learning (ICML)</i>, 2015. [<a href="https://proceedings.mlr.press/v37/narasimhana15.pdf">pdf</a>] 
-<br>
-<font color="gray">
-One among several papers on <i >optimization of non-decomposable objectives</i > (e.g., precision@K).
-<br>
-Feel free to also see <a href="https://proceedings.neurips.cc/paper_files/paper/2014/file/9638ddfc7e3d56a611292c1578b19ff8-Paper.pdf">NeurIPS 2014</a>, <a href="https://proceedings.mlr.press/v37/kar15.pdf">ICML 2015</a>, <a href="https://www.kdd.org/kdd2016/papers/files/rpp0387-karAemb.pdf">KDD 2016</a>, <a href="https://proceedings.mlr.press/v139/kumar21b/kumar21b.pdf">ICML 2021</a>.
-</font>
-<br>
-
-<p align="justify"><b>Predicting Clinical Response to Anticancer Drugs Using an Ex Vivo Platform that Captures Tumour Heterogeneity</b>.
-<br>
-Majumder, B., Baraneedharan, U., Thiyagarajan, S., Radhakrishnan, P., Narasimhan, H., Dhandapani, M., Brijwani, N., Pinto, 
-D.D., Prasath, A., Shanthappa, B.U., Thayakumar, A., Surendran, R., 
-Babu, G., Shenoy, A.M., Kuriakose, M.A., Bergthold, G., Horowitz, P., 
-Loda, M., Beroukhim, R., Agarwal, S., Sengupta, S., Sundaram, M. and 
-Majumder, P.K. 
-<br>	
-<i>Nature Communications</i>, 6:6169, 2015. 
-[<a href="http://www.nature.com/ncomms/2015/150227/ncomms7169/pdf/ncomms7169.pdf" rel="nofollow">paper</a>] 
-<br>
-[<font color="gray">Featured in <a href="http://www.businesswire.com/news/home/20150302006933/en/Mitra-Biotech-CANScript-Platform-Validated-Personalized-Cancer#.VYawzqBzOfQ" rel="nofollow">Business Wire</a>, <a href="https://www.genomeweb.com/companion-diagnostics/paper-describes-development-validation-mitra-biotechs-ex-vivo-platform" rel="nofollow">Genome Web</a>, <a href="http://www.cio.com.au/article/569280/machine-learning-used-predict-clinical-response-anti-cancer-drugs/" rel="nofollow">CIO</a>, <a href="http://www.telegraphindia.com/1150228/jsp/nation/story_5990.jsp#.VUEI8N9sabl" rel="nofollow">The Telegraph</a></font>]
-<br>
-<font color="gray">
-A real-world application of the algorithms we developed for <i >ranking with (partial) AUC</i > in <a href="http://proceedings.mlr.press/v28/narasimhan13.pdf">ICML 2013</a>, <a href="https://dl.acm.org/doi/10.1145/2487575.2487674">KDD 2013</a>, <a href="https://direct.mit.edu/neco/article-abstract/29/7/1919/8293/Support-Vector-Algorithms-for-Optimizing-the?redirectedFrom=fulltext">NeuralComp 2017</a>.
-<br>
-Feel free to also see <a href="https://papers.nips.cc/paper_files/paper/2013/file/05311655a15b75fab86956663e1819cd-Paper.pdf">NeurIPS 2013</a> (<font color="#FFA500">Spotlight</font>), <a href="https://arxiv.org/pdf/2504.11284">ICML 2025</a>.
-</font>
-<hr>
-<br>
+            <!-- Page Navigation Links -->
+            <nav class="page-nav">
+                <ul>
+                    <li><a href="#news">News/Highlights</a></li>
+                    <li><a href="#selected-pubs">Selected Publications</a></li>
+                    <li><a href="#service">Professional Service</a></li>
+                    <li><a href="#preprints">Preprints</a></li>
+                    <li><a href="#all-pubs">Publications (By Year)</a></li>
+                </ul>
+            </nav>
+            <!-- End Page Navigation Links -->
 
 
-<hr>
-<h3 align="left">Preprints</h3>
-<hr>
-<p align="justify">Jitkrittum, W., Narasimhan, H., Rawat, A.S., Juneja, J., Wang, Z., Lee, C.-Y., Shenoy, P., Panigrahy, R., Menon, A.K and Kumar, S. <i>Universal Model Routing for Efficient LLM Inference.</i>  Manuscript, 2025.
-<br>
-[<a href="https://arxiv.org/pdf/2502.08773">arXiv:2502.08773</a>]
-<p align="justify">Wang, C., Augenstein, S., Rush, K., Jitkrittum, W., Narasimhan, H., Rawat, A.S., Menon, A.K and Go, A. <i>Cascade-Aware Training of Language Models.</i>  Manuscript, 2024. 
-<br>
-[<a href="https://arxiv.org/pdf/2406.00060">arXiv:2406.00060</a>]
-<p align="justify">Cotter, A., Menon, A.K.,  Narasimhan, H.,  Rawat, A.S., Reddi, S.J. and Zhou, Y. <i>Distilling Double Descent</i>. Manuscript, 2021. 
-<br>	
-[<a href="https://arxiv.org/pdf/2102.06849.pdf">arXiv:2102.06849</a>]
-<hr>	
-<br>
+            <hr>
 
-<hr>
-<h3 align="left">Publications (By Year)</h3>
-<hr>
-<h4 align="left">2025</h4>
-<p align="justify">Lukasik, M., Chen, L., Narasimhan, H., Menon, A.K., Jitkrittum, W., Yu, F., Reddi, S.J., Fu, G., Bateni, M. and Kumar, S. <i>Bipartite Ranking From Multiple Labels: On Loss Versus Label Aggregation</i>. In the 42nd International Conference on Machine Learning (ICML), 2025. <i>To appear</i>.
-<br>
-[<a href="https://arxiv.org/pdf/2504.11284">arXiv:2504.11284</a>]
-<br>
-<p align="justify">Narasimhan, H., Jitkrittum, W., Rawat, A.S., Kim, S., Gupta, N., Menon, A.K. and Kumar, S. <i>Faster Cascades via Speculative Decoding</i>. In the 13th International Conference on Learning Representations (ICLR), 2025. 
-[<a href="https://openreview.net/pdf?id=vo9t20wsmd">pdf</a>]
-<br><font color="#FFA500">Outstanding Paper Honorable Mention Award.</font>
-<br><font color="#FFA500">Oral Presentation.</font>
-<p align="justify">Lukasik, M., Meng, Z., Narasimhan, H., Menon, A.K., Chang, Y.-W., Yu, F. and Kumar, S. <i>Better Autoregressive Regression with LLMs</i>. In the 13th International Conference on Learning Representations (ICLR), 2025. 
-[<a href="https://openreview.net/pdf?id=xGs7Ch3Vyo">pdf</a>]
-<br><font color="#FFA500">Spotlight presentation.</font>
-<hr>
-<h4 align="left">2024</h4>
-<p align="justify">Narasimhan, H., Ramaswamy, H.G., Tavker, S.K., Khurana, D., Netrapalli, P. and Agarwal,  S. <i>Consistent  Multiclass  Algorithms  for  Complex  Metrics  and  Constraints</i>.
-<br>
-<i>Journal of Machine Learning Research (JMLR)</i>, 25(367):1−81, 2024.
-<br>
-<p align="justify">Lukasik, M.,  Narasimhan, H., Menon, A.K., Yu, F. and Kumar, S. <i>Regression-aware Inference with LLMs</i>. In Findings of the Association for Computational Linguistics: EMNLP 2024.
-<br>	
-<p align="justify">Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S. <i>Optimal Auctions through Deep Learning: Advances in Differentiable Economics</i>.  
-<br>
-<i>Journal of the ACM (JACM)</i>, 71(1): 1-53, 2024.
-<br>	
-<p align="justify"> Narasimhan, H., Menon, A.K., Jitkrittum, W., Gupta, N., and Kumar, S. <i>Learning to Reject Meets Long-tail Learning</i>. In the 12th International Conference on Learning Representations (ICLR), 2024. 
-<br><font color="#FFA500">Spotlight presentation.</font>
-<p align="justify"> Gupta, N., Narasimhan, H., Jitkrittum, W., Rawat, A.S., Menon, A.K., and Kumar, S. <i>Language Model Cascades: Token-Level Uncertainty And Beyond</i>. In the 12th International Conference on Learning Representations (ICLR), 2024. 
-<p align="justify"> Narasimhan, H., Menon, A.K., Jitkrittum, W., and Kumar, S. <i>Post-hoc Estimators for Selective Classification and OOD Detection</i>. In the 12th International Conference on Learning Representations (ICLR), 2024. 
-<br>
-<hr>
-<h4 align="left">2023</h4>
-<p align="justify">Jitkrittum, W., Gupta, N., Menon, A.K., Narasimhan, H., Rawat, A.S., Kumar, S. <i>When Does Confidence-Based Cascade Deferral Suffice</i>?  In Advances  in  Neural  Information  Processing Systems (NeurIPS), 2023.
-<p align="justify">Wang, S., Narasimhan, N., Zhou, Y., Hooker, S., Lukasik, M., Menon, A.K. <i>Robust Distillation for Worst-class Performance</i>. In the 39th Conference on Uncertainty in Artificial Intelligence (UAI), 2023. 
-<p align="justify">Wei, J., Narasimhan, H., Amid, E., Chu, W.-S., Liu, Y., and Kumar, A. <i>Distributionally Robust Post-hoc Classifiers under Prior Shifts</i>. In the 11th  International  Conference  on  Learning  Representations (ICLR), 2023.
-<hr>
-<h4 align="left">2022</h4>
-<p align="justify">Narasimhan, H., Menon, A.K., Jitkrittum, W., Rawat, A. S. and Kumar, S. <i>Post-hoc Estimators for Learning  to  Defer  to  an  Expert</i>. In Advances  in  Neural  Information  Processing Systems (NeurIPS), 2022.
-<p align="justify">Hiranandani, G., Mathur, J., Narasimhan, H., and Koyejo, O. <i>Quadratic Metric Elicitation for Fairness and Beyond</i>. In the 38th Conference on Uncertainty in Artificial Intelligence (UAI), 2022.
-<br><font color="#FFA500">Oral presentation.</font>
-<p align="justify">Jiang, H., Narasimhan, H., Bahri, D., Cotter, A. and Rostamizadeh, A. <i>Churn Reduction via Distillation</i>. In the 10th  International  Conference  on  Learning  Representations (ICLR), 2022.
-<br><font color="#FFA500">Spotlight presentation.</font>
-<hr>
-<h4 align="left">2021</h4>
-<p align="justify">Narasimhan, H. and Menon, A.K. <i>Training Over-parameterized Models with Non-decomposable Metrics</i>. In Advances in Neural Information Processing Systems (NeurIPS), 2021.
-<p align="justify">Hiranandani, G., Mathur, J., Narasimhan, H., Fard, M.M. amd Koyejo, O. <i>Optimizing Black-box Metrics with Iterative Example Weighting</i>. In the 38th International Conference on Machine Learning (ICML), 2021.
-<p align="justify">Kumar, A., Narasimhan, H., and Cotter, A. <i>Implicit Rate-constrained Optimization of Non-decomposable Objectives</i>. In the 38th International Conference on Machine Learning (ICML), 2021.
-<p align="justify">Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S. <i>Optimal Auctions through Deep Learning</i>. 
-<br>	
-Invited Research Highlight, <i>Communications of the ACM (CACM)</i>, 64(8):109-116, 2021. 
-<hr>
-<h4 align="left">2020</h4>
-<p align="justify"> Wang, S., Guo, W., Narasimhan, H., Cotter, A., Gupta, M. and Jordan, M.I. 
-<i>Robust Optimization for Fairness with Noisy Protected Groups</i>. In Advances in Neural Information Processing Systems (NeurIPS), 2020.
-<p align="justify"> Narasimhan, H., Cotter, A., Zhou, Y., Wang, S., Guo, W. <i>Approximate Heavily-constrained Learning with Lagrange Multiplier Models</i>. In Advances in Neural Information Processing Systems (NeurIPS), 2020.
-<p align="justify"> Hiranandani, G., Narasimhan, H., and Koyejo, O. <i>Fair Performance Metric Elicitation</i>. In Advances in Neural Information Processing Systems (NeurIPS), 2020.
-<p align="justify"> Tavker, S.K., Ramaswamy, H.G., and Narasimhan, H. <i>Consistent Plug-in Classifiers for Complex Objectives and Constraints</i>. In Advances in Neural Information Processing Systems (NeurIPS), 2020.
-<p align="justify"> Jiang, Q., Adigun, O., Narasimhan, H., Fard, M.M., and Gupta M. <i>Optimizing Black-box Metrics with Adaptive Surrogates</i>. In Proceedings of the 37th International Conference on Machine Learning (ICML), 2020.
-<p align="justify"> Narasimhan, H., Cotter, A., Gupta, M., and Wang, S. <i>Pairwise Fairness for Ranking and Regression</i>. In Proceedings of the 34th AAAI Conference on Artificial Intelligence 
-(AAAI)</i>, 2020.
-<hr>
-<h4 align="left">2019</h4>
-<p align="justify"> Narasimhan, H., Cotter, A., and Gupta, M. <i>Optimizing Generalized Rate Metrics with Three Players</i>. In Advances in Neural Information Processing Systems (NeurIPS), 2019.
-<br><font color="#FFA500">Oral presentation.</font>
-<p align="justify"> Cotter, A., Narasimhan, H., and Gupta, M. <i>On Making Stochastic Classifiers Deterministic</i>. In Advances in Neural Information Processing Systems (NeurIPS), 2019.
-<br><font color="#FFA500">Oral presentation.</font>
-<p align="justify"> Zhao, S., Fard, M.M., Narasimhan, H. and Gupta, M. <i>Metric-optimized Example Weights</i>.  In Proceedings of the 36th International Conference on Machine Learning (ICML)</i>, 2019.
-<p align="justify">  Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S. <i>Optimal Auctions through Deep Learning</i>.  In Proceedings of the 36th International Conference on Machine Learning (ICML), 2019.
-<p align="justify">  Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S.  
-<i>Machine Learning for Optimal Economic Design</i>. 
-<br>	
-<i>The Future of Economic Design</i>, Springer, 2019.
-<br><font color="#FFA500">Oral presentation.</font>
-<hr>
-<h4 align="left">2018</h4>
-<p align="justify">Narasimhan, H. <i>Learning with Complex Loss Functions and Constraints</i>. In Proceedings  of  the  21st  International  Conference  on  Artificial  Intelligence  and  Statistics (AISTATS), 2018.
-<br><font color="#FFA500">Oral presentation.</font>
-<p align="justify"> Golowich, N., Narasimhan, H. and Parkes, D.C. <i>Deep Learning for Multi-Facility Location Mechanism Design</i>.  In Proceedings of the 27th International Joint Conference on Artificial Intelligence (IJCAI), 2018.
-<p align="justify"> Feng,  Z.,  Narasimhan,  H. and Parkes,  D.C. <i>Deep Learning for Revenue-Optimal Auctions  with  Budgets.</i> In Proceedings  of  the  17th  International  Conference  on Autonomous Agents and Multiagent Systems (AAMAS), 2018.
-<hr>
-<h4 align="left">2017</h4>
-<p align="justify"> Narasimhan, H. and Agarwal, S. <i>Support Vector Algorithms for Optimizing the Partial Area Under the ROC curve</i>. 
-<br>	
-<i>Neural Computation</i>, 29(7):1919-1963, 2017.
-<hr>
-<h4 align="left">2016</h4>
-<p align="justify">Narasimhan, H., Pan, W., Kar, P., Protopapas, P. and Ramaswamy, H.G. <i>Optimizing the multiclass F-measure via biconcave programming</i>. In Proceedings of the 16th IEEE International Conference on Data Mining (ICDM). 2016.</p>	
-<p align="justify">Kar, P., Li, S., Narasimhan, H., Chawla, S. and Sebastiani, F. <i>Online optimization methods for the quantification problem</i>. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge, Discovery and Data Mining (KDD), 2016.</p>
-<p align="justify"> Narasimhan, H., Agarwal, S. and Parkes, D.C. <i>Automated Mechanism Design without Money via Machine Learning</i>. In Proceedings of the 25th International Joint Conference on Artificial Intelligence (IJCAI), 2016.</p>
-<p align="justify">Narasimhan, H., and Parkes, D.C. <i>A General Statistical Framework for Designing Strategy-proof Assignment Mechanisms</i>. In Proceedings of the Conference on Uncertainty in Artificial Intelligence (UAI), 2016. </p>
-<hr>
-<h4 align="left">2015</h4>
-<p align="justify"> Narasimhan, H., Parkes, D.C. and Singer, Y. <i>Learnability of influence in networks</i>. In Advances in Neural Information Processing Systems (NIPS), 2015.		
-			</p>
-<p align="justify"> Ahmed,  S.,  Narasimhan,  H. and Agarwal,  S. <i>Bayes optimal feature selection for supervised learning with general performance measures</i>. In Proceedings of the 31st Conference on Uncertainty in Artificial Intelligence (UAI), 2015.
-			</p>
-<p align="justify">Majumder, B., Baraneedharan, U., Thiyagarajan, S., 
-Radhakrishnan, P., Narasimhan, H., Dhandapani, M., Brijwani, N., Pinto, 
-D.D., Prasath, A., Shanthappa, B.U., Thayakumar, A., Surendran, R., 
-Babu, G., Shenoy, A.M., Kuriakose, M.A., Bergthold, G., Horowitz, P., 
-Loda, M., Beroukhim, R., Agarwal, S., Sengupta, S., Sundaram, M. and 
-Majumder, P.K. <i>Predicting clinical response to anticancer drugs using an ex vivo platform that captures tumour heterogeneity</i>. 
-<br>	
-<i>Nature Communications, 6:6169, 2015</i>.<br />
-<p align="justify">Narasimhan, H.*, Ramaswamy, H.G.*, Saha, A. and Agarwal, S. <i>Consistent multiclass algorithms for complex performance measures</i>.
- In Proceedings of the 32nd International Conference on Machine Learning
- (ICML), 2015. <br />
-(*both authors contributed equally
- to the paper)
-			</p>
-<p align="justify">Narasimhan, H., Kar, P.,  and Jain, P. <i>Optimizing non-decomposable performance measures: A tale of two classes</i>. In Proceedings of the 32nd International Conference on Machine Learning (ICML), 2015. 
-			</p>
-<p align="justify">Kar, P., Narasimhan, H., and Jain, P. <i>Surrogate functions for maximizing precision at the top</i>. In Proceedings of the 32nd International Conference on Machine Learning (ICML), 2015.<br />
-</p>
-<hr>
-<h4 align="left">2014</h4>
-<p align="justify">Narasimhan, H.*, Vaish, R.* and Agarwal, S., <i>On the statistical consistency of plug-in classifiers for non-decomposable performance measures</i>. In Advances in Neural Information Processing Systems (NIPS), 2014.<br />
-			  (*both authors contributed equally to the paper)
-			</p>
-<p align="justify">Kar, P., Narasimhan, H., and Jain, P. <i>Online and stochastic gradient methods for non-decomposable loss functions</i>. In Advances in Neural Information Processing Systems (NIPS), 2014.<br />
-			</p>
-<p align="justify">Saha, A., Dewangan, C., Narasimhan, H., Sriram, S., and Agarwal, S. <i>Learning score systems for patient mortality prediction in intensive care units via orthogonal matching pursuit</i>. In Proceedings of the 13th International Conference on Machine Learning and Applications (ICMLA), 2014.<br />
-			</p>
-<p align="justify">Agarwal, A., Narasimhan, H., Kalyanakrishnan, S. and Agarwal, S., <i>GEV-canonical regression for accurate binary class probability estimation when one class is rare</i>. In Proceedings of the 31st International Conference on Machine Learning (ICML), 2014. <br />
-			</p>
-<hr>
-<h4 align="left">2013</h4>
-<p align="justify">Narasimhan, H. and Agarwal, S., <i>On the relationship between binary classification, bipartite ranking, and binary class probability estimation</i>.  In Advances in Neural Information Processing Systems (NIPS), 2013.
-<br><font color="#FFA500">Spotlight presentation.</font>
-<br />
-</p>
-<p align="justify">Narasimhan, H. and Agarwal, S., <i>SVM_pAUC^tight: A new support vector method for optimizing partial AUC based on a tight convex upper bound</i>. In Proceedings of the 19th ACM SIGKDD Conference on Knowledge, Discovery and Data Mining (KDD), 2013. 
-	<br />
-</p>
-<p align="justify">Menon, A. K., Narasimhan, H., Agarwal, S. and Chawla, S., <i>On the statistical consistency of algorithms for binary classification under class imbalance</i>. In Proceedings of the 30th International Conference on Machine Learning (ICML), 2013. 
-<br />
-[<a href="http://proceedings.mlr.press/v28/menon13a.pdf">paper</a>] 
-[<a href="http://proceedings.mlr.press/v28/menon13a-supp.pdf">supplementary material</a>]
-</p>
-<p align="justify">Narasimhan, H. and Agarwal, S., <i>A structural SVM based approach for optimizing partial AUC</i>. In Proceedings of the 30th International Conference on Machine Learning (ICML), 2013. 
-	<br>
+            <section id="news">
+                <h2>News/Highlights</h2>
+                 <p>👉 ICLR 2025 Outstanding Paper <a href="https://blog.iclr.cc/2025/04/22/announcing-the-outstanding-paper-awards-at-iclr-2025/">Honorable Mention Award</a> for our paper <em>"Faster cascades via speculative decoding"</em>, 2025.</p>
+                 <p>👉 New patent on <em>"Performing classification tasks using post-hoc estimators for expert deferral"</em>, 2024. [<a href="https://patents.google.com/patent/US20240135254A1/">US20240135254A1</a>]</p>
+                 <p>👉 Invited talk on <em>"Learning to abstain and beyond"</em> at the <a href="https://sites.google.com/corp/view/dai-2023">1st AAAI Workshop on Deployable AI (DAI)</a>, 2023. [<a href="documents/slides_learning_to_abstain_dai_aaai_23.pdf">slides</a>]</p>
+                 <p>👉 New patent on <em>"Systems and Methods for Implicit Rate-Constrained Optimization of Non-Decomposable Objectives"</em>, 2022. [<a href="https://patents.google.com/patent/US20220398506A1">US20220398506A1</a>]</p>
+                 <p>👉 Co-organized <a href="https://libauc.org/cvpr2022/">tutorial</a> on <em>"Deep AUC Maximization: From Algorithms to Practice"</em> at CVPR 2022.</p>
+                 <p>👉 Co-authored Google <a href = "https://ai.googleblog.com/2020/02/setting-fairness-goals-with-tensorflow.html">blogpost</a> on <em>"Setting Fairness Goals with the TensorFlow Constrained Optimization Library"</em>.</p>
+            </section>
 
-[<a href="http://proceedings.mlr.press/v28/narasimhan13.pdf">paper</a>] 
-[<a href="http://proceedings.mlr.press/v28/narasimhan13-supp.pdf">supplementary material</a>]
-</p>
-</dd>
-<hr>
-</span>
-</div>
-</div>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-    window.jstiming.load.tick('sjl');
-  </script>
-<script xmlns="http://www.w3.org/1999/xhtml" src="https://ssl.gstatic.com/sites/p/89dd68/system/js/jot_min_view__en.js"></script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-    window.jstiming.load.tick('jl');
-  </script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-      gsites.HoverPopupMenu.createSiteDropdownMenus('sites-header-nav-dropdown', false);
-    </script>
-<script xmlns="http://www.w3.org/1999/xhtml">
-                    window.onload = function() {
-                      if (false) {
-                        JOT_setMobilePreview();
-                      }
-                      var loadTimer = window.jstiming.load;
-                      loadTimer.tick("ol");
-                      loadTimer["name"] = "load," + webspace.page.type + ",user_page";
-                      window.jstiming.report(loadTimer, {}, 'https://gg.google.com/csi');
-                    }
-                  </script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-        JOT_insertAnalyticsCode(false,
-            false);
-      </script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-    var maestroRunner = new gsites.pages.view.SitesMaestroRunner(
-        webspace, "en");
-    maestroRunner.initListeners();
-    maestroRunner.installEditRender();
-  </script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
-  //<![CDATA[
-    // Decorate any fastUI buttons on the page with a class of 'goog-button'.
-    if (webspace.user.hasWriteAccess) {
-      JOT_decorateButtons();
-    }
+            <hr>
 
-    // Fires delayed events.
-    (function() {
-      JOT_fullyLoaded = true;
-      var delayedEvents = JOT_delayedEvents;
-      for (var x = 0; x < delayedEvents.length; x++) {
-        var event = delayedEvents[x];
-        JOT_postEvent(event.eventName, event.eventSrc, event.payload);
-      }
-      JOT_delayedEvents = null;
-      JOT_postEvent('pageLoaded');
-    })();
-  //]]>
-</script>
-<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
-    JOT_postEvent('decorateGvizCharts');
-  </script>
-<script type="text/javascript">
-          JOT_setupPostRenderingManager();
-        </script>
-<script type="text/javascript">
-          JOT_postEvent('renderPlus', null, 'sites-chrome-main');
-        </script>
-<script type="text/javascript">
-          sites.codeembed.init();
-        </script>
-<div id="server-timer-div" style="display:none"> </div>
-<script type="text/javascript">
-          window.jstiming.load.tick('render');
-          JOT_postEvent('usercontentrendered', this);
-        </script>
+             <section id="selected-pubs" class="publications">
+                <h2>Selected Publications</h2>
+
+                <div class="publication-item">
+                    <p><strong>Faster Cascades via Speculative Decoding</strong>.
+                    <br>
+                    Narasimhan, H., Jitkrittum, W., Rawat, A.S., Kim, S., Gupta, N., Menon, A.K. and Kumar, S.
+                    <br>
+                    In the <em>13th International Conference on Learning Representations (ICLR)</em>, 2025. [<a href="https://openreview.net/pdf?id=vo9t20wsmd">pdf</a>]
+                    <br><span class="highlight-award">Outstanding Paper Honorable Mention Award</span>
+                    <br>
+                    <span class="comment-text">
+                    Part of recent work on <em>speeding up inference with LLMs</em> (<a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/bc8f76d9caadd48f77025b1c889d2e2d-Paper-Conference.pdf">NeurIPS 2022</a>, <a href="https://openreview.net/pdf?id=4KZhZJSPYU">NeurIPS 2023</a>, <a href="https://openreview.net/pdf?id=KgaBScZ4VI">ICLR 2024a</a>).<br> Required revisiting the classical problem of <em>learning to abstain</em> for modern settings (<a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/bc8f76d9caadd48f77025b1c889d2e2d-Paper-Conference.pdf">NeurIPS 2022</a>, <a href="https://openreview.net/pdf?id=ta26LtNq2r">ICLR 2024b</a> <span class="highlight-spotlight">Spotlight</span>, <a href="https://openreview.net/pdf?id=DASh78rJ7g">ICLR 2024c</a>).
+                    </span></p>
+                </div>
+
+                <div class="publication-item">
+                    <p><strong>Robust Optimization for Fairness with Noisy Protected Groups</strong>.
+                    <br>
+                    Wang, S., Guo, W., Narasimhan, H., Cotter, A., Gupta, M. and Jordan, M.I.
+                    <br>
+                    In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2020. [<a href="https://proceedings.neurips.cc/paper/2020/file/37d097caf1299d9aa79c2c2b843d2d78-Paper.pdf?id=vo9t20wsmd">pdf</a>]
+                    <br>
+                    <span class="comment-text">
+                    Part of work on <em>robust algorithms for fairness and long-tail</em> settings.<br> Feel free to also see <a href="https://papers.neurips.cc/paper_files/paper/2021/file/9713faa264b94e2bf346a1bb52587fd8-Paper.pdf">NeurIPS 2021</a>, <a href="https://openreview.net/pdf?id=HbtFCX2PLq0">ICLR 2022</a> (<span class="highlight-spotlight">Spotlight</span>), <a href="https://openreview.net/pdf?id=3KUfbI9_DQE">ICLR 2023</a>, <a href="https://proceedings.mlr.press/v216/wang23e/wang23e.pdf">UAI 2023</a>.
+                    </span></p>
+                </div>
+
+                <div class="publication-item">
+                    <p><strong>On Making Stochastic Classifiers Deterministic</strong>.
+                    <br>
+                    Cotter, A., Narasimhan, H., and Gupta, M.
+                    <br>
+                    In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2019. [<a href="https://papers.nips.cc/paper_files/paper/2019/file/5fc34ed307aac159a30d81181c99847e-Paper.pdf">pdf</a>]
+                    <br><span class="highlight-oral">Oral presentation</span>
+                    <br>
+                    <span class="comment-text">
+                    One of my favorite papers from work on <em>constrained optimization</em> for ML training (open-sourced as the <a href="https://github.com/google-research/tensorflow_constrained_optimization/blob/master/README.md">TFCO</a> library).<br> Feel free to also see <a href="https://papers.nips.cc/paper_files/paper/2019/file/3ce257b311e5acf849992f5a675188e8-Paper.pdf">NeruIPS 2019b</a> (<span class="highlight-oral">Oral</span>), <a href="https://proceedings.neurips.cc/paper_files/paper/2020/file/62db9e3397c76207a687c360e0243317-Paper.pdf">NeurIPS 2020</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/5970/5826">AAAI 2020</a>.
+                    </span></p>
+                </div>
+
+                <div class="publication-item">
+                    <p><strong>Optimal Auctions through Deep Learning</strong>.
+                    <br>
+                    Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S.
+                    <br>
+                    In Proceedings of the <em>36th International Conference on Machine Learning (ICML)</em>, 2019. [<a href="https://proceedings.mlr.press/v97/duetting19a/duetting19a.pdf">pdf</a>]
+                    <br>
+                    <span class="highlight-oral">Oral Presentation</span>
+                    <br>
+                    Invited Research Highlight, <em>Communications of the ACM (CACM)</em>, 64(8):109-116, 2021.
+                    Longer version in the <em>Journal of the ACM (JACM)</em>, 71(1): 1-53, 2024. [<a href="https://arxiv.org/pdf/1706.03459">pdf</a>]
+                    <br>
+                    <span class="comment-text">
+                    Culmination of work on <em>machine learning for mechanism design</em> (e.g., <a href="https://papers.nips.cc/paper_files/paper/2015/file/4a2ddf148c5a9c42151a529e8cbdcc06-Paper.pdf">NeurIPS 2015</a>, <a href="https://dl.acm.org/doi/abs/10.5555/3237383.3237439">AAMAS 2018</a>).
+                    </span></p>
+                </div>
+
+                 <div class="publication-item">
+                    <p><strong>Learning with Complex Loss Functions and Constraints</strong>.
+                    <br>
+                    Narasimhan, H.
+                    <br>
+                    In <em>Proceedings of the 21st International Conference on Artificial Intelligence and Statistics (AISTATS)</em>, 2018. [<a href="https://proceedings.mlr.press/v84/narasimhan18a/narasimhan18a.pdf">pdf</a>]
+                    <br>
+                    <span class="highlight-oral">Oral presentation</span>
+                    <br>
+                    Longer version in the <em>Journal of Machine Learning Research (JMLR)</em>, 25(367):1−81, 2024. [<a href="https://www.jmlr.org/papers/volume25/22-1137/22-1137.pdf">pdf</a>]
+                    <br>
+                    <span class="comment-text">
+                    Culmination of work on <em>consistent algorithms for complex classification tasks</em>.<br> Feel free to also see <a href="https://proceedings.neurips.cc/paper_files/paper/2014/file/3644e33a5161ec5f3997a6acb98d4447-Paper.pdf">NeurIPS 2014</a>, <a href="https://proceedings.mlr.press/v37/narasimhanb15.pdf">ICML 2015</a>, <a href="https://proceedings.neurips.cc/paper/2020/file/eab1bceaa6c5823d7ed86cfc7a8bd824-Paper.pdf">NeurIPS 2020</a>.
+                    </span></p>
+                 </div>
+
+                <div class="publication-item">
+                    <p><strong>Optimizing Non-decomposable Performance Measures: A Tale of Two Classes</strong>.
+                    <br>
+                    Narasimhan, H., Kar, P.,  and Jain, P.
+                    <br>
+                    In <em>Proceedings of the 32nd International Conference on Machine Learning (ICML)</em>, 2015. [<a href="https://proceedings.mlr.press/v37/narasimhana15.pdf">pdf</a>]
+                    <br>
+                    <span class="comment-text">
+                    One among several papers on <em>optimization of non-decomposable objectives</em> (e.g., precision@K).<br> Feel free to also see <a href="https://proceedings.neurips.cc/paper_files/paper/2014/file/9638ddfc7e3d56a611292c1578b19ff8-Paper.pdf">NeurIPS 2014</a>, <a href="https://proceedings.mlr.press/v37/kar15.pdf">ICML 2015</a>, <a href="https://www.kdd.org/kdd2016/papers/files/rpp0387-karAemb.pdf">KDD 2016</a>, <a href="https://proceedings.mlr.press/v139/kumar21b/kumar21b.pdf">ICML 2021</a>.
+                    </span></p>
+                 </div>
+
+                 <div class="publication-item">
+                     <p><strong>Predicting Clinical Response to Anticancer Drugs Using an Ex Vivo Platform that Captures Tumour Heterogeneity</strong>.
+                    <br>
+                    Majumder, B., Baraneedharan, U., Thiyagarajan, S., Radhakrishnan, P., Narasimhan, H., Dhandapani, M., Brijwani, N., Pinto,
+                    D.D., Prasath, A., Shanthappa, B.U., Thayakumar, A., Surendran, R.,
+                    Babu, G., Shenoy, A.M., Kuriakose, M.A., Bergthold, G., Horowitz, P.,
+                    Loda, M., Beroukhim, R., Agarwal, S., Sengupta, S., Sundaram, M. and
+                    Majumder, P.K.
+                    <br>
+                    <em>Nature Communications</em>, 6:6169, 2015.
+                    [<a href="http://www.nature.com/ncomms/2015/150227/ncomms7169/pdf/ncomms7169.pdf" rel="nofollow">paper</a>]
+                    <br><span class="comment-text">[Featured in <a href="http://www.businesswire.com/news/home/20150302006933/en/Mitra-Biotech-CANScript-Platform-Validated-Personalized-Cancer#.VYawzqBzOfQ" rel="nofollow">Business Wire</a>, <a href="https://www.genomeweb.com/companion-diagnostics/paper-describes-development-validation-mitra-biotechs-ex-vivo-platform" rel="nofollow">Genome Web</a>, <a href="http://www.cio.com.au/article/569280/machine-learning-used-predict-clinical-response-anti-cancer-drugs/" rel="nofollow">CIO</a>, <a href="http://www.telegraphindia.com/1150228/jsp/nation/story_5990.jsp#.VUEI8N9sabl" rel="nofollow">The Telegraph</a>]</span> <!-- Removed <br> before next comment -->
+                    <span class="comment-text">
+                    A real-world application of the algorithms we developed for <em>ranking with (partial) AUC</em> in <a href="http://proceedings.mlr.press/v28/narasimhan13.pdf">ICML 2013</a>, <a href="https://dl.acm.org/doi/10.1145/2487575.2487674">KDD 2013</a>, <a href="https://direct.mit.edu/neco/article-abstract/29/7/1919/8293/Support-Vector-Algorithms-for-Optimizing-the?redirectedFrom=fulltext">NeuralComp 2017</a>.<br> Feel free to also see <a href="https://papers.nips.cc/paper_files/paper/2013/file/05311655a15b75fab86956663e1819cd-Paper.pdf">NeurIPS 2013</a> (<span class="highlight-spotlight">Spotlight</span>), <a href="https://arxiv.org/pdf/2504.11284">ICML 2025</a>.
+                    </span></p>
+                </div>
+            </section>
+
+            <hr>
+
+             <section id="service">
+                <h2>Professional Service</h2>
+                <p><strong>Senior Area Chair:</strong> NeurIPS 2024, 2025</p>
+                <p><strong>Area Chair:</strong> ICML 2023, 2024, 2025; NeurIPS 2021, 2022, 2023</p>
+                <p><strong>Conference Reviewing:</strong> NeurIPS 2018 (<span class="highlight-review">top 200</span>), 2019 (<span class="highlight-review">top 400</span>), 2020 (<span class="highlight-review">top 10%</span>); ICML 2020 (<span class="highlight-review">top 33%</span>); ICLR 2021, 2022, 2023, 2024; FAccT 2021, 2022</p>
+                <p><strong>Journal Reviewing:</strong> JMLR, TPAMI, TEAC, TMLR, JAIR, TKDE, Artificial Intelligence, Pattern Recognition Letters</p>
+            </section>
+
+            <hr>
+
+            <section id="preprints" class="preprints">
+                <h2>Preprints</h2>
+                 <p>Jitkrittum, W., Narasimhan, H., Rawat, A.S., Juneja, J., Wang, Z., Lee, C.-Y., Shenoy, P., Panigrahy, R., Menon, A.K and Kumar, S. <em>Universal Model Routing for Efficient LLM Inference.</em> Manuscript, 2025.
+                <br>
+                [<a href="https://arxiv.org/pdf/2502.08773">arXiv:2502.08773</a>]</p>
+                 <p>Wang, C., Augenstein, S., Rush, K., Jitkrittum, W., Narasimhan, H., Rawat, A.S., Menon, A.K and Go, A. <em>Cascade-Aware Training of Language Models.</em> Manuscript, 2024.
+                <br>
+                [<a href="https://arxiv.org/pdf/2406.00060">arXiv:2406.00060</a>]</p>
+                 <p>Cotter, A., Menon, A.K., Narasimhan, H., Rawat, A.S., Reddi, S.J. and Zhou, Y. <em>Distilling Double Descent</em>. Manuscript, 2021.
+                <br>
+                [<a href="https://arxiv.org/pdf/2102.06849.pdf">arXiv:2102.06849</a>]</p>
+            </section>
+
+            <hr>
+
+            <section id="all-pubs" class="publications">
+                <h2>Publications (By Year)</h2>
+
+                <h4>2025</h4>
+                <p>Lukasik, M., Chen, L., Narasimhan, H., Menon, A.K., Jitkrittum, W., Yu, F., Reddi, S.J., Fu, G., Bateni, M. and Kumar, S. <em>Bipartite Ranking From Multiple Labels: On Loss Versus Label Aggregation</em>. In the 42nd International Conference on Machine Learning (ICML), 2025. <em>To appear</em>.
+                <br>
+                [<a href="https://arxiv.org/pdf/2504.11284">arXiv:2504.11284</a>]</p>
+                <p>Narasimhan, H., Jitkrittum, W., Rawat, A.S., Kim, S., Gupta, N., Menon, A.K. and Kumar, S. <em>Faster Cascades via Speculative Decoding</em>. In the 13th International Conference on Learning Representations (ICLR), 2025.
+                [<a href="https://openreview.net/pdf?id=vo9t20wsmd">pdf</a>]
+                <br><span class="highlight-award">Outstanding Paper Honorable Mention Award</span> <span class="highlight-oral">Oral Presentation</span>
+                </p>
+                <p>Lukasik, M., Meng, Z., Narasimhan, H., Menon, A.K., Chang, Y.-W., Yu, F. and Kumar, S. <em>Better Autoregressive Regression with LLMs</em>. In the 13th International Conference on Learning Representations (ICLR), 2025.
+                [<a href="https://openreview.net/pdf?id=xGs7Ch3Vyo">pdf</a>]
+                <br><span class="highlight-spotlight">Spotlight presentation</span></p>
+
+                <h4>2024</h4>
+                <p>Narasimhan, H., Ramaswamy, H.G., Tavker, S.K., Khurana, D., Netrapalli, P. and Agarwal, S. <em>Consistent Multiclass Algorithms for Complex Metrics and Constraints</em>.
+                <br>
+                <em>Journal of Machine Learning Research (JMLR)</em>, 25(367):1−81, 2024.</p>
+                <p>Lukasik, M., Narasimhan, H., Menon, A.K., Yu, F. and Kumar, S. <em>Regression-aware Inference with LLMs</em>. In Findings of the Association for Computational Linguistics: EMNLP 2024.</p>
+                <p>Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S. <em>Optimal Auctions through Deep Learning: Advances in Differentiable Economics</em>.
+                <br>
+                <em>Journal of the ACM (JACM)</em>, 71(1): 1-53, 2024.</p>
+                <p>Narasimhan, H., Menon, A.K., Jitkrittum, W., Gupta, N., and Kumar, S. <em>Learning to Reject Meets Long-tail Learning</em>. In the 12th International Conference on Learning Representations (ICLR), 2024.
+                <br><span class="highlight-spotlight">Spotlight presentation</span></p>
+                <p>Gupta, N., Narasimhan, H., Jitkrittum, W., Rawat, A.S., Menon, A.K., and Kumar, S. <em>Language Model Cascades: Token-Level Uncertainty And Beyond</em>. In the 12th International Conference on Learning Representations (ICLR), 2024.</p>
+                <p>Narasimhan, H., Menon, A.K., Jitkrittum, W., and Kumar, S. <em>Post-hoc Estimators for Selective Classification and OOD Detection</em>. In the 12th International Conference on Learning Representations (ICLR), 2024.</p>
+
+                <h4>2023</h4>
+                 <p>Jitkrittum, W., Gupta, N., Menon, A.K., Narasimhan, H., Rawat, A.S., Kumar, S. <em>When Does Confidence-Based Cascade Deferral Suffice</em>? In Advances in Neural Information Processing Systems (NeurIPS), 2023.</p>
+                 <p>Wang, S., Narasimhan, N., Zhou, Y., Hooker, S., Lukasik, M., Menon, A.K. <em>Robust Distillation for Worst-class Performance</em>. In the 39th Conference on Uncertainty in Artificial Intelligence (UAI), 2023.</p>
+                 <p>Wei, J., Narasimhan, H., Amid, E., Chu, W.-S., Liu, Y., and Kumar, A. <em>Distributionally Robust Post-hoc Classifiers under Prior Shifts</em>. In the 11th International Conference on Learning Representations (ICLR), 2023.</p>
+
+                <h4>2022</h4>
+                 <p>Narasimhan, H., Menon, A.K., Jitkrittum, W., Rawat, A. S. and Kumar, S. <em>Post-hoc Estimators for Learning to Defer to an Expert</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2022.</p>
+                 <p>Hiranandani, G., Mathur, J., Narasimhan, H., and Koyejo, O. <em>Quadratic Metric Elicitation for Fairness and Beyond</em>. In the 38th Conference on Uncertainty in Artificial Intelligence (UAI), 2022.
+                <br><span class="highlight-oral">Oral presentation</span></p>
+                 <p>Jiang, H., Narasimhan, H., Bahri, D., Cotter, A. and Rostamizadeh, A. <em>Churn Reduction via Distillation</em>. In the 10th International Conference on Learning Representations (ICLR), 2022.
+                <br><span class="highlight-spotlight">Spotlight presentation</span></p>
+
+                <h4>2021</h4>
+                <p>Narasimhan, H. and Menon, A.K. <em>Training Over-parameterized Models with Non-decomposable Metrics</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2021.</p>
+                <p>Hiranandani, G., Mathur, J., Narasimhan, H., Fard, M.M. amd Koyejo, O. <em>Optimizing Black-box Metrics with Iterative Example Weighting</em>. In the 38th International Conference on Machine Learning (ICML), 2021.</p>
+                <p>Kumar, A., Narasimhan, H., and Cotter, A. <em>Implicit Rate-constrained Optimization of Non-decomposable Objectives</em>. In the 38th International Conference on Machine Learning (ICML), 2021.</p>
+                <p>Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S. <em>Optimal Auctions through Deep Learning</em>.
+                <br>
+                Invited Research Highlight, <em>Communications of the ACM (CACM)</em>, 64(8):109-116, 2021.</p>
+
+                <h4>2020</h4>
+                 <p>Wang, S., Guo, W., Narasimhan, H., Cotter, A., Gupta, M. and Jordan, M.I. <em>Robust Optimization for Fairness with Noisy Protected Groups</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2020.</p>
+                 <p>Narasimhan, H., Cotter, A., Zhou, Y., Wang, S., Guo, W. <em>Approximate Heavily-constrained Learning with Lagrange Multiplier Models</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2020.</p>
+                 <p>Hiranandani, G., Narasimhan, H., and Koyejo, O. <em>Fair Performance Metric Elicitation</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2020.</p>
+                 <p>Tavker, S.K., Ramaswamy, H.G., and Narasimhan, H. <em>Consistent Plug-in Classifiers for Complex Objectives and Constraints</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2020.</p>
+                 <p>Jiang, Q., Adigun, O., Narasimhan, H., Fard, M.M., and Gupta M. <em>Optimizing Black-box Metrics with Adaptive Surrogates</em>. In Proceedings of the 37th International Conference on Machine Learning (ICML), 2020.</p>
+                 <p>Narasimhan, H., Cotter, A., Gupta, M., and Wang, S. <em>Pairwise Fairness for Ranking and Regression</em>. In Proceedings of the 34th AAAI Conference on Artificial Intelligence (AAAI)</em>, 2020.</p>
+
+                <h4>2019</h4>
+                 <p>Narasimhan, H., Cotter, A., and Gupta, M. <em>Optimizing Generalized Rate Metrics with Three Players</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2019.
+                <br><span class="highlight-oral">Oral presentation</span></p>
+                 <p>Cotter, A., Narasimhan, H., and Gupta, M. <em>On Making Stochastic Classifiers Deterministic</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2019.
+                <br><span class="highlight-oral">Oral presentation</span></p>
+                 <p>Zhao, S., Fard, M.M., Narasimhan, H. and Gupta, M. <em>Metric-optimized Example Weights</em>. In Proceedings of the 36th International Conference on Machine Learning (ICML)</em>, 2019.</p>
+                 <p>Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S. <em>Optimal Auctions through Deep Learning</em>. In Proceedings of the 36th International Conference on Machine Learning (ICML), 2019.</p>
+                 <p>Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S. <em>Machine Learning for Optimal Economic Design</em>.
+                <br>
+                <em>The Future of Economic Design</em>, Springer, 2019.</p>
+
+                <h4>2018</h4>
+                <p>Narasimhan, H. <em>Learning with Complex Loss Functions and Constraints</em>. In Proceedings of the 21st International Conference on Artificial Intelligence and Statistics (AISTATS), 2018.
+                <br><span class="highlight-oral">Oral presentation</span></p>
+                <p>Golowich, N., Narasimhan, H. and Parkes, D.C. <em>Deep Learning for Multi-Facility Location Mechanism Design</em>. In Proceedings of the 27th International Joint Conference on Artificial Intelligence (IJCAI), 2018.</p>
+                <p>Feng, Z., Narasimhan, H. and Parkes, D.C. <em>Deep Learning for Revenue-Optimal Auctions with Budgets.</em> In Proceedings of the 17th International Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2018.</p>
+
+                <h4>2017</h4>
+                <p>Narasimhan, H. and Agarwal, S. <em>Support Vector Algorithms for Optimizing the Partial Area Under the ROC curve</em>.
+                <br>
+                <em>Neural Computation</em>, 29(7):1919-1963, 2017.</p>
+
+                <h4>2016</h4>
+                <p>Narasimhan, H., Pan, W., Kar, P., Protopapas, P. and Ramaswamy, H.G. <em>Optimizing the multiclass F-measure via biconcave programming</em>. In Proceedings of the 16th IEEE International Conference on Data Mining (ICDM). 2016.</p>
+                <p>Kar, P., Li, S., Narasimhan, H., Chawla, S. and Sebastiani, F. <em>Online optimization methods for the quantification problem</em>. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge, Discovery and Data Mining (KDD), 2016.</p>
+                <p>Narasimhan, H., Agarwal, S. and Parkes, D.C. <em>Automated Mechanism Design without Money via Machine Learning</em>. In Proceedings of the 25th International Joint Conference on Artificial Intelligence (IJCAI), 2016.</p>
+                <p>Narasimhan, H., and Parkes, D.C. <em>A General Statistical Framework for Designing Strategy-proof Assignment Mechanisms</em>. In Proceedings of the Conference on Uncertainty in Artificial Intelligence (UAI), 2016. </p>
+
+                <h4>2015</h4>
+                <p>Narasimhan, H., Parkes, D.C. and Singer, Y. <em>Learnability of influence in networks</em>. In Advances in Neural Information Processing Systems (NIPS), 2015.</p>
+                <p>Ahmed, S., Narasimhan, H. and Agarwal, S. <em>Bayes optimal feature selection for supervised learning with general performance measures</em>. In Proceedings of the 31st Conference on Uncertainty in Artificial Intelligence (UAI), 2015.</p>
+                <p>Majumder, B., Baraneedharan, U., Thiyagarajan, S., Radhakrishnan, P., Narasimhan, H., Dhandapani, M., Brijwani, N., Pinto, D.D., Prasath, A., Shanthappa, B.U., Thayakumar, A., Surendran, R., Babu, G., Shenoy, A.M., Kuriakose, M.A., Bergthold, G., Horowitz, P., Loda, M., Beroukhim, R., Agarwal, S., Sengupta, S., Sundaram, M. and Majumder, P.K. <em>Predicting clinical response to anticancer drugs using an ex vivo platform that captures tumour heterogeneity</em>.
+                <br>
+                <em>Nature Communications, 6:6169, 2015</em>.</p>
+                <p>Narasimhan, H.*, Ramaswamy, H.G.*, Saha, A. and Agarwal, S. <em>Consistent multiclass algorithms for complex performance measures</em>. In Proceedings of the 32nd International Conference on Machine Learning (ICML), 2015. <br>(*both authors contributed equally to the paper)</p>
+                <p>Narasimhan, H., Kar, P., and Jain, P. <em>Optimizing non-decomposable performance measures: A tale of two classes</em>. In Proceedings of the 32nd International Conference on Machine Learning (ICML), 2015.</p>
+                <p>Kar, P., Narasimhan, H., and Jain, P. <em>Surrogate functions for maximizing precision at the top</em>. In Proceedings of the 32nd International Conference on Machine Learning (ICML), 2015.</p>
+
+                <h4>2014</h4>
+                <p>Narasimhan, H.*, Vaish, R.* and Agarwal, S., <em>On the statistical consistency of plug-in classifiers for non-decomposable performance measures</em>. In Advances in Neural Information Processing Systems (NIPS), 2014.<br>(*both authors contributed equally to the paper)</p>
+                <p>Kar, P., Narasimhan, H., and Jain, P. <em>Online and stochastic gradient methods for non-decomposable loss functions</em>. In Advances in Neural Information Processing Systems (NIPS), 2014.</p>
+                <p>Saha, A., Dewangan, C., Narasimhan, H., Sriram, S., and Agarwal, S. <em>Learning score systems for patient mortality prediction in intensive care units via orthogonal matching pursuit</em>. In Proceedings of the 13th International Conference on Machine Learning and Applications (ICMLA), 2014.</p>
+                <p>Agarwal, A., Narasimhan, H., Kalyanakrishnan, S. and Agarwal, S., <em>GEV-canonical regression for accurate binary class probability estimation when one class is rare</em>. In Proceedings of the 31st International Conference on Machine Learning (ICML), 2014. </p>
+
+                <h4>2013</h4>
+                <p>Narasimhan, H. and Agarwal, S., <em>On the relationship between binary classification, bipartite ranking, and binary class probability estimation</em>. In Advances in Neural Information Processing Systems (NIPS), 2013.
+                <br><span class="highlight-spotlight">Spotlight presentation</span></p>
+                <p>Narasimhan, H. and Agarwal, S., <em>SVM_pAUC^tight: A new support vector method for optimizing partial AUC based on a tight convex upper bound</em>. In Proceedings of the 19th ACM SIGKDD Conference on Knowledge, Discovery and Data Mining (KDD), 2013.</p>
+                <p>Menon, A. K., Narasimhan, H., Agarwal, S. and Chawla, S., <em>On the statistical consistency of algorithms for binary classification under class imbalance</em>. In Proceedings of the 30th International Conference on Machine Learning (ICML), 2013.
+                <br>
+                [<a href="http://proceedings.mlr.press/v28/menon13a.pdf">paper</a>]
+                [<a href="http://proceedings.mlr.press/v28/menon13a-supp.pdf">supplementary material</a>]</p>
+                <p>Narasimhan, H. and Agarwal, S., <em>A structural SVM based approach for optimizing partial AUC</em>. In Proceedings of the 30th International Conference on Machine Learning (ICML), 2013.
+                <br>
+                [<a href="http://proceedings.mlr.press/v28/narasimhan13.pdf">paper</a>]
+                [<a href="http://proceedings.mlr.press/v28/narasimhan13-supp.pdf">supplementary material</a>]</p>
+
+            </section>
+
+
+        </main>
+
+        <footer>
+            <!-- Optional footer content -->
+        </footer>
+    </div> <!-- /container -->
+
 </body>
 </html>
