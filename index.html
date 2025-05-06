@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +31,7 @@
         body {
             font-family: 'Lato', sans-serif;
             line-height: 1.7;
-            color: #444;
+            color: #444; /* Default text color */
             background-color: #f4f7f6;
             padding: 1em;
             font-size: 16px;
@@ -75,8 +76,8 @@
         h2 {
             color: #34495e;
             border-bottom: 2px solid #eef1f2;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
             font-size: 1.8em;
             font-weight: 700;
         }
@@ -114,12 +115,12 @@
             align-items: flex-start;
             gap: 30px;
             margin-bottom: 0px;
-            margin-top: 5px; /* Added significant space above */
+            margin-top: 15px; /* Added significant space above */
         }
 
         .profile-pic-container {
             flex: 0 0 220px;
-            margin-top: 10px;
+            margin-top: 28px;
             text-align: center;
             /* Removed top margin here, handled by section margin */
         }
@@ -270,28 +271,48 @@
         }
 
 
-        /* Publications & Highlights */
-        .publications p, .preprints p, #all-pubs p { /* Apply to all publication lists */
-             margin-bottom: 18px;
-             padding-bottom: 15px;
-             border-bottom: 1px solid #f0f0f0;
+        /* Publications Formatting */
+        .publications p, .preprints p {
+             margin-bottom: 18px; /* Space between publication entries */
+             padding-bottom: 15px; /* Space before the border */
+             border-bottom: 1px solid #f0f0f0; /* Separator line */
+             line-height: 1.6; /* Adjust line height within entry */
         }
-        .publications p:last-child, .preprints p:last-child, #all-pubs p:last-child {
+        .publications p:last-child, .preprints p:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
+        /* Ensure nested elements don't add extra margin */
+        .publications p strong, .publications p em, .publications p a, .publications p span,
+        .preprints p strong, .preprints p em, .preprints p a, .preprints p span {
+             display: inline; /* Avoid block display for nested elements */
+             margin: 0;
+             padding: 0;
+        }
+         #all-pubs p br, #preprints p br { /* Apply consistent line break spacing */
+             content: "";
+             display: block;
+             margin-bottom: 0.2em; /* Small space between lines */
+         }
+
 
         /* Styling for Selected Publications items (inside #research) */
         #research .publication-item p {
             margin-bottom: 25px;
             padding-bottom: 20px;
             border-bottom: 1px solid #f0f0f0; /* Ensure border is present */
+            line-height: 1.6; /* Ensure consistent line height */
         }
         #research .publication-item:last-child p {
              border-bottom: none;
              margin-bottom: 0;
              padding-bottom: 0;
+        }
+        #research .publication-item p br {
+             content: "";
+             display: block;
+             margin-bottom: 0.2em; /* Small space between lines */
         }
 
 
@@ -301,8 +322,8 @@
         .highlight-spotlight {
             font-weight: bold;
             /* Removed padding, border-radius, background-color */
-            display: inline-block; /* Keep inline-block for potential spacing */
-            margin: 2px 2px 3px 0; /* Adjusted margin slightly */
+            display: inline; /* Changed to inline */
+            margin: 0 3px 0 0; /* Adjusted margin */
             color: #8B008B; /* Dark Magenta - distinct color */
         }
 
@@ -312,15 +333,21 @@
              font-style: italic;
         }
 
+        /* Author Highlight Style */
+        .highlight-author {
+            color: #00695C; /* Dark Teal - more visible but still professional */
+            font-weight: 500; /* Semi-bold if font supports it */
+        }
+
         /* Comment Text Styling */
         .comment-text {
             color: #667;
             font-size: 0.9em;
-            display: block;
-            margin-top: 12px;
+            display: block; /* Keep as block for separation */
+            margin-top: 8px; /* Reduced top margin */
             padding-left: 0;
             border-left: none;
-            line-height: 1.6;
+            line-height: 1.5; /* Slightly reduced line height */
         }
          .comment-text br {
              content: "";
@@ -331,11 +358,12 @@
 
         em {
             font-style: italic;
-            color: #555;
+            color: #555; /* Ensure emphasis color is consistent */
         }
 
-        strong {
+        strong { /* Style for explicitly bolded text like titles */
             font-weight: 700;
+            color: #333; /* Slightly darker for titles */
         }
 
         /* Responsive Design */
@@ -401,6 +429,9 @@
             .page-nav {
                 margin-top: 15px;
             }
+            .publications p, .preprints p {
+                 line-height: 1.5; /* Adjust line height on smaller screens */
+            }
 
         }
 
@@ -423,10 +454,14 @@
             }
              .comment-text {
                  font-size: 0.88em;
+                 margin-top: 6px;
             }
              .hobby-text {
                  margin-top: 1em;
                  margin-bottom: 0.8em;
+            }
+            #all-pubs p br, #preprints p br, #research .publication-item p br {
+                 margin-bottom: 0.1em; /* Tighter line breaks on mobile */
             }
 
         }
@@ -504,103 +539,100 @@
                  <h3>Selected Publications</h3>
                  <div class="publications">
                      <div class="publication-item">
-                         <p><strong>Faster Cascades via Speculative Decoding</strong>.
-                         <br>
-                         Narasimhan, H., Jitkrittum, W., Rawat, A.S., Kim, S., Gupta, N., Menon, A.K. and Kumar, S.
-                         <br>
-                         In the <em>13th International Conference on Learning Representations (ICLR)</em>, 2025. [<a href="https://openreview.net/pdf?id=vo9t20wsmd">pdf</a>]
-                         <br><span class="highlight-award">Outstanding Paper Honorable Mention Award</span>
-                         <br>
-                         <span class="comment-text">
-                         Part of recent work on <em>speeding up inference with LLMs</em> (<a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/bc8f76d9caadd48f77025b1c889d2e2d-Paper-Conference.pdf">NeurIPS 2022</a>, <a href="https://openreview.net/pdf?id=4KZhZJSPYU">NeurIPS 2023</a>, <a href="https://openreview.net/pdf?id=KgaBScZ4VI">ICLR 2024a</a>).<br> Required revisiting the classical problem of <em>learning to abstain</em> for modern settings (<a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/bc8f76d9caadd48f77025b1c889d2e2d-Paper-Conference.pdf">NeurIPS 2022</a>, <a href="https://openreview.net/pdf?id=ta26LtNq2r">ICLR 2024b</a> <span class="highlight-spotlight">Spotlight</span>, <a href="https://openreview.net/pdf?id=DASh78rJ7g">ICLR 2024c</a>).
-                         </span></p>
+                          <p><span class="highlight-author">Narasimhan, H.</span>, Jitkrittum, W., Rawat, A.S., Kim, S., Gupta, N., Menon, A.K. and Kumar, S.
+                          <br>
+                          <strong>Faster Cascades via Speculative Decoding</strong>.
+                          <br>
+                          In the <em>13th International Conference on Learning Representations (ICLR)</em>, 2025. [<a href="https://openreview.net/pdf?id=vo9t20wsmd">pdf</a>]
+                          <br><span class="highlight-award">Outstanding Paper Honorable Mention Award</span>
+                          <br>
+                          <span class="comment-text">
+                          Part of recent work on <em>speeding up inference with LLMs</em> (<a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/bc8f76d9caadd48f77025b1c889d2e2d-Paper-Conference.pdf">NeurIPS 2022</a>, <a href="https://openreview.net/pdf?id=4KZhZJSPYU">NeurIPS 2023</a>, <a href="https://openreview.net/pdf?id=KgaBScZ4VI">ICLR 2024a</a>).<br> Required revisiting the classical problem of <em>learning to abstain</em> for modern settings (<a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/bc8f76d9caadd48f77025b1c889d2e2d-Paper-Conference.pdf">NeurIPS 2022</a>, <a href="https://openreview.net/pdf?id=ta26LtNq2r">ICLR 2024b</a> <span class="highlight-spotlight">Spotlight</span>, <a href="https://openreview.net/pdf?id=DASh78rJ7g">ICLR 2024c</a>).
+                          </span></p>
                      </div>
 
                      <div class="publication-item">
-                         <p><strong>Robust Optimization for Fairness with Noisy Protected Groups</strong>.
-                         <br>
-                         Wang, S., Guo, W., Narasimhan, H., Cotter, A., Gupta, M. and Jordan, M.I.
-                         <br>
-                         In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2020. [<a href="https://proceedings.neurips.cc/paper/2020/file/37d097caf1299d9aa79c2c2b843d2d78-Paper.pdf?id=vo9t20wsmd">pdf</a>]
-                         <br>
-                         <span class="comment-text">
-                         Part of work on <em>robust algorithms for fairness and long-tail</em> settings.<br> Feel free to also see <a href="https://papers.neurips.cc/paper_files/paper/2021/file/9713faa264b94e2bf346a1bb52587fd8-Paper.pdf">NeurIPS 2021</a>, <a href="https://openreview.net/pdf?id=HbtFCX2PLq0">ICLR 2022</a> (<span class="highlight-spotlight">Spotlight</span>), <a href="https://openreview.net/pdf?id=3KUfbI9_DQE">ICLR 2023</a>, <a href="https://proceedings.mlr.press/v216/wang23e/wang23e.pdf">UAI 2023</a>.
-                         </span></p>
+                          <p>Wang, S., Guo, W., <span class="highlight-author">Narasimhan, H.</span>, Cotter, A., Gupta, M. and Jordan, M.I.
+                          <br>
+                          <strong>Robust Optimization for Fairness with Noisy Protected Groups</strong>.
+                          <br>
+                          In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2020. [<a href="https://proceedings.neurips.cc/paper/2020/file/37d097caf1299d9aa79c2c2b843d2d78-Paper.pdf?id=vo9t20wsmd">pdf</a>]
+                          <br>
+                          <span class="comment-text">
+                          Part of work on <em>robust algorithms for fairness and long-tail</em> settings.<br> Feel free to also see <a href="https://papers.neurips.cc/paper_files/paper/2021/file/9713faa264b94e2bf346a1bb52587fd8-Paper.pdf">NeurIPS 2021</a>, <a href="https://openreview.net/pdf?id=HbtFCX2PLq0">ICLR 2022</a> (<span class="highlight-spotlight">Spotlight</span>), <a href="https://openreview.net/pdf?id=3KUfbI9_DQE">ICLR 2023</a>, <a href="https://proceedings.mlr.press/v216/wang23e/wang23e.pdf">UAI 2023</a>.
+                          </span></p>
                      </div>
 
                      <div class="publication-item">
-                         <p><strong>On Making Stochastic Classifiers Deterministic</strong>.
-                         <br>
-                         Cotter, A., Narasimhan, H., and Gupta, M.
-                         <br>
-                         In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2019. [<a href="https://papers.nips.cc/paper_files/paper/2019/file/5fc34ed307aac159a30d81181c99847e-Paper.pdf">pdf</a>]
-                         <br><span class="highlight-oral">Oral presentation</span>
-                         <br>
-                         <span class="comment-text">
-                         One of my favorite papers from work on <em>constrained optimization</em> for ML training (open-sourced as the <a href="https://github.com/google-research/tensorflow_constrained_optimization/blob/master/README.md">TFCO</a> library).<br> Feel free to also see <a href="https://papers.nips.cc/paper_files/paper/2019/file/3ce257b311e5acf849992f5a675188e8-Paper.pdf">NeruIPS 2019b</a> (<span class="highlight-oral">Oral</span>), <a href="https://proceedings.neurips.cc/paper_files/paper/2020/file/62db9e3397c76207a687c360e0243317-Paper.pdf">NeurIPS 2020</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/5970/5826">AAAI 2020</a>.
-                         </span></p>
+                          <p>Cotter, A., <span class="highlight-author">Narasimhan, H.</span>, and Gupta, M.
+                          <br>
+                          <strong>On Making Stochastic Classifiers Deterministic</strong>.
+                          <br>
+                          In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2019. [<a href="https://papers.nips.cc/paper_files/paper/2019/file/5fc34ed307aac159a30d81181c99847e-Paper.pdf">pdf</a>]
+                          <br><span class="highlight-oral">Oral presentation</span>
+                          <br>
+                          <span class="comment-text">
+                          One of my favorite papers from work on <em>constrained optimization</em> for ML training (open-sourced as the <a href="https://github.com/google-research/tensorflow_constrained_optimization/blob/master/README.md">TFCO</a> library).<br> Feel free to also see <a href="https://papers.nips.cc/paper_files/paper/2019/file/3ce257b311e5acf849992f5a675188e8-Paper.pdf">NeruIPS 2019b</a> (<span class="highlight-oral">Oral</span>), <a href="https://proceedings.neurips.cc/paper_files/paper/2020/file/62db9e3397c76207a687c360e0243317-Paper.pdf">NeurIPS 2020</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/5970/5826">AAAI 2020</a>.
+                          </span></p>
                      </div>
 
                      <div class="publication-item">
-                         <p><strong>Optimal Auctions through Deep Learning</strong>.
-                         <br>
-                         Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S.
-                         <br>
-                         In Proceedings of the <em>36th International Conference on Machine Learning (ICML)</em>, 2019. [<a href="https://proceedings.mlr.press/v97/duetting19a/duetting19a.pdf">pdf</a>]
-                         <br>
-                         <span class="highlight-oral">Oral Presentation</span>
-                         <br>
-                         Invited Research Highlight, <em>Communications of the ACM (CACM)</em>, 64(8):109-116, 2021.
-                         Longer version in the <em>Journal of the ACM (JACM)</em>, 71(1): 1-53, 2024. [<a href="https://arxiv.org/pdf/1706.03459">pdf</a>]
-                         <br>
-                         <span class="comment-text">
-                         Culmination of work on <em>machine learning for mechanism design</em> (e.g., <a href="https://papers.nips.cc/paper_files/paper/2015/file/4a2ddf148c5a9c42151a529e8cbdcc06-Paper.pdf">NeurIPS 2015</a>, <a href="https://dl.acm.org/doi/abs/10.5555/3237383.3237439">AAMAS 2018</a>).
-                         </span></p>
+                          <p>Duetting, P., Feng, Z., <span class="highlight-author">Narasimhan, H.</span>, Parkes, D.C. and Ravindranath, S.S.
+                          <br>
+                          <strong>Optimal Auctions through Deep Learning</strong>.
+                          <br>
+                          In Proceedings of the <em>36th International Conference on Machine Learning (ICML)</em>, 2019. [<a href="https://proceedings.mlr.press/v97/duetting19a/duetting19a.pdf">pdf</a>]
+                          <br>
+                          <span class="highlight-oral">Oral Presentation</span>
+                          <br>
+                          Invited Research Highlight, <em>Communications of the ACM (CACM)</em>, 64(8):109-116, 2021.
+                          Longer version in the <em>Journal of the ACM (JACM)</em>, 71(1): 1-53, 2024. [<a href="https://arxiv.org/pdf/1706.03459">pdf</a>]
+                          <br>
+                          <span class="comment-text">
+                          Culmination of work on <em>machine learning for mechanism design</em> (e.g., <a href="https://papers.nips.cc/paper_files/paper/2015/file/4a2ddf148c5a9c42151a529e8cbdcc06-Paper.pdf">NeurIPS 2015</a>, <a href="https://dl.acm.org/doi/abs/10.5555/3237383.3237439">AAMAS 2018</a>).
+                          </span></p>
                      </div>
 
                       <div class="publication-item">
-                         <p><strong>Learning with Complex Loss Functions and Constraints</strong>.
-                         <br>
-                         Narasimhan, H.
-                         <br>
-                         In <em>Proceedings of the 21st International Conference on Artificial Intelligence and Statistics (AISTATS)</em>, 2018. [<a href="https://proceedings.mlr.press/v84/narasimhan18a/narasimhan18a.pdf">pdf</a>]
-                         <br>
-                         <span class="highlight-oral">Oral presentation</span>
-                         <br>
-                         Longer version in the <em>Journal of Machine Learning Research (JMLR)</em>, 25(367):1−81, 2024. [<a href="https://www.jmlr.org/papers/volume25/22-1137/22-1137.pdf">pdf</a>]
-                         <br>
-                         <span class="comment-text">
-                         Culmination of work on <em>consistent algorithms for complex classification tasks</em>.<br> Feel free to also see <a href="https://proceedings.neurips.cc/paper_files/paper/2014/file/3644e33a5161ec5f3997a6acb98d4447-Paper.pdf">NeurIPS 2014</a>, <a href="https://proceedings.mlr.press/v37/narasimhanb15.pdf">ICML 2015</a>, <a href="https://proceedings.neurips.cc/paper/2020/file/eab1bceaa6c5823d7ed86cfc7a8bd824-Paper.pdf">NeurIPS 2020</a>.
-                         </span></p>
+                          <p><span class="highlight-author">Narasimhan, H.</span>
+                          <br>
+                          <strong>Learning with Complex Loss Functions and Constraints</strong>.
+                          <br>
+                          In <em>Proceedings of the 21st International Conference on Artificial Intelligence and Statistics (AISTATS)</em>, 2018. [<a href="https://proceedings.mlr.press/v84/narasimhan18a/narasimhan18a.pdf">pdf</a>]
+                          <br>
+                          <span class="highlight-oral">Oral presentation</span>
+                          <br>
+                          Longer version in the <em>Journal of Machine Learning Research (JMLR)</em>, 25(367):1−81, 2024. [<a href="https://www.jmlr.org/papers/volume25/22-1137/22-1137.pdf">pdf</a>]
+                          <br>
+                          <span class="comment-text">
+                          Culmination of work on <em>consistent algorithms for complex classification tasks</em>.<br> Feel free to also see <a href="https://proceedings.neurips.cc/paper_files/paper/2014/file/3644e33a5161ec5f3997a6acb98d4447-Paper.pdf">NeurIPS 2014</a>, <a href="https://proceedings.mlr.press/v37/narasimhanb15.pdf">ICML 2015</a>, <a href="https://proceedings.neurips.cc/paper/2020/file/eab1bceaa6c5823d7ed86cfc7a8bd824-Paper.pdf">NeurIPS 2020</a>.
+                          </span></p>
                       </div>
 
                      <div class="publication-item">
-                         <p><strong>Optimizing Non-decomposable Performance Measures: A Tale of Two Classes</strong>.
-                         <br>
-                         Narasimhan, H., Kar, P.,  and Jain, P.
-                         <br>
-                         In <em>Proceedings of the 32nd International Conference on Machine Learning (ICML)</em>, 2015. [<a href="https://proceedings.mlr.press/v37/narasimhana15.pdf">pdf</a>]
-                         <br>
-                         <span class="comment-text">
-                         One among several papers on <em>optimization of non-decomposable objectives</em> (e.g., precision@K).<br> Feel free to also see <a href="https://proceedings.neurips.cc/paper_files/paper/2014/file/9638ddfc7e3d56a611292c1578b19ff8-Paper.pdf">NeurIPS 2014</a>, <a href="https://proceedings.mlr.press/v37/kar15.pdf">ICML 2015</a>, <a href="https://www.kdd.org/kdd2016/papers/files/rpp0387-karAemb.pdf">KDD 2016</a>, <a href="https://proceedings.mlr.press/v139/kumar21b/kumar21b.pdf">ICML 2021</a>.
-                         </span></p>
+                          <p><span class="highlight-author">Narasimhan, H.</span>, Kar, P.,  and Jain, P.
+                          <br>
+                          <strong>Optimizing Non-decomposable Performance Measures: A Tale of Two Classes</strong>.
+                          <br>
+                          In <em>Proceedings of the 32nd International Conference on Machine Learning (ICML)</em>, 2015. [<a href="https://proceedings.mlr.press/v37/narasimhana15.pdf">pdf</a>]
+                          <br>
+                          <span class="comment-text">
+                          One among several papers on <em>optimization of non-decomposable objectives</em> (e.g., precision@K).<br> Feel free to also see <a href="https://proceedings.neurips.cc/paper_files/paper/2014/file/9638ddfc7e3d56a611292c1578b19ff8-Paper.pdf">NeurIPS 2014</a>, <a href="https://proceedings.mlr.press/v37/kar15.pdf">ICML 2015</a>, <a href="https://www.kdd.org/kdd2016/papers/files/rpp0387-karAemb.pdf">KDD 2016</a>, <a href="https://proceedings.mlr.press/v139/kumar21b/kumar21b.pdf">ICML 2021</a>.
+                          </span></p>
                       </div>
 
                       <div class="publication-item">
-                          <p><strong>Predicting Clinical Response to Anticancer Drugs Using an Ex Vivo Platform that Captures Tumour Heterogeneity</strong>.
-                         <br>
-                         Majumder, B., Baraneedharan, U., Thiyagarajan, S., Radhakrishnan, P., Narasimhan, H., Dhandapani, M., Brijwani, N., Pinto,
-                         D.D., Prasath, A., Shanthappa, B.U., Thayakumar, A., Surendran, R.,
-                         Babu, G., Shenoy, A.M., Kuriakose, M.A., Bergthold, G., Horowitz, P.,
-                         Loda, M., Beroukhim, R., Agarwal, S., Sengupta, S., Sundaram, M. and
-                         Majumder, P.K.
-                         <br>
-                         <em>Nature Communications</em>, 6:6169, 2015.
-                         [<a href="http://www.nature.com/ncomms/2015/150227/ncomms7169/pdf/ncomms7169.pdf" rel="nofollow">paper</a>]
-                         <br><span class="comment-text" style="margin-top: 8px; margin-bottom: 8px;">[Featured in <a href="http://www.businesswire.com/news/home/20150302006933/en/Mitra-Biotech-CANScript-Platform-Validated-Personalized-Cancer#.VYawzqBzOfQ" rel="nofollow">Business Wire</a>, <a href="https://www.genomeweb.com/companion-diagnostics/paper-describes-development-validation-mitra-biotechs-ex-vivo-platform" rel="nofollow">Genome Web</a>, <a href="http://www.cio.com.au/article/569280/machine-learning-used-predict-clinical-response-anti-cancer-drugs/" rel="nofollow">CIO</a>, <a href="http://www.telegraphindia.com/1150228/jsp/nation/story_5990.jsp#.VUEI8N9sabl" rel="nofollow">The Telegraph</a>]</span>
-                         <span class="comment-text">
-                         A real-world application of the algorithms we developed for <em>ranking with (partial) AUC</em> in <a href="http://proceedings.mlr.press/v28/narasimhan13.pdf">ICML 2013</a>, <a href="https://dl.acm.org/doi/10.1145/2487575.2487674">KDD 2013</a>, <a href="https://direct.mit.edu/neco/article-abstract/29/7/1919/8293/Support-Vector-Algorithms-for-Optimizing-the?redirectedFrom=fulltext">NeuralComp 2017</a>.<br> Feel free to also see <a href="https://papers.nips.cc/paper_files/paper/2013/file/05311655a15b75fab86956663e1819cd-Paper.pdf">NeurIPS 2013</a> (<span class="highlight-spotlight">Spotlight</span>), <a href="https://arxiv.org/pdf/2504.11284">ICML 2025</a>.
-                         </span></p>
+                          <p>Majumder, B., Baraneedharan, U., Thiyagarajan, S., Radhakrishnan, P., <span class="highlight-author">Narasimhan, H.</span>, Dhandapani, M., Brijwani, N., Pinto, D.D., Prasath, A., Shanthappa, B.U., Thayakumar, A., Surendran, R., Babu, G., Shenoy, A.M., Kuriakose, M.A., Bergthold, G., Horowitz, P., Loda, M., Beroukhim, R., Agarwal, S., Sengupta, S., Sundaram, M. and Majumder, P.K.
+                          <br>
+                          <strong>Predicting Clinical Response to Anticancer Drugs Using an Ex Vivo Platform that Captures Tumour Heterogeneity</strong>.
+                          <br>
+                          <em>Nature Communications</em>, 6:6169, 2015.
+                          [<a href="http://www.nature.com/ncomms/2015/150227/ncomms7169/pdf/ncomms7169.pdf" rel="nofollow">paper</a>]
+                          <br>  
+                          <span class="comment-text">
+                          Featured in <a href="http://www.businesswire.com/news/home/20150302006933/en/Mitra-Biotech-CANScript-Platform-Validated-Personalized-Cancer#.VYawzqBzOfQ" rel="nofollow">Business Wire</a>, <a href="https://www.genomeweb.com/companion-diagnostics/paper-describes-development-validation-mitra-biotechs-ex-vivo-platform" rel="nofollow">Genome Web</a>, <a href="http://www.cio.com.au/article/569280/machine-learning-used-predict-clinical-response-anti-cancer-drugs/" rel="nofollow">CIO</a>, <a href="http://www.telegraphindia.com/1150228/jsp/nation/story_5990.jsp#.VUEI8N9sabl" rel="nofollow">The Telegraph</a>.<br>
+                          A real-world application of the algorithms we developed for <em>ranking with (partial) AUC</em> in <a href="http://proceedings.mlr.press/v28/narasimhan13.pdf">ICML 2013</a>, <a href="https://dl.acm.org/doi/10.1145/2487575.2487674">KDD 2013</a>, <a href="https://direct.mit.edu/neco/article-abstract/29/7/1919/8293/Support-Vector-Algorithms-for-Optimizing-the?redirectedFrom=fulltext">NeuralComp 2017</a>.<br> Feel free to also see <a href="https://papers.nips.cc/paper_files/paper/2013/file/05311655a15b75fab86956663e1819cd-Paper.pdf">NeurIPS 2013</a> (<span class="highlight-spotlight">Spotlight</span>), <a href="https://arxiv.org/pdf/2504.11284">ICML 2025</a>.
+                          </span></p>
                      </div>
                  </div>
                  <!-- End Selected Publications Subsection -->
@@ -620,15 +652,29 @@
 
             <section id="preprints" class="preprints">
                 <h2>Preprints</h2>
-                 <p>Jitkrittum, W., Narasimhan, H., Rawat, A.S., Juneja, J., Wang, Z., Lee, C.-Y., Shenoy, P., Panigrahy, R., Menon, A.K and Kumar, S. <em>Universal Model Routing for Efficient LLM Inference.</em> Manuscript, 2025.
-                <br>
-                [<a href="https://arxiv.org/pdf/2502.08773">arXiv:2502.08773</a>]</p>
-                 <p>Wang, C., Augenstein, S., Rush, K., Jitkrittum, W., Narasimhan, H., Rawat, A.S., Menon, A.K and Go, A. <em>Cascade-Aware Training of Language Models.</em> Manuscript, 2024.
-                <br>
-                [<a href="https://arxiv.org/pdf/2406.00060">arXiv:2406.00060</a>]</p>
-                 <p>Cotter, A., Menon, A.K., Narasimhan, H., Rawat, A.S., Reddi, S.J. and Zhou, Y. <em>Distilling Double Descent</em>. Manuscript, 2021.
-                <br>
-                [<a href="https://arxiv.org/pdf/2102.06849.pdf">arXiv:2102.06849</a>]</p>
+                  <p>Jitkrittum, W., <span class="highlight-author">Narasimhan, H.</span>, Rawat, A.S., Juneja, J., Wang, Z., Lee, C.-Y., Shenoy, P., Panigrahy, R., Menon, A.K and Kumar, S.
+                  <br>
+                  <strong>Universal Model Routing for Efficient LLM Inference.</strong>
+                  <br>
+                  <em>Manuscript, 2025.</em>
+                  <br>
+                  [<a href="https://arxiv.org/pdf/2502.08773">arXiv:2502.08773</a>]</p>
+
+                  <p>Wang, C., Augenstein, S., Rush, K., Jitkrittum, W., <span class="highlight-author">Narasimhan, H.</span>, Rawat, A.S., Menon, A.K and Go, A.
+                  <br>
+                  <strong>Cascade-Aware Training of Language Models.</strong>
+                  <br>
+                  <em>Manuscript, 2024.</em>
+                  <br>
+                  [<a href="https://arxiv.org/pdf/2406.00060">arXiv:2406.00060</a>]</p>
+
+                  <p>Cotter, A., Menon, A.K., <span class="highlight-author">Narasimhan, H.</span>, Rawat, A.S., Reddi, S.J. and Zhou, Y.
+                  <br>
+                  <strong>Distilling Double Descent</strong>.
+                  <br>
+                  <em>Manuscript, 2021.</em>
+                  <br>
+                  [<a href="https://arxiv.org/pdf/2102.06849.pdf">arXiv:2102.06849</a>]</p>
             </section>
 
             <hr>
@@ -637,114 +683,353 @@
                 <h2>Publications</h2>
 
                 <h4>2025</h4>
-                <p>Lukasik, M., Chen, L., Narasimhan, H., Menon, A.K., Jitkrittum, W., Yu, F., Reddi, S.J., Fu, G., Bateni, M. and Kumar, S. <em>Bipartite Ranking From Multiple Labels: On Loss Versus Label Aggregation</em>. In the 42nd International Conference on Machine Learning (ICML), 2025. <em>To appear</em>.
-                <br>
-                [<a href="https://arxiv.org/pdf/2504.11284">arXiv:2504.11284</a>]</p>
-                <p>Narasimhan, H., Jitkrittum, W., Rawat, A.S., Kim, S., Gupta, N., Menon, A.K. and Kumar, S. <em>Faster Cascades via Speculative Decoding</em>. In the 13th International Conference on Learning Representations (ICLR), 2025.
-                [<a href="https://openreview.net/pdf?id=vo9t20wsmd">pdf</a>]
-                <br><span class="highlight-award">Outstanding Paper Honorable Mention Award</span>
-                </p>
-                <p>Lukasik, M., Meng, Z., Narasimhan, H., Menon, A.K., Chang, Y.-W., Yu, F. and Kumar, S. <em>Better Autoregressive Regression with LLMs</em>. In the 13th International Conference on Learning Representations (ICLR), 2025.
-                [<a href="https://openreview.net/pdf?id=xGs7Ch3Vyo">pdf</a>]
-                <br><span class="highlight-spotlight">Spotlight presentation</span></p>
+                 <p>Lukasik, M., Chen, L., <span class="highlight-author">Narasimhan, H.</span>, Menon, A.K., Jitkrittum, W., Yu, F., Reddi, S.J., Fu, G., Bateni, M. and Kumar, S.
+                 <br>
+                 <strong>Bipartite Ranking From Multiple Labels: On Loss Versus Label Aggregation</strong>.
+                 <br>
+                 In the <em>42nd International Conference on Machine Learning (ICML)</em>, 2025. <em>To appear</em>.
+                 <br>
+                 [<a href="https://arxiv.org/pdf/2504.11284">arXiv:2504.11284</a>]</p>
+
+                 <p><span class="highlight-author">Narasimhan, H.</span>, Jitkrittum, W., Rawat, A.S., Kim, S., Gupta, N., Menon, A.K. and Kumar, S.
+                 <br>
+                 <strong>Faster Cascades via Speculative Decoding</strong>.
+                 <br>
+                 In the <em>13th International Conference on Learning Representations (ICLR)</em>, 2025.
+                 <br>
+                 [<a href="https://openreview.net/pdf?id=vo9t20wsmd">pdf</a>]
+                 <br><span class="highlight-award">Outstanding Paper Honorable Mention Award</span>
+                 </p>
+
+                 <p>Lukasik, M., Meng, Z., <span class="highlight-author">Narasimhan, H.</span>, Menon, A.K., Chang, Y.-W., Yu, F. and Kumar, S.
+                 <br>
+                 <strong>Better Autoregressive Regression with LLMs</strong>.
+                 <br>
+                 In the <em>13th International Conference on Learning Representations (ICLR)</em>, 2025.
+                 <br>
+                 [<a href="https://openreview.net/pdf?id=xGs7Ch3Vyo">pdf</a>]
+                 <br><span class="highlight-spotlight">Spotlight presentation</span></p>
 
                 <h4>2024</h4>
-                <p>Narasimhan, H., Ramaswamy, H.G., Tavker, S.K., Khurana, D., Netrapalli, P. and Agarwal, S. <em>Consistent Multiclass Algorithms for Complex Metrics and Constraints</em>.
-                <br>
-                <em>Journal of Machine Learning Research (JMLR)</em>, 25(367):1−81, 2024.</p>
-                <p>Lukasik, M., Narasimhan, H., Menon, A.K., Yu, F. and Kumar, S. <em>Regression-aware Inference with LLMs</em>. In Findings of the Association for Computational Linguistics: EMNLP 2024.</p>
-                <p>Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S. <em>Optimal Auctions through Deep Learning: Advances in Differentiable Economics</em>.
-                <br>
-                <em>Journal of the ACM (JACM)</em>, 71(1): 1-53, 2024.</p>
-                <p>Narasimhan, H., Menon, A.K., Jitkrittum, W., Gupta, N., and Kumar, S. <em>Learning to Reject Meets Long-tail Learning</em>. In the 12th International Conference on Learning Representations (ICLR), 2024.
-                <br><span class="highlight-spotlight">Spotlight presentation</span></p>
-                <p>Gupta, N., Narasimhan, H., Jitkrittum, W., Rawat, A.S., Menon, A.K., and Kumar, S. <em>Language Model Cascades: Token-Level Uncertainty And Beyond</em>. In the 12th International Conference on Learning Representations (ICLR), 2024.</p>
-                <p>Narasimhan, H., Menon, A.K., Jitkrittum, W., and Kumar, S. <em>Post-hoc Estimators for Selective Classification and OOD Detection</em>. In the 12th International Conference on Learning Representations (ICLR), 2024.</p>
+                 <p><span class="highlight-author">Narasimhan, H.</span>, Ramaswamy, H.G., Tavker, S.K., Khurana, D., Netrapalli, P. and Agarwal, S.
+                 <br>
+                 <strong>Consistent Multiclass Algorithms for Complex Metrics and Constraints</strong>.
+                 <br>
+                 <em>Journal of Machine Learning Research (JMLR)</em>, 25(367):1−81, 2024.</p>
+
+                 <p>Lukasik, M., <span class="highlight-author">Narasimhan, H.</span>, Menon, A.K., Yu, F. and Kumar, S.
+                 <br>
+                 <strong>Regression-aware Inference with LLMs</strong>.
+                 <br>
+                 In <em>Findings of the Association for Computational Linguistics: EMNLP 2024</em>.</p>
+
+                 <p>Duetting, P., Feng, Z., <span class="highlight-author">Narasimhan, H.</span>, Parkes, D.C. and Ravindranath, S.S.
+                 <br>
+                 <strong>Optimal Auctions through Deep Learning: Advances in Differentiable Economics</strong>.
+                 <br>
+                 <em>Journal of the ACM (JACM)</em>, 71(1): 1-53, 2024.</p>
+
+                 <p><span class="highlight-author">Narasimhan, H.</span>, Menon, A.K., Jitkrittum, W., Gupta, N., and Kumar, S.
+                 <br>
+                 <strong>Learning to Reject Meets Long-tail Learning</strong>.
+                 <br>
+                 In the <em>12th International Conference on Learning Representations (ICLR)</em>, 2024.
+                 <br><span class="highlight-spotlight">Spotlight presentation</span></p>
+
+                 <p>Gupta, N., <span class="highlight-author">Narasimhan, H.</span>, Jitkrittum, W., Rawat, A.S., Menon, A.K., and Kumar, S.
+                 <br>
+                 <strong>Language Model Cascades: Token-Level Uncertainty And Beyond</strong>.
+                 <br>
+                 In the <em>12th International Conference on Learning Representations (ICLR)</em>, 2024.</p>
+
+                 <p><span class="highlight-author">Narasimhan, H.</span>, Menon, A.K., Jitkrittum, W., and Kumar, S.
+                 <br>
+                 <strong>Post-hoc Estimators for Selective Classification and OOD Detection</strong>.
+                 <br>
+                 In the <em>12th International Conference on Learning Representations (ICLR)</em>, 2024.</p>
 
                 <h4>2023</h4>
-                 <p>Jitkrittum, W., Gupta, N., Menon, A.K., Narasimhan, H., Rawat, A.S., Kumar, S. <em>When Does Confidence-Based Cascade Deferral Suffice</em>? In Advances in Neural Information Processing Systems (NeurIPS), 2023.</p>
-                 <p>Wang, S., Narasimhan, N., Zhou, Y., Hooker, S., Lukasik, M., Menon, A.K. <em>Robust Distillation for Worst-class Performance</em>. In the 39th Conference on Uncertainty in Artificial Intelligence (UAI), 2023.</p>
-                 <p>Wei, J., Narasimhan, H., Amid, E., Chu, W.-S., Liu, Y., and Kumar, A. <em>Distributionally Robust Post-hoc Classifiers under Prior Shifts</em>. In the 11th International Conference on Learning Representations (ICLR), 2023.</p>
+                  <p>Jitkrittum, W., Gupta, N., Menon, A.K., <span class="highlight-author">Narasimhan, H.</span>, Rawat, A.S., Kumar, S.
+                  <br>
+                  <strong>When Does Confidence-Based Cascade Deferral Suffice?</strong>
+                  <br>
+                  In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2023.</p>
+
+                  <p>Wang, S., Narasimhan, N., Zhou, Y., Hooker, S., Lukasik, M., Menon, A.K.
+                  <br>
+                  <strong>Robust Distillation for Worst-class Performance</strong>.
+                  <br>
+                  In the <em>39th Conference on Uncertainty in Artificial Intelligence (UAI)</em>, 2023.</p>
+
+                  <p>Wei, J., <span class="highlight-author">Narasimhan, H.</span>, Amid, E., Chu, W.-S., Liu, Y., and Kumar, A.
+                  <br>
+                  <strong>Distributionally Robust Post-hoc Classifiers under Prior Shifts</strong>.
+                  <br>
+                  In the <em>11th International Conference on Learning Representations (ICLR)</em>, 2023.</p>
 
                 <h4>2022</h4>
-                 <p>Narasimhan, H., Menon, A.K., Jitkrittum, W., Rawat, A. S. and Kumar, S. <em>Post-hoc Estimators for Learning to Defer to an Expert</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2022.</p>
-                 <p>Hiranandani, G., Mathur, J., Narasimhan, H., and Koyejo, O. <em>Quadratic Metric Elicitation for Fairness and Beyond</em>. In the 38th Conference on Uncertainty in Artificial Intelligence (UAI), 2022.
-                <br><span class="highlight-oral">Oral presentation</span></p>
-                 <p>Jiang, H., Narasimhan, H., Bahri, D., Cotter, A. and Rostamizadeh, A. <em>Churn Reduction via Distillation</em>. In the 10th International Conference on Learning Representations (ICLR), 2022.
-                <br><span class="highlight-spotlight">Spotlight presentation</span></p>
+                  <p><span class="highlight-author">Narasimhan, H.</span>, Menon, A.K., Jitkrittum, W., Rawat, A. S. and Kumar, S.
+                  <br>
+                  <strong>Post-hoc Estimators for Learning to Defer to an Expert</strong>.
+                  <br>
+                  In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2022.</p>
+
+                  <p>Hiranandani, G., Mathur, J., <span class="highlight-author">Narasimhan, H.</span>, and Koyejo, O.
+                  <br>
+                  <strong>Quadratic Metric Elicitation for Fairness and Beyond</strong>.
+                  <br>
+                  In the <em>38th Conference on Uncertainty in Artificial Intelligence (UAI)</em>, 2022.
+                  <br><span class="highlight-oral">Oral presentation</span></p>
+
+                  <p>Jiang, H., <span class="highlight-author">Narasimhan, H.</span>, Bahri, D., Cotter, A. and Rostamizadeh, A.
+                  <br>
+                  <strong>Churn Reduction via Distillation</strong>.
+                  <br>
+                  In the <em>10th International Conference on Learning Representations (ICLR)</em>, 2022.
+                  <br><span class="highlight-spotlight">Spotlight presentation</span></p>
 
                 <h4>2021</h4>
-                <p>Narasimhan, H. and Menon, A.K. <em>Training Over-parameterized Models with Non-decomposable Metrics</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2021.</p>
-                <p>Hiranandani, G., Mathur, J., Narasimhan, H., Fard, M.M. amd Koyejo, O. <em>Optimizing Black-box Metrics with Iterative Example Weighting</em>. In the 38th International Conference on Machine Learning (ICML), 2021.</p>
-                <p>Kumar, A., Narasimhan, H., and Cotter, A. <em>Implicit Rate-constrained Optimization of Non-decomposable Objectives</em>. In the 38th International Conference on Machine Learning (ICML), 2021.</p>
-                <p>Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S. <em>Optimal Auctions through Deep Learning</em>.
-                <br>
-                Invited Research Highlight, <em>Communications of the ACM (CACM)</em>, 64(8):109-116, 2021.</p>
+                 <p><span class="highlight-author">Narasimhan, H.</span> and Menon, A.K.
+                 <br>
+                 <strong>Training Over-parameterized Models with Non-decomposable Metrics</strong>.
+                 <br>
+                 In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2021.</p>
+
+                 <p>Hiranandani, G., Mathur, J., <span class="highlight-author">Narasimhan, H.</span>, Fard, M.M. amd Koyejo, O.
+                 <br>
+                 <strong>Optimizing Black-box Metrics with Iterative Example Weighting</strong>.
+                 <br>
+                 In the <em>38th International Conference on Machine Learning (ICML)</em>, 2021.</p>
+
+                 <p>Kumar, A., <span class="highlight-author">Narasimhan, H.</span>, and Cotter, A.
+                 <br>
+                 <strong>Implicit Rate-constrained Optimization of Non-decomposable Objectives</strong>.
+                 <br>
+                 In the <em>38th International Conference on Machine Learning (ICML)</em>, 2021.</p>
+
+                 <p>Duetting, P., Feng, Z., <span class="highlight-author">Narasimhan, H.</span>, Parkes, D.C. and Ravindranath, S.S.
+                 <br>
+                 <strong>Optimal Auctions through Deep Learning</strong>.
+                 <br>
+                 Invited Research Highlight, <em>Communications of the ACM (CACM)</em>, 64(8):109-116, 2021.</p>
 
                 <h4>2020</h4>
-                 <p>Wang, S., Guo, W., Narasimhan, H., Cotter, A., Gupta, M. and Jordan, M.I. <em>Robust Optimization for Fairness with Noisy Protected Groups</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2020.</p>
-                 <p>Narasimhan, H., Cotter, A., Zhou, Y., Wang, S., Guo, W. <em>Approximate Heavily-constrained Learning with Lagrange Multiplier Models</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2020.</p>
-                 <p>Hiranandani, G., Narasimhan, H., and Koyejo, O. <em>Fair Performance Metric Elicitation</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2020.</p>
-                 <p>Tavker, S.K., Ramaswamy, H.G., and Narasimhan, H. <em>Consistent Plug-in Classifiers for Complex Objectives and Constraints</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2020.</p>
-                 <p>Jiang, Q., Adigun, O., Narasimhan, H., Fard, M.M., and Gupta M. <em>Optimizing Black-box Metrics with Adaptive Surrogates</em>. In Proceedings of the 37th International Conference on Machine Learning (ICML), 2020.</p>
-                 <p>Narasimhan, H., Cotter, A., Gupta, M., and Wang, S. <em>Pairwise Fairness for Ranking and Regression</em>. In Proceedings of the 34th AAAI Conference on Artificial Intelligence (AAAI)</em>, 2020.</p>
+                  <p>Wang, S., Guo, W., <span class="highlight-author">Narasimhan, H.</span>, Cotter, A., Gupta, M. and Jordan, M.I.
+                  <br>
+                  <strong>Robust Optimization for Fairness with Noisy Protected Groups</strong>.
+                  <br>
+                  In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2020.</p>
+
+                  <p><span class="highlight-author">Narasimhan, H.</span>, Cotter, A., Zhou, Y., Wang, S., Guo, W.
+                  <br>
+                  <strong>Approximate Heavily-constrained Learning with Lagrange Multiplier Models</strong>.
+                  <br>
+                  In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2020.</p>
+
+                  <p>Hiranandani, G., <span class="highlight-author">Narasimhan, H.</span>, and Koyejo, O.
+                  <br>
+                  <strong>Fair Performance Metric Elicitation</strong>.
+                  <br>
+                  In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2020.</p>
+
+                  <p>Tavker, S.K., Ramaswamy, H.G., and <span class="highlight-author">Narasimhan, H.</span>
+                  <br>
+                  <strong>Consistent Plug-in Classifiers for Complex Objectives and Constraints</strong>.
+                  <br>
+                  In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2020.</p>
+
+                  <p>Jiang, Q., Adigun, O., <span class="highlight-author">Narasimhan, H.</span>, Fard, M.M., and Gupta M.
+                  <br>
+                  <strong>Optimizing Black-box Metrics with Adaptive Surrogates</strong>.
+                  <br>
+                  In Proceedings of the <em>37th International Conference on Machine Learning (ICML)</em>, 2020.</p>
+
+                  <p><span class="highlight-author">Narasimhan, H.</span>, Cotter, A., Gupta, M., and Wang, S.
+                  <br>
+                  <strong>Pairwise Fairness for Ranking and Regression</strong>.
+                  <br>
+                  In Proceedings of the <em>34th AAAI Conference on Artificial Intelligence (AAAI)</em>, 2020.</p>
 
                 <h4>2019</h4>
-                 <p>Narasimhan, H., Cotter, A., and Gupta, M. <em>Optimizing Generalized Rate Metrics with Three Players</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2019.
-                <br><span class="highlight-oral">Oral presentation</span></p>
-                 <p>Cotter, A., Narasimhan, H., and Gupta, M. <em>On Making Stochastic Classifiers Deterministic</em>. In Advances in Neural Information Processing Systems (NeurIPS), 2019.
-                <br><span class="highlight-oral">Oral presentation</span></p>
-                 <p>Zhao, S., Fard, M.M., Narasimhan, H. and Gupta, M. <em>Metric-optimized Example Weights</em>. In Proceedings of the 36th International Conference on Machine Learning (ICML)</em>, 2019.</p>
-                 <p>Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S. <em>Optimal Auctions through Deep Learning</em>. In Proceedings of the 36th International Conference on Machine Learning (ICML), 2019.</p>
-                 <p>Duetting, P., Feng, Z., Narasimhan, H., Parkes, D.C. and Ravindranath, S.S. <em>Machine Learning for Optimal Economic Design</em>.
-                <br>
-                <em>The Future of Economic Design</em>, Springer, 2019.</p>
+                  <p><span class="highlight-author">Narasimhan, H.</span>, Cotter, A., and Gupta, M.
+                  <br>
+                  <strong>Optimizing Generalized Rate Metrics with Three Players</strong>.
+                  <br>
+                  In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2019.
+                  <br><span class="highlight-oral">Oral presentation</span></p>
+
+                  <p>Cotter, A., <span class="highlight-author">Narasimhan, H.</span>, and Gupta, M.
+                  <br>
+                  <strong>On Making Stochastic Classifiers Deterministic</strong>.
+                  <br>
+                  In <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2019.
+                  <br><span class="highlight-oral">Oral presentation</span></p>
+
+                  <p>Zhao, S., Fard, M.M., <span class="highlight-author">Narasimhan, H.</span> and Gupta, M.
+                  <br>
+                  <strong>Metric-optimized Example Weights</strong>.
+                  <br>
+                  In Proceedings of the <em>36th International Conference on Machine Learning (ICML)</em>, 2019.</p>
+
+                  <p>Duetting, P., Feng, Z., <span class="highlight-author">Narasimhan, H.</span>, Parkes, D.C. and Ravindranath, S.S.
+                  <br>
+                  <strong>Optimal Auctions through Deep Learning</strong>.
+                  <br>
+                  In Proceedings of the <em>36th International Conference on Machine Learning (ICML)</em>, 2019.</p>
+
+                  <p>Duetting, P., Feng, Z., <span class="highlight-author">Narasimhan, H.</span>, Parkes, D.C. and Ravindranath, S.S.
+                  <br>
+                  <strong>Machine Learning for Optimal Economic Design</strong>.
+                  <br>
+                  <em>The Future of Economic Design</em>, Springer, 2019.</p>
 
                 <h4>2018</h4>
-                <p>Narasimhan, H. <em>Learning with Complex Loss Functions and Constraints</em>. In Proceedings of the 21st International Conference on Artificial Intelligence and Statistics (AISTATS), 2018.
-                <br><span class="highlight-oral">Oral presentation</span></p>
-                <p>Golowich, N., Narasimhan, H. and Parkes, D.C. <em>Deep Learning for Multi-Facility Location Mechanism Design</em>. In Proceedings of the 27th International Joint Conference on Artificial Intelligence (IJCAI), 2018.</p>
-                <p>Feng, Z., Narasimhan, H. and Parkes, D.C. <em>Deep Learning for Revenue-Optimal Auctions with Budgets.</em> In Proceedings of the 17th International Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2018.</p>
+                 <p><span class="highlight-author">Narasimhan, H.</span>
+                 <br>
+                 <strong>Learning with Complex Loss Functions and Constraints</strong>.
+                 <br>
+                 In Proceedings of the <em>21st International Conference on Artificial Intelligence and Statistics (AISTATS)</em>, 2018.
+                 <br><span class="highlight-oral">Oral presentation</span></p>
+
+                 <p>Golowich, N., <span class="highlight-author">Narasimhan, H.</span> and Parkes, D.C.
+                 <br>
+                 <strong>Deep Learning for Multi-Facility Location Mechanism Design</strong>.
+                 <br>
+                 In Proceedings of the <em>27th International Joint Conference on Artificial Intelligence (IJCAI)</em>, 2018.</p>
+
+                 <p>Feng, Z., <span class="highlight-author">Narasimhan, H.</span> and Parkes, D.C.
+                 <br>
+                 <strong>Deep Learning for Revenue-Optimal Auctions with Budgets.</strong>
+                 <br>
+                 In Proceedings of the <em>17th International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</em>, 2018.</p>
 
                 <h4>2017</h4>
-                <p>Narasimhan, H. and Agarwal, S. <em>Support Vector Algorithms for Optimizing the Partial Area Under the ROC curve</em>.
-                <br>
-                <em>Neural Computation</em>, 29(7):1919-1963, 2017.</p>
+                 <p><span class="highlight-author">Narasimhan, H.</span> and Agarwal, S.
+                 <br>
+                 <strong>Support Vector Algorithms for Optimizing the Partial Area Under the ROC curve</strong>.
+                 <br>
+                 <em>Neural Computation</em>, 29(7):1919-1963, 2017.</p>
 
                 <h4>2016</h4>
-                <p>Narasimhan, H., Pan, W., Kar, P., Protopapas, P. and Ramaswamy, H.G. <em>Optimizing the multiclass F-measure via biconcave programming</em>. In Proceedings of the 16th IEEE International Conference on Data Mining (ICDM). 2016.</p>
-                <p>Kar, P., Li, S., Narasimhan, H., Chawla, S. and Sebastiani, F. <em>Online optimization methods for the quantification problem</em>. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge, Discovery and Data Mining (KDD), 2016.</p>
-                <p>Narasimhan, H., Agarwal, S. and Parkes, D.C. <em>Automated Mechanism Design without Money via Machine Learning</em>. In Proceedings of the 25th International Joint Conference on Artificial Intelligence (IJCAI), 2016.</p>
-                <p>Narasimhan, H., and Parkes, D.C. <em>A General Statistical Framework for Designing Strategy-proof Assignment Mechanisms</em>. In Proceedings of the Conference on Uncertainty in Artificial Intelligence (UAI), 2016. </p>
+                 <p><span class="highlight-author">Narasimhan, H.</span>, Pan, W., Kar, P., Protopapas, P. and Ramaswamy, H.G.
+                 <br>
+                 <strong>Optimizing the multiclass F-measure via biconcave programming</strong>.
+                 <br>
+                 In Proceedings of the <em>16th IEEE International Conference on Data Mining (ICDM)</em>, 2016.</p>
+
+                 <p>Kar, P., Li, S., <span class="highlight-author">Narasimhan, H.</span>, Chawla, S. and Sebastiani, F.
+                 <br>
+                 <strong>Online optimization methods for the quantification problem</strong>.
+                 <br>
+                 In Proceedings of the <em>22nd ACM SIGKDD International Conference on Knowledge, Discovery and Data Mining (KDD)</em>, 2016.</p>
+
+                 <p><span class="highlight-author">Narasimhan, H.</span>, Agarwal, S. and Parkes, D.C.
+                 <br>
+                 <strong>Automated Mechanism Design without Money via Machine Learning</strong>.
+                 <br>
+                 In Proceedings of the <em>25th International Joint Conference on Artificial Intelligence (IJCAI)</em>, 2016.</p>
+
+                 <p><span class="highlight-author">Narasimhan, H.</span>, and Parkes, D.C.
+                 <br>
+                 <strong>A General Statistical Framework for Designing Strategy-proof Assignment Mechanisms</strong>.
+                 <br>
+                 In Proceedings of the <em>Conference on Uncertainty in Artificial Intelligence (UAI)</em>, 2016.</p>
 
                 <h4>2015</h4>
-                <p>Narasimhan, H., Parkes, D.C. and Singer, Y. <em>Learnability of influence in networks</em>. In Advances in Neural Information Processing Systems (NIPS), 2015.</p>
-                <p>Ahmed, S., Narasimhan, H. and Agarwal, S. <em>Bayes optimal feature selection for supervised learning with general performance measures</em>. In Proceedings of the 31st Conference on Uncertainty in Artificial Intelligence (UAI), 2015.</p>
-                <p>Majumder, B., Baraneedharan, U., Thiyagarajan, S., Radhakrishnan, P., Narasimhan, H., Dhandapani, M., Brijwani, N., Pinto, D.D., Prasath, A., Shanthappa, B.U., Thayakumar, A., Surendran, R., Babu, G., Shenoy, A.M., Kuriakose, M.A., Bergthold, G., Horowitz, P., Loda, M., Beroukhim, R., Agarwal, S., Sengupta, S., Sundaram, M. and Majumder, P.K. <em>Predicting clinical response to anticancer drugs using an ex vivo platform that captures tumour heterogeneity</em>.
-                <br>
-                <em>Nature Communications, 6:6169, 2015</em>.</p>
-                <p>Narasimhan, H.*, Ramaswamy, H.G.*, Saha, A. and Agarwal, S. <em>Consistent multiclass algorithms for complex performance measures</em>. In Proceedings of the 32nd International Conference on Machine Learning (ICML), 2015. <br>(*both authors contributed equally to the paper)</p>
-                <p>Narasimhan, H., Kar, P., and Jain, P. <em>Optimizing non-decomposable performance measures: A tale of two classes</em>. In Proceedings of the 32nd International Conference on Machine Learning (ICML), 2015.</p>
-                <p>Kar, P., Narasimhan, H., and Jain, P. <em>Surrogate functions for maximizing precision at the top</em>. In Proceedings of the 32nd International Conference on Machine Learning (ICML), 2015.</p>
+                 <p><span class="highlight-author">Narasimhan, H.</span>, Parkes, D.C. and Singer, Y.
+                 <br>
+                 <strong>Learnability of influence in networks</strong>.
+                 <br>
+                 In <em>Advances in Neural Information Processing Systems (NIPS)</em>, 2015.</p>
+
+                 <p>Ahmed, S., <span class="highlight-author">Narasimhan, H.</span> and Agarwal, S.
+                 <br>
+                 <strong>Bayes optimal feature selection for supervised learning with general performance measures</strong>.
+                 <br>
+                 In Proceedings of the <em>31st Conference on Uncertainty in Artificial Intelligence (UAI)</em>, 2015.</p>
+
+                 <p>Majumder, B., Baraneedharan, U., Thiyagarajan, S., Radhakrishnan, P., <span class="highlight-author">Narasimhan, H.</span>, Dhandapani, M., Brijwani, N., Pinto, D.D., Prasath, A., Shanthappa, B.U., Thayakumar, A., Surendran, R., Babu, G., Shenoy, A.M., Kuriakose, M.A., Bergthold, G., Horowitz, P., Loda, M., Beroukhim, R., Agarwal, S., Sengupta, S., Sundaram, M. and Majumder, P.K.
+                 <br>
+                 <strong>Predicting clinical response to anticancer drugs using an ex vivo platform that captures tumour heterogeneity</strong>.
+                 <br>
+                 <em>Nature Communications</em>, 6:6169, 2015.</p>
+
+                 <p><span class="highlight-author">Narasimhan, H.</span>*, Ramaswamy, H.G.*, Saha, A. and Agarwal, S.
+                 <br>
+                 <strong>Consistent multiclass algorithms for complex performance measures</strong>.
+                 <br>
+                 In Proceedings of the <em>32nd International Conference on Machine Learning (ICML)</em>, 2015.
+                 <br>(*both authors contributed equally to the paper)</p>
+
+                 <p><span class="highlight-author">Narasimhan, H.</span>, Kar, P., and Jain, P.
+                 <br>
+                 <strong>Optimizing non-decomposable performance measures: A tale of two classes</strong>.
+                 <br>
+                 In Proceedings of the <em>32nd International Conference on Machine Learning (ICML)</em>, 2015.</p>
+
+                 <p>Kar, P., <span class="highlight-author">Narasimhan, H.</span>, and Jain, P.
+                 <br>
+                 <strong>Surrogate functions for maximizing precision at the top</strong>.
+                 <br>
+                 In Proceedings of the <em>32nd International Conference on Machine Learning (ICML)</em>, 2015.</p>
 
                 <h4>2014</h4>
-                <p>Narasimhan, H.*, Vaish, R.* and Agarwal, S., <em>On the statistical consistency of plug-in classifiers for non-decomposable performance measures</em>. In Advances in Neural Information Processing Systems (NIPS), 2014.<br>(*both authors contributed equally to the paper)</p>
-                <p>Kar, P., Narasimhan, H., and Jain, P. <em>Online and stochastic gradient methods for non-decomposable loss functions</em>. In Advances in Neural Information Processing Systems (NIPS), 2014.</p>
-                <p>Saha, A., Dewangan, C., Narasimhan, H., Sriram, S., and Agarwal, S. <em>Learning score systems for patient mortality prediction in intensive care units via orthogonal matching pursuit</em>. In Proceedings of the 13th International Conference on Machine Learning and Applications (ICMLA), 2014.</p>
-                <p>Agarwal, A., Narasimhan, H., Kalyanakrishnan, S. and Agarwal, S., <em>GEV-canonical regression for accurate binary class probability estimation when one class is rare</em>. In Proceedings of the 31st International Conference on Machine Learning (ICML), 2014. </p>
+                 <p><span class="highlight-author">Narasimhan, H.</span>*, Vaish, R.* and Agarwal, S.
+                 <br>
+                 <strong>On the statistical consistency of plug-in classifiers for non-decomposable performance measures</strong>.
+                 <br>
+                 In <em>Advances in Neural Information Processing Systems (NIPS)</em>, 2014.
+                 <br>(*both authors contributed equally to the paper)</p>
+
+                 <p>Kar, P., <span class="highlight-author">Narasimhan, H.</span>, and Jain, P.
+                 <br>
+                 <strong>Online and stochastic gradient methods for non-decomposable loss functions</strong>.
+                 <br>
+                 In <em>Advances in Neural Information Processing Systems (NIPS)</em>, 2014.</p>
+
+                 <p>Saha, A., Dewangan, C., <span class="highlight-author">Narasimhan, H.</span>, Sriram, S., and Agarwal, S.
+                 <br>
+                 <strong>Learning score systems for patient mortality prediction in intensive care units via orthogonal matching pursuit</strong>.
+                 <br>
+                 In Proceedings of the <em>13th International Conference on Machine Learning and Applications (ICMLA)</em>, 2014.</p>
+
+                 <p>Agarwal, A., <span class="highlight-author">Narasimhan, H.</span>, Kalyanakrishnan, S. and Agarwal, S.
+                 <br>
+                 <strong>GEV-canonical regression for accurate binary class probability estimation when one class is rare</strong>.
+                 <br>
+                 In Proceedings of the <em>31st International Conference on Machine Learning (ICML)</em>, 2014.</p>
 
                 <h4>2013</h4>
-                <p>Narasimhan, H. and Agarwal, S., <em>On the relationship between binary classification, bipartite ranking, and binary class probability estimation</em>. In Advances in Neural Information Processing Systems (NIPS), 2013.
-                <br><span class="highlight-spotlight">Spotlight presentation</span></p>
-                <p>Narasimhan, H. and Agarwal, S., <em>SVM_pAUC^tight: A new support vector method for optimizing partial AUC based on a tight convex upper bound</em>. In Proceedings of the 19th ACM SIGKDD Conference on Knowledge, Discovery and Data Mining (KDD), 2013.</p>
-                <p>Menon, A. K., Narasimhan, H., Agarwal, S. and Chawla, S., <em>On the statistical consistency of algorithms for binary classification under class imbalance</em>. In Proceedings of the 30th International Conference on Machine Learning (ICML), 2013.
-                <br>
-                [<a href="http://proceedings.mlr.press/v28/menon13a.pdf">paper</a>]
-                [<a href="http://proceedings.mlr.press/v28/menon13a-supp.pdf">supplementary material</a>]</p>
-                <p>Narasimhan, H. and Agarwal, S., <em>A structural SVM based approach for optimizing partial AUC</em>. In Proceedings of the 30th International Conference on Machine Learning (ICML), 2013.
-                <br>
-                [<a href="http://proceedings.mlr.press/v28/narasimhan13.pdf">paper</a>]
-                [<a href="http://proceedings.mlr.press/v28/narasimhan13-supp.pdf">supplementary material</a>]</p>
+                 <p><span class="highlight-author">Narasimhan, H.</span> and Agarwal, S.
+                 <br>
+                 <strong>On the relationship between binary classification, bipartite ranking, and binary class probability estimation</strong>.
+                 <br>
+                 In <em>Advances in Neural Information Processing Systems (NIPS)</em>, 2013.
+                 <br><span class="highlight-spotlight">Spotlight presentation</span></p>
+
+                 <p><span class="highlight-author">Narasimhan, H.</span> and Agarwal, S.
+                 <br>
+                 <strong>SVM_pAUC^tight: A new support vector method for optimizing partial AUC based on a tight convex upper bound</strong>.
+                 <br>
+                 In Proceedings of the <em>19th ACM SIGKDD Conference on Knowledge, Discovery and Data Mining (KDD)</em>, 2013.</p>
+
+                 <p>Menon, A. K., <span class="highlight-author">Narasimhan, H.</span>, Agarwal, S. and Chawla, S.
+                 <br>
+                 <strong>On the statistical consistency of algorithms for binary classification under class imbalance</strong>.
+                 <br>
+                 In Proceedings of the <em>30th International Conference on Machine Learning (ICML)</em>, 2013.
+                 <br>
+                 [<a href="http://proceedings.mlr.press/v28/menon13a.pdf">paper</a>]
+                 [<a href="http://proceedings.mlr.press/v28/menon13a-supp.pdf">supplementary material</a>]</p>
+
+                 <p><span class="highlight-author">Narasimhan, H.</span> and Agarwal, S.
+                 <br>
+                 <strong>A structural SVM based approach for optimizing partial AUC</strong>.
+                 <br>
+                 In Proceedings of the <em>30th International Conference on Machine Learning (ICML)</em>, 2013.
+                 <br>
+                 [<a href="http://proceedings.mlr.press/v28/narasimhan13.pdf">paper</a>]
+                 [<a href="http://proceedings.mlr.press/v28/narasimhan13-supp.pdf">supplementary material</a>]</p>
 
             </section>
 
