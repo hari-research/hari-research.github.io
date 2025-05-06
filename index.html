@@ -141,20 +141,34 @@
             margin-bottom: 15px;
         }
 
-        /* Styling for Links section (now includes research themes) */
-        .links {
-             margin-top: 0px;
-             margin-bottom: 10px;
-             padding-bottom: 0;
-        }
-        .links p {
-            margin-bottom: 8px;
-        }
-        .links ul {
+        /* Styling for Research section lists */
+        #research ul {
              margin-bottom: 10px;
              margin-top: 4px;
+             list-style: none;
+             padding-left: 0;
+             margin-left: 20px;
         }
-        .links .hobby-text {
+        #research ul li {
+            margin-bottom: 5px;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.6;
+        }
+        #research ul li::before {
+            content: '•';
+            color: #0056b3;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+        #research p {
+            margin-bottom: 8px;
+        }
+
+        .hobby-text { /* Specific styling for hobby text if needed */
             margin-top: 1.2em;
             margin-bottom: 0;
         }
@@ -165,21 +179,21 @@
         }
 
 
-        /* Lists (General styling applied via section or .links) */
-        section ul, .links ul {
+        /* Lists (General styling applied via section) */
+        section ul {
             list-style: none;
             padding-left: 0;
             margin-left: 20px;
         }
 
-        section ul li, .links ul li {
+        section ul li {
             margin-bottom: 5px;
             padding-left: 18px;
             position: relative;
             line-height: 1.6;
         }
 
-        section ul li::before, .links ul li::before {
+        section ul li::before {
             content: '•';
             color: #0056b3;
             font-weight: bold;
@@ -344,13 +358,14 @@
              .page-nav ul {
                 justify-content: flex-start;
             }
-            .links ul {
+            /* Adjust list margins for mobile */
+             section ul, #research ul {
                  margin-left: 15px;
-            }
-            .links ul li {
+             }
+             section ul li, #research ul li {
                   padding-left: 18px;
                   margin-bottom: 5px;
-            }
+             }
             .page-nav {
                 margin-top: 15px;
             }
@@ -377,7 +392,7 @@
              .comment-text {
                  font-size: 0.88em;
             }
-             .links .hobby-text {
+             .hobby-text {
                  margin-top: 1em;
             }
 
@@ -399,7 +414,7 @@
                 </div>
                 <div class="profile-bio">
                     <p>
-                        I am a Staff Research Scientist at <a href="https://research.google/">Google Research</a> in Mountain View, USA. I am broadly interested in the design of principled and practical algorithms for machine learning, with the goal of improving both training and inference efficiency.
+                        I am a Staff Research Scientist at <a href="https://research.google/">Google Research</a> in Mountain View, USA. I am broadly interested in the design of principled and practical algorithms for machine learning, currently focused on improving inference efficiency in large language models.
                     </p>
                     <p>
                         Prior to Google, I was a post-doctoral fellow at <a href="https://www.seas.harvard.edu/" rel="nofollow">Harvard University</a> from 2015-2018, working with <a href="http://www.eecs.harvard.edu/%7Eparkes/" rel="nofollow">David C. Parkes</a>.
@@ -412,34 +427,16 @@
                 </div>
             </section>
 
-            <section class="links">
-                 <p>The following are some themes I am excited about:</p>
-                 <ul>
-                     <li>Fast inference algorithms for large language models (LLMs).</li>
-                     <li>Design of loss functions for ranking, retrieval, and other real-world objectives.</li>
-                     <li>Constrained optimization with application to fairness.</li>
-                 </ul>
-                 <p>In the past, I have worked on applying machine learning techniques to the design of auctions and other economic mechanisms.</p>
-
-                 <p class="hobby-text">
-                    Outside of work, I am passionate about <a href="https://www.instagram.com/stories/highlights/18044521994263313/">baking</a>, and have recently taken to amateur theatre.
-                 </p>
-            </section>
-
-            <style>
-            .container {
-                line-height: 2em; 
-            }
-            </style>
-
             <!-- Page Navigation Links -->
             <nav class="page-nav">
                 <ul>
                     <li><a href="#news">News/Highlights</a></li>
+                    <li><a href="#research">Research</a></li> {/* Added link to new section */}
                     <li><a href="#selected-pubs">Selected Publications</a></li>
                     <li><a href="#service">Professional Service</a></li>
                     <li><a href="#preprints">Preprints</a></li>
-                    <li><a href="#all-pubs">Publications (By Year)</a></li>
+                    <li><a href="#all-pubs">Publications</a></li> {/* Updated link text */}
+                    <li><a href="#hobbies">Hobbies</a></li> {/* Added link to new section */}
                 </ul>
             </nav>
             <!-- End Page Navigation Links -->
@@ -455,6 +452,19 @@
                  <p>👉 New patent on <em>"Systems and Methods for Implicit Rate-Constrained Optimization of Non-Decomposable Objectives"</em>, 2022. [<a href="https://patents.google.com/patent/US20220398506A1">US20220398506A1</a>]</p>
                  <p>👉 Co-organized <a href="https://libauc.org/cvpr2022/">tutorial</a> on <em>"Deep AUC Maximization: From Algorithms to Practice"</em> at CVPR 2022.</p>
                  <p>👉 Co-authored Google <a href = "https://ai.googleblog.com/2020/02/setting-fairness-goals-with-tensorflow.html">blogpost</a> on <em>"Setting Fairness Goals with the TensorFlow Constrained Optimization Library"</em>.</p>
+            </section>
+
+            <hr>
+
+            <section id="research">
+                 <h2>Research</h2>
+                 <p>The following are some themes I am excited about:</p>
+                 <ul>
+                     <li>Fast inference algorithms for large language models (LLMs).</li>
+                     <li>Design of loss functions for ranking, retrieval, and other real-world objectives.</li>
+                     <li>Constrained optimization with application to fairness.</li>
+                 </ul>
+                 <p>In the past, I have worked on applying machine learning techniques to the design of auctions and other economic mechanisms.</p>
             </section>
 
             <hr>
@@ -591,7 +601,7 @@
             <hr>
 
             <section id="all-pubs" class="publications">
-                <h2>Publications (By Year)</h2>
+                <h2>Publications</h2> {/* Changed title */}
 
                 <h4>2025</h4>
                 <p>Lukasik, M., Chen, L., Narasimhan, H., Menon, A.K., Jitkrittum, W., Yu, F., Reddi, S.J., Fu, G., Bateni, M. and Kumar, S. <em>Bipartite Ranking From Multiple Labels: On Loss Versus Label Aggregation</em>. In the 42nd International Conference on Machine Learning (ICML), 2025. <em>To appear</em>.
@@ -703,6 +713,15 @@
                 [<a href="http://proceedings.mlr.press/v28/narasimhan13.pdf">paper</a>]
                 [<a href="http://proceedings.mlr.press/v28/narasimhan13-supp.pdf">supplementary material</a>]</p>
 
+            </section>
+
+             <hr>
+
+             <section id="hobbies">
+                 <h2>Hobbies</h2>
+                  <p class="hobby-text">
+                    Outside of work, I am passionate about <a href="https://www.instagram.com/stories/highlights/18044521994263313/">baking</a>, and have recently taken to amateur theatre.
+                 </p>
             </section>
 
 
