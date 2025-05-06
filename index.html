@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Homepage of Harikrishna Narasimhan (Hari), Staff Research Scientist at Google Research.">
-    <title font-size>Harikrishna Narasimhan (Hari)</title>
+    <title>Harikrishna Narasimhan (Hari)</title> <!-- Removed font-size attribute -->
     <link rel="shortcut icon" type="image/x-icon" href="//www.google.com/images/icons/product/sites-16.ico" />
     <link rel="apple-touch-icon" href="https://ssl.gstatic.com/sites/p/89dd68/system/app/images/apple-touch-icon.png" type="image/png" />
 
@@ -265,7 +265,7 @@
             transition: background-color 0.2s ease, color 0.2s ease;
         }
 
-        .page-nav a:hover {
+        .page-nav a:hover, .page-nav a.active-nav-link { /* Combined hover and active styles */
             background-color: #eef1f2;
             color: #0056b3;
         }
@@ -628,9 +628,8 @@
                           <br>
                           <em>Nature Communications</em>, 6:6169, 2015.
                           [<a href="http://www.nature.com/ncomms/2015/150227/ncomms7169/pdf/ncomms7169.pdf" rel="nofollow">paper</a>]
-                          <br>  
+                          <br><span class="comment-text" style="margin-top: 8px; margin-bottom: 8px;">[Featured in <a href="http://www.businesswire.com/news/home/20150302006933/en/Mitra-Biotech-CANScript-Platform-Validated-Personalized-Cancer#.VYawzqBzOfQ" rel="nofollow">Business Wire</a>, <a href="https://www.genomeweb.com/companion-diagnostics/paper-describes-development-validation-mitra-biotechs-ex-vivo-platform" rel="nofollow">Genome Web</a>, <a href="http://www.cio.com.au/article/569280/machine-learning-used-predict-clinical-response-anti-cancer-drugs/" rel="nofollow">CIO</a>, <a href="http://www.telegraphindia.com/1150228/jsp/nation/story_5990.jsp#.VUEI8N9sabl" rel="nofollow">The Telegraph</a>]</span>
                           <span class="comment-text">
-                          Featured in <a href="http://www.businesswire.com/news/home/20150302006933/en/Mitra-Biotech-CANScript-Platform-Validated-Personalized-Cancer#.VYawzqBzOfQ" rel="nofollow">Business Wire</a>, <a href="https://www.genomeweb.com/companion-diagnostics/paper-describes-development-validation-mitra-biotechs-ex-vivo-platform" rel="nofollow">Genome Web</a>, <a href="http://www.cio.com.au/article/569280/machine-learning-used-predict-clinical-response-anti-cancer-drugs/" rel="nofollow">CIO</a>, <a href="http://www.telegraphindia.com/1150228/jsp/nation/story_5990.jsp#.VUEI8N9sabl" rel="nofollow">The Telegraph</a>.<br>
                           A real-world application of the algorithms we developed for <em>ranking with (partial) AUC</em> in <a href="http://proceedings.mlr.press/v28/narasimhan13.pdf">ICML 2013</a>, <a href="https://dl.acm.org/doi/10.1145/2487575.2487674">KDD 2013</a>, <a href="https://direct.mit.edu/neco/article-abstract/29/7/1919/8293/Support-Vector-Algorithms-for-Optimizing-the?redirectedFrom=fulltext">NeuralComp 2017</a>.<br> Feel free to also see <a href="https://papers.nips.cc/paper_files/paper/2013/file/05311655a15b75fab86956663e1819cd-Paper.pdf">NeurIPS 2013</a> (<span class="highlight-spotlight">Spotlight</span>), <a href="https://arxiv.org/pdf/2504.11284">ICML 2025</a>.
                           </span></p>
                      </div>
@@ -1052,6 +1051,123 @@
             <!-- Optional footer content -->
         </footer>
     </div> <!-- /container -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.page-nav ul li a');
+            const contentSections = Array.from(document.querySelectorAll('main > section[id]'))
+                                         .filter(section => !section.classList.contains('profile-section'));
+            const pageNavElement = document.querySelector('.page-nav');
+
+            let mainContentSeparatorHr = null;
+            const interstitialHrs = [];
+
+            if (pageNavElement) {
+                let currentElement = pageNavElement.nextElementSibling;
+                while (currentElement) {
+                    if (currentElement.tagName === 'HR') {
+                        if (!mainContentSeparatorHr) {
+                            mainContentSeparatorHr = currentElement;
+                        } else {
+                            interstitialHrs.push(currentElement);
+                        }
+                    }
+                    currentElement = currentElement.nextElementSibling;
+                }
+            }
+            
+            function updateActiveLink(activeLink) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active-nav-link');
+                });
+                if (activeLink) {
+                    activeLink.classList.add('active-nav-link');
+                }
+            }
+
+            function showSection(sectionId, clickedLink) {
+                contentSections.forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                interstitialHrs.forEach(hr => {
+                    hr.style.display = 'none';
+                });
+
+                const targetSection = sectionId ? document.getElementById(sectionId) : null;
+                
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                }
+
+                if (mainContentSeparatorHr) {
+                    mainContentSeparatorHr.style.display = targetSection ? 'block' : 'none';
+                }
+                
+                updateActiveLink(clickedLink);
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    showSection(targetId, link);
+
+                    if (pageNavElement) {
+                        // Scrolls the pageNavElement to be aligned with the scroll-padding-top 
+                        // defined on the html element (20px in this case).
+                        pageNavElement.scrollIntoView({ behavior: 'auto', block: 'start' });
+                    }
+                    
+                    if (history.pushState) {
+                        history.pushState(null, null, `#${targetId}`);
+                    } else {
+                        // Fallback for older browsers that don't support pushState.
+                        // This will cause a page jump.
+                        window.location.hash = `#${targetId}`;
+                    }
+                });
+            });
+
+            // Initial state handling:
+            // Try to show section from URL hash, or default to the first nav link's section.
+            let initialSectionId = null;
+            let initialLink = null;
+            
+            const defaultFirstLink = (navLinks.length > 0) ? navLinks[0] : null;
+            let defaultSectionId = defaultFirstLink ? defaultFirstLink.getAttribute('href').substring(1) : null;
+
+            if (window.location.hash) {
+                const hashId = window.location.hash.substring(1);
+                // Check if the hash corresponds to a valid content section
+                const isValidSection = contentSections.some(s => s.id === hashId);
+                if (isValidSection) {
+                    initialSectionId = hashId;
+                    initialLink = Array.from(navLinks).find(link => link.getAttribute('href') === `#${hashId}`);
+                }
+            }
+            
+            if (!initialSectionId && defaultSectionId) {
+                // If no valid hash, or no hash at all, use the default section
+                initialSectionId = defaultSectionId;
+                initialLink = defaultFirstLink;
+            }
+
+            if (initialSectionId) {
+                showSection(initialSectionId, initialLink);
+            } else {
+                // If no sections could be determined (e.g., no nav links, no valid hash)
+                // hide all dynamic content.
+                showSection(null, null); 
+            }
+            
+            // Fix the invalid attribute in the title tag if it exists
+            const titleTag = document.querySelector('title');
+            if (titleTag && titleTag.hasAttribute('font-size')) {
+                titleTag.removeAttribute('font-size');
+            }
+        });
+    </script>
 
 </body>
 </html>
