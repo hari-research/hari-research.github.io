@@ -366,6 +366,24 @@
             color: #333; /* Slightly darker for titles */
         }
 
+        /* Cake Grid for Hobbies */
+        .cake-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cake-grid img {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Creates square images */
+            object-fit: cover;   /* Ensures the image covers the square area, cropping if necessary */
+            border-radius: 4px;
+            border: 1px solid #eee;
+            display: block; /* Good practice for images in layout */
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             body {
@@ -432,6 +450,10 @@
             .publications p, .preprints p {
                  line-height: 1.5; /* Adjust line height on smaller screens */
             }
+            .cake-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller min size for cakes on mobile */
+                gap: 8px;
+            }
 
         }
 
@@ -462,6 +484,10 @@
             }
             #all-pubs p br, #preprints p br, #research .publication-item p br {
                  margin-bottom: 0.1em; /* Tighter line breaks on mobile */
+            }
+            .cake-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Even smaller for very small screens */
+                gap: 5px;
             }
 
         }
@@ -1041,8 +1067,30 @@
              <section id="hobbies">
                  <h2>Hobbies</h2>
                   <p class="hobby-text">
-                    Outside of work, I am passionate about baking, and particularly enjoy designing themed cakes (e.g., for Halloween and Pride). You can find some of my cake designs <a href="https://www.instagram.com/stories/highlights/18044521994263313/">here</a>. More recently, I have taken to amateur theatre.
+                    Outside of work, I am passionate about baking, and particularly enjoy designing themed cakes (e.g., for Halloween and Pride). More recently, I have taken to amateur theatre.
                  </p>
+                 <div class="cake-grid">
+                    <img src="images/cakes/Cake1.jpeg" alt="Cake design 1">
+                    <img src="images/cakes/Cake2.jpeg" alt="Cake design 2">
+                    <img src="images/cakes/Cake3.jpeg" alt="Cake design 3">
+                    <img src="images/cakes/Cake4.jpeg" alt="Cake design 4">
+                    <img src="images/cakes/Cake5.jpeg" alt="Cake design 5">
+                    <img src="images/cakes/Cake6.jpeg" alt="Cake design 6">
+                    <img src="images/cakes/Cake7.jpeg" alt="Cake design 7">
+                    <img src="images/cakes/Cake8.jpeg" alt="Cake design 8">
+                    <img src="images/cakes/Cake9.jpeg" alt="Cake design 9">
+                    <img src="images/cakes/Cake10.jpeg" alt="Cake design 10">
+                    <img src="images/cakes/Cake12.jpeg" alt="Cake design 12">
+                    <img src="images/cakes/Cake13.jpeg" alt="Cake design 13">
+                    <img src="images/cakes/Cake14.jpeg" alt="Cake design 14">
+                    <img src="images/cakes/Cake15.jpeg" alt="Cake design 15">
+                    <img src="images/cakes/Cake16.jpeg" alt="Cake design 16">
+                    <img src="images/cakes/Cake17.jpeg" alt="Cake design 17">
+                    <img src="images/cakes/Cake18.jpeg" alt="Cake design 18">
+                    <img src="images/cakes/Cake19.jpeg" alt="Cake design 19">
+                    <img src="images/cakes/Cake20.jpeg" alt="Cake design 20">
+                    <img src="images/cakes/Cake22.jpeg" alt="Cake design 22">
+                 </div>
                  <p>
                     For more details about my personal hobbies, feel free to visit my Instagram <a href="https://www.instagram.com/hari.narasimhan/">page</a>.
                  </p>
