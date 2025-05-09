@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -457,7 +456,7 @@
                 grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller min size for cakes on mobile */
                 gap: 8px;
             }
-
+            /* On mobile, .hide-on-desktop (Cake21) should be visible by default rules for .cake-grid img */
         }
 
         @media (max-width: 480px) {
@@ -495,12 +494,11 @@
             #hobbies p {
                  margin-bottom: 10px; /* Tighter spacing for hobby paragraphs on mobile */
             }
-
         }
 
         /* Responsive Design Adjustments for Cake21 visibility */
         @media (min-width: 769px) { /* Screens wider than 768px (desktop) */
-            .hide-on-desktop {
+            .cake-grid img.hide-on-desktop { /* Increased specificity to hide Cake21 on desktop */
                 display: none;
             }
         }
