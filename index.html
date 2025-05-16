@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Homepage of Harikrishna Narasimhan (Hari), Staff Research Scientist at Google Research.">
-    <title>Harikrishna Narasimhan (Hari)</title> <!-- Removed font-size attribute -->
+    <title>Harikrishna Narasimhan (Hari)</title>
     <link rel="shortcut icon" type="image/x-icon" href="//www.google.com/images/icons/product/sites-16.ico" />
     <link rel="apple-touch-icon" href="https://ssl.gstatic.com/sites/p/89dd68/system/app/images/apple-touch-icon.png" type="image/png" />
 
@@ -13,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         /* Basic Reset & Body Styles */
@@ -99,7 +103,6 @@
              font-weight: 700;
         }
 
-
         hr {
             border: 0;
             height: 1px;
@@ -113,7 +116,7 @@
             flex-wrap: wrap;
             align-items: flex-start;
             gap: 30px;
-            margin-bottom: 0px;
+            margin-bottom: 0px; /* Keep bottom margin low as social icons come after */
             margin-top: 15px; /* Added significant space above */
         }
 
@@ -141,10 +144,7 @@
         .profile-bio p {
             margin-bottom: 15px;
         }
-        .profile-bio p:last-of-type { /* Reduce margin for the email line */
-             margin-bottom: 5px;
-        }
-
+        /* Removed specific style for last-of-type email line */
 
         /* Styling for Research section lists */
         #research ul {
@@ -180,11 +180,9 @@
              margin-bottom: 15px;
         }
 
-
         section > p { /* General paragraph spacing in other sections */
              margin-bottom: 15px;
         }
-
 
         /* Lists (General styling applied via section) */
         section ul {
@@ -230,10 +228,37 @@
              font-size: 0.9em; /* Slightly smaller bullet */
         }
 
+        /* Social Icons Styling */
+        .social-icons {
+            text-align: center;
+            margin-top: 20px; /* Space after profile bio */
+            margin-bottom: 20px; /* Space before the HR */
+            padding: 0; /* No extra padding needed */
+        }
+
+        .social-icons a {
+            display: inline-block; /* Allows margin/padding and horizontal alignment */
+            margin: 0 10px; /* Space between icons */
+            line-height: 1; /* Helps with vertical alignment */
+            color: #34495e; /* Default icon color */
+            font-size: 28px; /* Set icon size */
+            transition: color 0.2s ease, transform 0.2s ease; /* Add transition */
+        }
+
+        .social-icons a:hover {
+            color: #0056b3; /* Change color on hover */
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+
+        /* Style the HR immediately following .social-icons */
+        .social-icons + hr {
+            margin-top: 20px;
+            margin-bottom: 20px; /* Adjust margin to work well with page-nav margin-top */
+        }
 
         /* Page Navigation */
         .page-nav {
-            margin-top: 20px;
+            margin-top: 20px; /* Adjusted to align with HR margin */
             margin-bottom: 40px;
             padding: 10px 0;
             border-top: 1px solid #eef1f2;
@@ -272,7 +297,6 @@
             color: #0056b3;
         }
 
-
         /* Publications Formatting */
         .publications p, .preprints p {
              margin-bottom: 18px; /* Space between publication entries */
@@ -298,7 +322,6 @@
              margin-bottom: 0.2em; /* Small space between lines */
          }
 
-
         /* Styling for Selected Publications items (inside #research) */
         #research .publication-item p {
             margin-bottom: 25px;
@@ -317,7 +340,6 @@
              margin-bottom: 0.2em; /* Small space between lines */
         }
 
-
         /* Unified Highlighting Style (Text Color Only) */
         .highlight-award,
         .highlight-oral,
@@ -328,7 +350,6 @@
             margin: 0 3px 0 0; /* Adjusted margin */
             color: #8B008B; /* Dark Magenta - distinct color */
         }
-
 
         .highlight-review {
              color: #2e7d32;
@@ -355,8 +376,7 @@
              content: "";
              display: block;
              margin-bottom: 0.1em; /* Reduced space after explicit <br> */
-        }
-
+         }
 
         em {
             font-style: italic;
@@ -415,7 +435,7 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 25px;
-                margin-bottom: 15px;
+                margin-bottom: 15px; /* Adjust margin for mobile */
                 margin-top: 20px; /* Adjust top margin for mobile */
             }
 
@@ -429,10 +449,7 @@
                width: 100%;
             }
 
-             .page-nav ul {
-                justify-content: flex-start;
-            }
-            /* Adjust list margins for mobile */
+             /* Adjust list margins for mobile */
              section ul, #research ul {
                  margin-left: 15px;
              }
@@ -446,9 +463,35 @@
              #news li {
                 padding-left: 20px; /* Ensure padding for bullet on mobile */
              }
-            .page-nav {
-                margin-top: 15px;
+
+             /* Social Icons Mobile Adjustments */
+             .social-icons {
+                margin-top: 15px; /* Adjust margins for mobile */
+                margin-bottom: 15px;
+             }
+             .social-icons a {
+                margin: 0 8px; /* Adjust spacing */
+                font-size: 24px; /* Slightly smaller icons on mobile */
+             }
+             .social-icons + hr { /* Style the HR immediately following .social-icons */
+                margin-top: 15px; /* Adjust margin for mobile */
+                margin-bottom: 15px;
+             }
+
+            .page-nav ul {
+                justify-content: flex-start;
             }
+            .page-nav {
+                margin-top: 15px; /* Adjust margin for mobile */
+            }
+            .page-nav a {
+                padding: 5px 8px;
+                font-size: 0.95em;
+            }
+             .page-nav ul {
+                gap: 3px 10px;
+            }
+
             .publications p, .preprints p {
                  line-height: 1.5; /* Adjust line height on smaller screens */
             }
@@ -468,6 +511,23 @@
             }
              h2 {
                 font-size: 1.4em;
+            }
+             /* Social Icons Extra Small Mobile Adjustments */
+            .social-icons {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+             .social-icons a {
+                margin: 0 6px;
+                font-size: 22px;
+             }
+             .social-icons + hr { /* Style the HR immediately following .social-icons */
+                margin-top: 10px;
+                margin-bottom: 10px;
+             }
+
+             .page-nav {
+                margin-top: 10px;
             }
              .page-nav a {
                 padding: 5px 8px;
@@ -526,11 +586,21 @@
                         I completed my PhD in Computer Science from the <a href="https://www.csa.iisc.ac.in/" rel="nofollow">Indian Institute of Science</a> (2012-2015), working with <a href="https://shivaniagarwal.net" rel="nofollow">Shivani Agarwal</a>, and supported by a <em>Google India PhD Fellowship</em>.
                         During my PhD, I also interned at <a href="http://research.microsoft.com/en-us/labs/india/" rel="nofollow">Microsoft Research</a> with <a href="https://www.prateekjain.org/" rel="nofollow">Prateek Jain</a>.
                     </p>
-                    <p>
-                        <b>Email:</b> hnarasimhan [at] google [dot] com
-                    </p>
+                    <!-- Removed the email paragraph here -->
                 </div>
             </section>
+
+            <!-- Social Icons -->
+             <div class="social-icons">
+                 <a href="mailto:hnarasimhan@google.com" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+                 <a href="https://scholar.google.com/citations?user=7X_oT4YAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                 <a href="https://www.linkedin.com/in/harikrishna-narasimhan-942b18156/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                 <a href="https://x.com/HariNarasim" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter (X)"><i class="fab fa-twitter"></i></a>
+                 <a href="https://www.instagram.com/hari.narasimhan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+             </div>
+            <!-- End Social Icons -->
+
+            <hr>
 
             <!-- Page Navigation Links -->
             <nav class="page-nav">
@@ -544,7 +614,6 @@
                 </ul>
             </nav>
             <!-- End Page Navigation Links -->
-
 
             <hr>
 
@@ -1078,7 +1147,7 @@
              <section id="hobbies">
                  <h2>Hobbies</h2>
                   <p class="hobby-text">
-                    Outside of work, I am passionate about baking, and particularly enjoy designing themed cakes (e.g., for Halloween and Pride). More recently, I have taken to amateur theatre. 
+                    Outside of work, I am passionate about baking, and particularly enjoy designing themed cakes (e.g., for Halloween and Pride). More recently, I have taken to amateur theatre.
                     For more details about my personal hobbies, feel free to visit my Instagram <a href="https://www.instagram.com/hari.narasimhan/">page</a>.
                  </p>
                  <p>The following are some of my cake designs:</p>
@@ -1107,7 +1176,6 @@
                  </div>
             </section>
 
-
         </main>
 
         <footer>
@@ -1122,23 +1190,29 @@
                                          .filter(section => !section.classList.contains('profile-section'));
             const pageNavElement = document.querySelector('.page-nav');
 
-            let mainContentSeparatorHr = null;
-            const interstitialHrs = [];
+            // Find all HR elements within the main content area, but excluding the first one after the profile section
+            // The first HR after the profile section is now after the social icons and before the page nav
+            const allHrsInMain = document.querySelectorAll('main > hr');
+            let firstHrAfterProfile = null;
+            let interstitialHrs = [];
 
-            if (pageNavElement) {
-                let currentElement = pageNavElement.nextElementSibling;
-                while (currentElement) {
-                    if (currentElement.tagName === 'HR') {
-                        if (!mainContentSeparatorHr) {
-                            mainContentSeparatorHr = currentElement;
-                        } else {
-                            interstitialHrs.push(currentElement);
-                        }
-                    }
-                    currentElement = currentElement.nextElementSibling;
-                }
+            if (allHrsInMain.length > 0) {
+                // The first HR immediately after the social-icons div
+                 firstHrAfterProfile = document.querySelector('.social-icons + hr');
+
+                 // The HRs *between* the navigable sections start after the page-nav
+                 if (pageNavElement) {
+                     let currentElement = pageNavElement.nextElementSibling;
+                     while (currentElement) {
+                         if (currentElement.tagName === 'HR') {
+                             interstitialHrs.push(currentElement);
+                         }
+                         currentElement = currentElement.nextElementSibling;
+                     }
+                 }
             }
-            
+
+
             function updateActiveLink(activeLink) {
                 navLinks.forEach(link => {
                     link.classList.remove('active-nav-link');
@@ -1153,20 +1227,35 @@
                     section.style.display = 'none';
                 });
 
+                // Hide all interstitial HRs between sections
                 interstitialHrs.forEach(hr => {
                     hr.style.display = 'none';
                 });
 
                 const targetSection = sectionId ? document.getElementById(sectionId) : null;
-                
+
                 if (targetSection) {
                     targetSection.style.display = 'block';
+
+                    // Show the HR *before* the target section if it's an interstitial one
+                     if (interstitialHrs.length > 0) {
+                          let currentElement = targetSection.previousElementSibling;
+                          while (currentElement && currentElement !== pageNavElement && currentElement !== firstHrAfterProfile) { // Stop searching before the page-nav and the first HR
+                               if (currentElement.tagName === 'HR' && interstitialHrs.includes(currentElement)) {
+                                    currentElement.style.display = 'block';
+                                    break; // Found the HR directly before the section
+                               }
+                               currentElement = currentElement.previousElementSibling;
+                          }
+                     }
+
                 }
 
-                if (mainContentSeparatorHr) {
-                    mainContentSeparatorHr.style.display = targetSection ? 'block' : 'none';
+                // The first HR (after social icons, before nav) should always be visible
+                if (firstHrAfterProfile) {
+                     firstHrAfterProfile.style.display = 'block';
                 }
-                
+
                 updateActiveLink(clickedLink);
             }
 
@@ -1177,11 +1266,11 @@
                     showSection(targetId, link);
 
                     if (pageNavElement) {
-                        // Scrolls the pageNavElement to be aligned with the scroll-padding-top 
+                        // Scrolls the pageNavElement to be aligned with the scroll-padding-top
                         // defined on the html element (20px in this case).
                         pageNavElement.scrollIntoView({ behavior: 'auto', block: 'start' });
                     }
-                    
+
                     if (history.pushState) {
                         history.pushState(null, null, `#${targetId}`);
                     } else {
@@ -1196,7 +1285,7 @@
             // Try to show section from URL hash, or default to the first nav link's section.
             let initialSectionId = null;
             let initialLink = null;
-            
+
             const defaultFirstLink = (navLinks.length > 0) ? navLinks[0] : null;
             let defaultSectionId = defaultFirstLink ? defaultFirstLink.getAttribute('href').substring(1) : null;
 
@@ -1209,7 +1298,7 @@
                     initialLink = Array.from(navLinks).find(link => link.getAttribute('href') === `#${hashId}`);
                 }
             }
-            
+
             if (!initialSectionId && defaultSectionId) {
                 // If no valid hash, or no hash at all, use the default section
                 initialSectionId = defaultSectionId;
@@ -1220,11 +1309,21 @@
                 showSection(initialSectionId, initialLink);
             } else {
                 // If no sections could be determined (e.g., no nav links, no valid hash)
-                // hide all dynamic content.
-                showSection(null, null); 
+                // or if you specifically wanted to start with nothing visible except profile/nav
+                // show the first section by default if there's one.
+                if (defaultSectionId) {
+                     showSection(defaultSectionId, defaultFirstLink);
+                } else {
+                    // Really nothing to show, hide dynamic sections and HRs
+                    contentSections.forEach(section => section.style.display = 'none');
+                    interstitialHrs.forEach(hr => hr.style.display = 'none');
+                     if (firstHrAfterProfile) {
+                         firstHrAfterProfile.style.display = 'block'; // Keep the profile/nav separator visible
+                     }
+                }
             }
-            
-            // Fix the invalid attribute in the title tag if it exists
+
+            // Fix the invalid attribute in the title tag if it exists (already done in provided code)
             const titleTag = document.querySelector('title');
             if (titleTag && titleTag.hasAttribute('font-size')) {
                 titleTag.removeAttribute('font-size');
