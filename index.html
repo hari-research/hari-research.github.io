@@ -122,7 +122,7 @@
 
         .profile-pic-container {
             flex: 0 0 190px; /* MODIFIED: Reduced from 220px */
-            margin-top: 8px;
+            margin-top: 7px;
             text-align: center;
             /* Removed top margin here, handled by section margin */
         }
@@ -211,6 +211,8 @@
         /* News List Specific Styles */
         #news ul {
             margin-left: 0; /* No extra indentation for news list */
+            margin-top: 0; /* Ensure ul starts right after heading */
+            margin-bottom: 15px; /* Space after a list of news for a year */
         }
         #news li {
             margin-bottom: 12px; /* Spacing between news items */
@@ -227,6 +229,22 @@
              top: 0px; /* Fine-tune vertical alignment */
              font-size: 0.9em; /* Slightly smaller bullet */
         }
+
+        /* News Year Heading Style */
+        .news-year-heading {
+            color: #444;
+            margin-top: 25px; /* Space above the year, similar to H4 */
+            margin-bottom: 15px; /* Space below the year, before the list of items */
+            font-size: 1.15em; /* Similar to H4 */
+            font-weight: 700; /* Bold like H4 */
+            border-bottom: 1px solid #eef1f2; /* Subtle separator */
+            padding-bottom: 6px;
+        }
+        /* Adjust margin for the first year heading to align with section content flow */
+        #news > .news-year-heading:first-child {
+            margin-top: 0; /* Remove top margin if it's the first element after H2 */
+        }
+
 
         /* Social Icons Styling */
         .social-icons {
@@ -430,6 +448,15 @@
              h4 {
                 font-size: 1.1em;
             }
+            .news-year-heading { /* Adjust news year heading for mobile */
+                font-size: 1.1em;
+                margin-top: 20px;
+                margin-bottom: 12px;
+            }
+            #news > .news-year-heading:first-child {
+                margin-top: 0;
+            }
+
 
             .profile-section {
                 flex-direction: column;
@@ -512,6 +539,15 @@
              h2 {
                 font-size: 1.4em;
             }
+             .news-year-heading { /* Adjust news year heading for smaller mobile */
+                font-size: 1.05em;
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+             #news > .news-year-heading:first-child {
+                margin-top: 0;
+            }
+
              /* Social Icons Extra Small Mobile Adjustments */
             .social-icons {
                 margin-top: 1px; /* MODIFIED: Reduced from 10px */
@@ -619,16 +655,52 @@
 
             <section id="news">
                 <h2>News & Highlights</h2>
+                <p class="news-year-heading">2025</p>
                  <ul>
-                     <li>ICLR 2025 Outstanding Paper <a href="https://blog.iclr.cc/2025/04/22/announcing-the-outstanding-paper-awards-at-iclr-2025/">Honorable Mention Award</a> for our paper <em>"Faster cascades via speculative decoding"</em>, 2025.</li>
-                     <li>New patent on <em>"Dynamic selection from among multiple candidate generative models with differing computational efficiencies"</em>, 2024. [<a href="https://patents.google.com/patent/US20240311405A1/">US20240311405A1</a>]</li>
-                     <li>New patent on <em>"Performing classification tasks using post-hoc estimators for expert deferral"</em>, 2024. [<a href="https://patents.google.com/patent/US20240135254A1/">US20240135254A1</a>]</li>
-                     <li>Invited talk on <em>"Learning to abstain and beyond"</em> at the <a href="https://sites.google.com/corp/view/dai-2023">1st AAAI Workshop on Deployable AI (DAI)</a>, 2023. [<a href="documents/slides_learning_to_abstain_dai_aaai_23.pdf">slides</a>]</li>
-                     <li>New patent on <em>"Systems and Methods for Implicit Rate-Constrained Optimization of Non-Decomposable Objectives"</em>, 2022. [<a href="https://patents.google.com/patent/US20220398506A1">US20220398506A1</a>]</li>
-                     <li>Co-organized <a href="https://libauc.org/cvpr2022/">tutorial</a> on <em>"Deep AUC Maximization: From Algorithms to Practice"</em> at CVPR 2022.</li>
-                     <li>Guest lecture on <em>"Fairness Goals through Constrained Optimization"</em> in the AI and Ethics course at IIT Kharagpur, 2020.
-                     <li>Co-authored Google <a href = "https://ai.googleblog.com/2020/02/setting-fairness-goals-with-tensorflow.html">blogpost</a> on <em>"Setting Fairness Goals with the TensorFlow Constrained Optimization Library"</em>, 2020.</li>
+                     <li>ICLR 2025 Outstanding Paper <a href="https://blog.iclr.cc/2025/04/22/announcing-the-outstanding-paper-awards-at-iclr-2025/">Honorable Mention Award</a> for our paper <em>"Faster cascades via speculative decoding"</em>.</li>
                  </ul>
+
+                <p class="news-year-heading">2024</p>
+                <ul>
+                    <li>Serving as Senior Area Chair for NeurIPS 2024.</li>
+                    <li>Two journal papers accepted in JMLR and JACM.</li>
+                    <li>Three papers accepted at ICLR 2024, including a Spotlight presentation.</li>
+                    <li>New patent on <em>"Dynamic selection from among multiple candidate generative models with differing computational efficiencies"</em>. [<a href="https://patents.google.com/patent/US20240311405A1/">US20240311405A1</a>]</li>
+                    <li>New patent on <em>"Performing classification tasks using post-hoc estimators for expert deferral"</em>. [<a href="https://patents.google.com/patent/US20240135254A1/">US20240135254A1</a>]</li>
+                </ul>
+
+                <p class="news-year-heading">2023</p>
+                <ul>
+                    <li>Serving as Area Chair for ICML 2023.</li>
+                    <li>Invited talk on <em>"Learning to abstain and beyond"</em> at the <a href="https://sites.google.com/corp/view/dai-2023">1st AAAI Workshop on Deployable AI (DAI)</a>. [<a href="documents/slides_learning_to_abstain_dai_aaai_23.pdf">slides</a>]</li>
+                </ul>
+
+                <p class="news-year-heading">2022</p>
+                <ul>
+                    <li>New patent on <em>"Systems and Methods for Implicit Rate-Constrained Optimization of Non-Decomposable Objectives"</em>. [<a href="https://patents.google.com/patent/US20220398506A1">US20220398506A1</a>]</li>
+                    <li>Co-organized <a href="https://libauc.org/cvpr2022/">tutorial</a> on <em>"Deep AUC Maximization: From Algorithms to Practice"</em> at CVPR 2022.</li>
+                </ul>
+
+                <p class="news-year-heading">2021</p>
+                <ul>
+                    <li>Serving as Area Chair for NeurIPS 2021.</li>
+                </ul>
+
+                <p class="news-year-heading">2020</p>
+                <ul>
+                    <li>Four papers accepted at NeurIPS 2020.</li>
+                    <li>One among top 10% reviewers in NeurIPS 2020.</li>
+                    <li>One among top 33% reviewers in ICML 2020.</li>
+                    <li>Guest lecture on <em>"Fairness Goals through Constrained Optimization"</em> in the AI and Ethics course at IIT Kharagpur.</li>
+                    <li>Co-authored Google <a href = "https://ai.googleblog.com/2020/02/setting-fairness-goals-with-tensorflow.html">blogpost</a> on <em>"Setting Fairness Goals with the TensorFlow Constrained Optimization Library"</em>.</li>
+                </ul>
+
+                <p class="news-year-heading">2019</p>
+                <ul>
+                    <li>Two papers accepted at NeurIPS for Oral Presentation (0.5% of submissions).</li>
+                    <li>One paper accepted at ICML for Oral Presentation (&lt;5% of submissions).</li>
+                    <li>One among top 400 reviewers in NeurIPS 2019.</li>
+                </ul>
             </section>
 
             <hr>
