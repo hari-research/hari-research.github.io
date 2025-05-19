@@ -121,10 +121,9 @@
         }
 
         .profile-pic-container {
-            flex: 0 0 190px; /* MODIFIED: Reduced from 220px */
-            margin-top: 7px;
+            flex: 0 0 190px;
+            margin-top: 8px;
             text-align: center;
-            /* Removed top margin here, handled by section margin */
         }
 
         .profile-pic {
@@ -144,139 +143,157 @@
         .profile-bio p {
             margin-bottom: 15px;
         }
-        /* Removed specific style for last-of-type email line */
 
         /* Styling for Research section lists */
         #research ul {
              margin-bottom: 10px;
              margin-top: 4px;
-             list-style: none; /* Already removing default bullets */
-             padding-left: 0; /* Already removing default padding */
-             margin-left: 20px; /* Keep indentation */
+             list-style: none;
+             padding-left: 0;
+             margin-left: 20px;
         }
         #research ul li {
             margin-bottom: 5px;
-            padding-left: 18px; /* Space for the custom bullet */
+            padding-left: 18px;
             position: relative;
             line-height: 1.6;
         }
         #research ul li::before {
-            content: '•'; /* Default bullet for research items */
-            color: #0056b3;
-            font-weight: bold;
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            top: 1px; /* Adjust vertical alignment if needed */
-        }
-        #research > p { /* Paragraphs directly under research section */
-            margin-bottom: 8px;
-        }
-
-        .hobby-text { /* Specific styling for hobby text */
-            margin-bottom: 1em; /* Add some space below the first hobby paragraph */
-        }
-        #hobbies p { /* General paragraph spacing in hobbies section */
-             margin-bottom: 15px;
-        }
-
-        section > p { /* General paragraph spacing in other sections */
-             margin-bottom: 15px;
-        }
-
-        /* Lists (General styling applied via section) */
-        section ul {
-            list-style: none; /* Removes default bullets */
-            padding-left: 0; /* Removes default padding */
-            margin-left: 20px; /* Default indentation for most lists */
-        }
-
-        section ul li {
-            margin-bottom: 5px;
-            padding-left: 18px; /* Space for the custom bullet */
-            position: relative;
-            line-height: 1.6;
-        }
-
-        section ul li::before { /* Default bullet style */
             content: '•';
             color: #0056b3;
             font-weight: bold;
             display: inline-block;
             position: absolute;
             left: 0;
-            top: 1px; /* Adjust vertical alignment if needed */
+            top: 1px;
+        }
+        #research > p {
+            margin-bottom: 8px;
         }
 
-        /* News List Specific Styles */
-        #news ul {
-            margin-left: 0; /* No extra indentation for news list */
-            margin-top: 0; /* Ensure ul starts right after heading */
-            margin-bottom: 15px; /* Space after a list of news for a year */
+        .hobby-text {
+            margin-bottom: 1em;
         }
-        #news li {
-            margin-bottom: 12px; /* Spacing between news items */
-            padding-left: 20px; /* Make space for the new bullet */
-            position: relative; /* Needed for absolute positioning of ::before */
-            line-height: 1.7;
+        #hobbies p {
+             margin-bottom: 15px;
         }
-        #news li::before {
-             content: '❖'; /* Diamond bullet symbol */
-             color: #555; /* Slightly muted color for the bullet */
-             font-weight: normal; /* Normal weight for this bullet */
+
+        section > p {
+             margin-bottom: 15px;
+        }
+
+        /* Lists (General styling applied via section) */
+        section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-left: 20px;
+        }
+
+        section ul li {
+            margin-bottom: 5px;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        section ul li::before {
+            content: '•';
+            color: #0056b3; /* Default bullet color for other sections */
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+
+        /* News List Hierarchical Styles - Grey Monochrome Block Style */
+        #news .news-main-list {
+            list-style: none;
+            padding-left: 0;
+            margin-left: 0;
+            margin-top: 0;
+        }
+
+        #news .news-year-item {
+            margin-bottom: 35px;
+            padding: 20px 25px;
+            background-color: #f9f9f9; /* Very light grey background */
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07); /* Soft grey shadow */
+            border: 1px solid #eeeeee; /* Light grey border */
+            position: relative;
+        }
+        #news .news-year-item::before {
+            content: none;
+        }
+        #news .news-year-item:last-child {
+            margin-bottom: 0;
+        }
+
+        #news .news-year-text {
+            display: block;
+            color: #333333; /* Dark grey for the year */
+            margin-bottom: 15px; /* MODIFIED: Reduced space after year text */
+            font-size: 1.3em;    /* MODIFIED: Reduced font size for year */
+            font-weight: 700;
+            padding-bottom: 8px; /* MODIFIED: Slightly reduced padding */
+        }
+
+        #news .news-items-for-year {
+            list-style: none;
+            padding-left: 0;
+            margin-left: 0;
+            margin-top: 0;
+        }
+
+        #news .news-items-for-year li {
+            margin-bottom: 14px;
+            padding-left: 28px; /* Space for the bullet and gap */
+            position: relative;
+            line-height: 1.8;
+        }
+
+        #news .news-items-for-year li::before {
+             content: '‣';      /* Filled right-pointing small triangle */
+             color: #888888;   /* Medium subtle grey */
+             font-weight: normal;
              position: absolute;
-             left: 0;
-             top: 0px; /* Fine-tune vertical alignment */
-             font-size: 0.9em; /* Slightly smaller bullet */
-        }
-
-        /* News Year Heading Style */
-        .news-year-heading {
-            color: #444;
-            margin-top: 25px; /* Space above the year, similar to H4 */
-            margin-bottom: 15px; /* Space below the year, before the list of items */
-            font-size: 1.15em; /* Similar to H4 */
-            font-weight: 700; /* Bold like H4 */
-            border-bottom: 1px solid #eef1f2; /* Subtle separator */
-            padding-bottom: 6px;
-        }
-        /* Adjust margin for the first year heading to align with section content flow */
-        #news > .news-year-heading:first-child {
-            margin-top: 0; /* Remove top margin if it's the first element after H2 */
+             left: 8px;        /* Positioned within the padding-left of the li */
+             top: 1px;         /* Adjusted for good vertical centering with text */
+             font-size: 1em;   /* Kept proportional to text for subtlety */
         }
 
 
         /* Social Icons Styling */
         .social-icons {
             text-align: center;
-            margin-top: 1px; /* MODIFIED: Space after profile bio, reduced from 20px */
-            margin-bottom: 20px; /* Space before the HR */
-            padding: 0; /* No extra padding needed */
+            margin-top: 1px;
+            margin-bottom: 20px;
+            padding: 0;
         }
 
         .social-icons a {
-            display: inline-block; /* Allows margin/padding and horizontal alignment */
-            margin: 0 10px; /* Space between icons */
-            line-height: 1; /* Helps with vertical alignment */
-            color: #34495e; /* Default icon color */
-            font-size: 28px; /* Set icon size */
-            transition: color 0.2s ease, transform 0.2s ease; /* Add transition */
+            display: inline-block;
+            margin: 0 10px;
+            line-height: 1;
+            color: #34495e;
+            font-size: 28px;
+            transition: color 0.2s ease, transform 0.2s ease;
         }
 
         .social-icons a:hover {
-            color: #0056b3; /* Change color on hover */
-            transform: scale(1.1); /* Slightly enlarge on hover */
+            color: #0056b3;
+            transform: scale(1.1);
         }
 
-        /* Style the HR immediately following .social-icons */
         .social-icons + hr {
             margin-top: 20px;
-            margin-bottom: 20px; /* Adjust margin to work well with page-nav margin-top */
+            margin-bottom: 20px;
         }
 
         /* Page Navigation */
         .page-nav {
-            margin-top: 20px; /* Adjusted to align with HR margin */
+            margin-top: 20px;
             margin-bottom: 40px;
             padding: 10px 0;
             border-top: 1px solid #eef1f2;
@@ -294,11 +311,11 @@
         }
 
         .page-nav li {
-            padding-left: 0; /* Override general list padding */
+            padding-left: 0;
             margin-bottom: 0;
         }
          .page-nav li::before {
-            content: none; /* Remove bullets for nav */
+            content: none;
         }
 
         .page-nav a {
@@ -310,42 +327,40 @@
             transition: background-color 0.2s ease, color 0.2s ease;
         }
 
-        .page-nav a:hover, .page-nav a.active-nav-link { /* Combined hover and active styles */
+        .page-nav a:hover, .page-nav a.active-nav-link {
             background-color: #eef1f2;
             color: #0056b3;
         }
 
         /* Publications Formatting */
         .publications p, .preprints p {
-             margin-bottom: 18px; /* Space between publication entries */
-             padding-bottom: 15px; /* Space before the border */
-             border-bottom: 1px solid #f0f0f0; /* Separator line */
-             line-height: 1.6; /* Adjust line height within entry */
+             margin-bottom: 18px;
+             padding-bottom: 15px;
+             border-bottom: 1px solid #f0f0f0;
+             line-height: 1.6;
         }
         .publications p:last-child, .preprints p:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
-        /* Ensure nested elements don't add extra margin */
         .publications p strong, .publications p em, .publications p a, .publications p span,
         .preprints p strong, .preprints p em, .preprints p a, .preprints p span {
-             display: inline; /* Avoid block display for nested elements */
+             display: inline;
              margin: 0;
              padding: 0;
         }
-         #all-pubs p br, #preprints p br { /* Apply consistent line break spacing */
+         #all-pubs p br, #preprints p br {
              content: "";
              display: block;
-             margin-bottom: 0.2em; /* Small space between lines */
+             margin-bottom: 0.2em;
          }
 
-        /* Styling for Selected Publications items (inside #research) */
         #research .publication-item p {
             margin-bottom: 25px;
             padding-bottom: 20px;
-            border-bottom: 1px solid #f0f0f0; /* Ensure border is present */
-            line-height: 1.6; /* Ensure consistent line height */
+            border-bottom: 1px solid #f0f0f0;
+            line-height: 1.6;
         }
         #research .publication-item:last-child p {
              border-bottom: none;
@@ -355,18 +370,16 @@
         #research .publication-item p br {
              content: "";
              display: block;
-             margin-bottom: 0.2em; /* Small space between lines */
+             margin-bottom: 0.2em;
         }
 
-        /* Unified Highlighting Style (Text Color Only) */
         .highlight-award,
         .highlight-oral,
         .highlight-spotlight {
             font-weight: bold;
-            /* Removed padding, border-radius, background-color */
-            display: inline; /* Changed to inline */
-            margin: 0 3px 0 0; /* Adjusted margin */
-            color: #8B008B; /* Dark Magenta - distinct color */
+            display: inline;
+            margin: 0 3px 0 0;
+            color: #8B008B;
         }
 
         .highlight-review {
@@ -374,54 +387,51 @@
              font-style: italic;
         }
 
-        /* Author Highlight Style */
         .highlight-author {
-            color: #00695C; /* Dark Teal - more visible but still professional */
-            font-weight: 500; /* Semi-bold if font supports it */
+            color: #00695C;
+            font-weight: 500;
         }
 
-        /* Comment Text Styling */
         .comment-text {
             color: #667;
             font-size: 0.9em;
-            display: block; /* Keep as block for separation */
-            margin-top: 8px; /* Reduced top margin */
+            display: block;
+            margin-top: 8px;
             padding-left: 0;
             border-left: none;
-            line-height: 1.5; /* Slightly reduced line height */
+            line-height: 1.5;
         }
          .comment-text br {
              content: "";
              display: block;
-             margin-bottom: 0.1em; /* Reduced space after explicit <br> */
+             margin-bottom: 0.1em;
          }
 
         em {
             font-style: italic;
-            color: #555; /* Ensure emphasis color is consistent */
+            color: #555;
         }
 
-        strong { /* Style for explicitly bolded text like titles */
+        strong {
             font-weight: 700;
-            color: #333; /* Slightly darker for titles */
+            color: #333;
         }
 
-        /* Cake Grid for Hobbies */
         .cake-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 10px;
-            margin-top: 10px; /* Reduced top margin to account for new paragraph */
+            margin-top: 10px;
             margin-bottom: 20px;
         }
 
         .cake-grid img {
             width: 100%;
-            aspect-ratio: 1 / 1; /* Creates square images */
-            object-fit: cover;   /* Ensures the image covers the square area, cropping if necessary */
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
             border-radius: 4px;
             border: 1px solid #eee;
-            display: block; /* Good practice for images in layout */
+            display: block;
         }
 
         /* Responsive Design */
@@ -442,19 +452,32 @@
             }
              h3 {
                 font-size: 1.3em;
-                margin-top: 25px; /* Adjust H3 margin for mobile */
+                margin-top: 25px;
                 margin-bottom: 18px;
             }
              h4 {
                 font-size: 1.1em;
             }
-            .news-year-heading { /* Adjust news year heading for mobile */
-                font-size: 1.1em;
-                margin-top: 20px;
-                margin-bottom: 12px;
+
+            /* News Section Responsive */
+            #news .news-year-item {
+                padding: 15px 20px;
+                margin-bottom: 25px;
             }
-            #news > .news-year-heading:first-child {
-                margin-top: 0;
+            #news .news-year-text {
+                font-size: 1.2em; /* MODIFIED: Adjusted for tablet */
+                margin-bottom: 12px; /* MODIFIED: Adjusted for tablet */
+                 padding-bottom: 6px; /* MODIFIED: Adjusted for tablet */
+            }
+            #news .news-items-for-year li {
+                padding-left: 24px; /* Adjust bullet padding */
+                margin-bottom: 12px;
+                line-height: 1.7;
+            }
+            #news .news-items-for-year li::before {
+                left: 6px; /* Adjust for new padding */
+                top: 1px;
+                font-size: 1em;
             }
 
 
@@ -462,21 +485,20 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 25px;
-                margin-bottom: 15px; /* Adjust margin for mobile */
-                margin-top: 20px; /* Adjust top margin for mobile */
+                margin-bottom: 15px;
+                margin-top: 20px;
             }
 
             .profile-pic-container {
                 flex-basis: auto;
                 width: 60%;
-                max-width: 180px; /* MODIFIED: Reduced from 200px */
+                max-width: 180px;
             }
 
             .profile-bio {
                width: 100%;
             }
 
-             /* Adjust list margins for mobile */
              section ul, #research ul {
                  margin-left: 15px;
              }
@@ -484,24 +506,17 @@
                   padding-left: 18px;
                   margin-bottom: 5px;
              }
-             #news ul {
-                margin-left: 0; /* Ensure news list isn't indented on mobile */
-             }
-             #news li {
-                padding-left: 20px; /* Ensure padding for bullet on mobile */
-             }
 
-             /* Social Icons Mobile Adjustments */
              .social-icons {
-                margin-top: -5px; /* MODIFIED: Adjust margins for mobile, reduced from 15px */
+                margin-top: -5px;
                 margin-bottom: 15px;
              }
              .social-icons a {
-                margin: 0 8px; /* Adjust spacing */
-                font-size: 24px; /* Slightly smaller icons on mobile */
+                margin: 0 8px;
+                font-size: 24px;
              }
-             .social-icons + hr { /* Style the HR immediately following .social-icons */
-                margin-top: 15px; /* Adjust margin for mobile */
+             .social-icons + hr {
+                margin-top: 15px;
                 margin-bottom: 15px;
              }
 
@@ -509,7 +524,7 @@
                 justify-content: flex-start;
             }
             .page-nav {
-                margin-top: 15px; /* Adjust margin for mobile */
+                margin-top: 15px;
             }
             .page-nav a {
                 padding: 5px 8px;
@@ -520,13 +535,12 @@
             }
 
             .publications p, .preprints p {
-                 line-height: 1.5; /* Adjust line height on smaller screens */
+                 line-height: 1.5;
             }
             .cake-grid {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller min size for cakes on mobile */
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
                 gap: 8px;
             }
-            /* On mobile, .hide-on-desktop (Cake21) should be visible by default rules for .cake-grid img */
         }
 
         @media (max-width: 480px) {
@@ -539,25 +553,36 @@
              h2 {
                 font-size: 1.4em;
             }
-             .news-year-heading { /* Adjust news year heading for smaller mobile */
-                font-size: 1.05em;
-                margin-top: 15px;
-                margin-bottom: 10px;
+            /* News Section Responsive Small */
+            #news .news-year-item {
+                padding: 15px;
+                margin-bottom: 20px;
             }
-             #news > .news-year-heading:first-child {
-                margin-top: 0;
+            #news .news-year-text {
+                font-size: 1.15em; /* MODIFIED: Adjusted for small mobile */
+                margin-bottom: 10px; /* MODIFIED: Adjusted for small mobile */
+                padding-bottom: 5px; /* MODIFIED: Adjusted for small mobile */
+            }
+            #news .news-items-for-year li {
+                padding-left: 20px; /* Adjust bullet padding */
+                margin-bottom: 10px;
+                line-height: 1.6;
+            }
+            #news .news-items-for-year li::before {
+                left: 4px; /* Adjust for new padding */
+                font-size: 0.9em; /* Slightly smaller bullet */
+                top: 2px;
             }
 
-             /* Social Icons Extra Small Mobile Adjustments */
             .social-icons {
-                margin-top: 1px; /* MODIFIED: Reduced from 10px */
+                margin-top: 1px;
                 margin-bottom: 10px;
             }
              .social-icons a {
                 margin: 0 6px;
                 font-size: 22px;
              }
-             .social-icons + hr { /* Style the HR immediately following .social-icons */
+             .social-icons + hr {
                 margin-top: 10px;
                 margin-bottom: 10px;
              }
@@ -581,20 +606,19 @@
                  margin-bottom: 0.8em;
             }
             #all-pubs p br, #preprints p br, #research .publication-item p br {
-                 margin-bottom: 0.1em; /* Tighter line breaks on mobile */
+                 margin-bottom: 0.1em;
             }
             .cake-grid {
-                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Even smaller for very small screens */
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
                 gap: 5px;
             }
             #hobbies p {
-                 margin-bottom: 10px; /* Tighter spacing for hobby paragraphs on mobile */
+                 margin-bottom: 10px;
             }
         }
 
-        /* Responsive Design Adjustments for Cake21 visibility */
-        @media (min-width: 769px) { /* Screens wider than 768px (desktop) */
-            .cake-grid img.hide-on-desktop { /* Increased specificity to hide Cake21 on desktop */
+        @media (min-width: 769px) {
+            .cake-grid img.hide-on-desktop {
                 display: none;
             }
         }
@@ -615,30 +639,26 @@
                 </div>
                 <div class="profile-bio">
                     <p>
-                        I am a Staff Research Scientist at <a href="https://research.google/">Google Research</a> in Mountain View, USA. I am broadly interested in the design of principled algorithms for practical machine learning problems, and am currently focused on improving inference efficiency in large language models.
+                        I am a Staff Research Scientist at <a href="https://research.google/">Google Research</a> in Mountain View, USA. I am broadly interested in the design of principled and practical algorithms for machine learning, and am currently focused on improving inference efficiency in large language models.
                     </p>
                     <p>
                         Prior to Google, I was a post-doctoral fellow at <a href="https://www.seas.harvard.edu/" rel="nofollow">Harvard University</a> (2015-2018), working with <a href="http://www.eecs.harvard.edu/%7Eparkes/" rel="nofollow">David C. Parkes</a>.
                         I completed my PhD in Computer Science from the <a href="https://www.csa.iisc.ac.in/" rel="nofollow">Indian Institute of Science</a> (2012-2015), working with <a href="https://shivaniagarwal.net" rel="nofollow">Shivani Agarwal</a>, and supported by a <em>Google India PhD Fellowship</em>.
                         During my PhD, I also interned at <a href="http://research.microsoft.com/en-us/labs/india/" rel="nofollow">Microsoft Research</a> with <a href="https://www.prateekjain.org/" rel="nofollow">Prateek Jain</a>.
                     </p>
-                    <!-- Removed the email paragraph here -->
                 </div>
             </section>
 
-            <!-- Social Icons -->
-             <div class="social-icons">
+            <div class="social-icons">
                  <a href="mailto:hnarasimhan@google.com" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
                  <a href="https://scholar.google.com/citations?user=7X_oT4YAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                  <a href="https://www.linkedin.com/in/harikrishna-narasimhan-942b18156/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                  <a href="https://x.com/HariNarasim" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter (X)"><i class="fab fa-twitter"></i></a>
                  <a href="https://www.instagram.com/hari.narasimhan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
              </div>
-            <!-- End Social Icons -->
 
             <hr>
 
-            <!-- Page Navigation Links -->
             <nav class="page-nav">
                 <ul>
                     <li><a href="#news">News</a></li>
@@ -649,57 +669,66 @@
                     <li><a href="#hobbies">Hobbies</a></li>
                 </ul>
             </nav>
-            <!-- End Page Navigation Links -->
 
             <hr>
 
             <section id="news">
                 <h2>News & Highlights</h2>
-                <p class="news-year-heading">2025</p>
-                 <ul>
-                     <li>ICLR 2025 Outstanding Paper <a href="https://blog.iclr.cc/2025/04/22/announcing-the-outstanding-paper-awards-at-iclr-2025/">Honorable Mention Award</a> for our paper <em>"Faster cascades via speculative decoding"</em>.</li>
-                 </ul>
-
-                <p class="news-year-heading">2024</p>
-                <ul>
-                    <li>Serving as Senior Area Chair for NeurIPS 2024.</li>
-                    <li>Two journal papers accepted in JMLR and JACM.</li>
-                    <li>Three papers accepted at ICLR 2024, including a Spotlight presentation.</li>
-                    <li>New patent on <em>"Dynamic selection from among multiple candidate generative models with differing computational efficiencies"</em>. [<a href="https://patents.google.com/patent/US20240311405A1/">US20240311405A1</a>]</li>
-                    <li>New patent on <em>"Performing classification tasks using post-hoc estimators for expert deferral"</em>. [<a href="https://patents.google.com/patent/US20240135254A1/">US20240135254A1</a>]</li>
-                </ul>
-
-                <p class="news-year-heading">2023</p>
-                <ul>
-                    <li>Serving as Area Chair for ICML 2023.</li>
-                    <li>Invited talk on <em>"Learning to abstain and beyond"</em> at the <a href="https://sites.google.com/corp/view/dai-2023">1st AAAI Workshop on Deployable AI (DAI)</a>. [<a href="documents/slides_learning_to_abstain_dai_aaai_23.pdf">slides</a>]</li>
-                </ul>
-
-                <p class="news-year-heading">2022</p>
-                <ul>
-                    <li>New patent on <em>"Systems and Methods for Implicit Rate-Constrained Optimization of Non-Decomposable Objectives"</em>. [<a href="https://patents.google.com/patent/US20220398506A1">US20220398506A1</a>]</li>
-                    <li>Co-organized <a href="https://libauc.org/cvpr2022/">tutorial</a> on <em>"Deep AUC Maximization: From Algorithms to Practice"</em> at CVPR 2022.</li>
-                </ul>
-
-                <p class="news-year-heading">2021</p>
-                <ul>
-                    <li>Serving as Area Chair for NeurIPS 2021.</li>
-                </ul>
-
-                <p class="news-year-heading">2020</p>
-                <ul>
-                    <li>Four papers accepted at NeurIPS 2020.</li>
-                    <li>One among top 10% reviewers in NeurIPS 2020.</li>
-                    <li>One among top 33% reviewers in ICML 2020.</li>
-                    <li>Guest lecture on <em>"Fairness Goals through Constrained Optimization"</em> in the AI and Ethics course at IIT Kharagpur.</li>
-                    <li>Co-authored Google <a href = "https://ai.googleblog.com/2020/02/setting-fairness-goals-with-tensorflow.html">blogpost</a> on <em>"Setting Fairness Goals with the TensorFlow Constrained Optimization Library"</em>.</li>
-                </ul>
-
-                <p class="news-year-heading">2019</p>
-                <ul>
-                    <li>Two papers accepted at NeurIPS for Oral Presentation (0.5% of submissions).</li>
-                    <li>One paper accepted at ICML for Oral Presentation (&lt;5% of submissions).</li>
-                    <li>One among top 400 reviewers in NeurIPS 2019.</li>
+                <ul class="news-main-list">
+                    <li class="news-year-item">
+                        <span class="news-year-text">2025</span>
+                        <ul class="news-items-for-year">
+                            <li>ICLR 2025 Outstanding Paper <a href="https://blog.iclr.cc/2025/04/22/announcing-the-outstanding-paper-awards-at-iclr-2025/">Honorable Mention Award</a> for our paper <em>"Faster cascades via speculative decoding"</em>.</li>
+                        </ul>
+                    </li>
+                    <li class="news-year-item">
+                        <span class="news-year-text">2024</span>
+                        <ul class="news-items-for-year">
+                            <li>Serving as Senior Area Chair for NeurIPS 2024.</li>
+                            <li>Two journal papers accepted in JMLR and JACM.</li>
+                            <li>Three papers accepted at ICLR 2024, including a Spotlight presentation.</li>
+                            <li>New patent on <em>"Dynamic selection from among multiple candidate generative models with differing computational efficiencies"</em>. [<a href="https://patents.google.com/patent/US20240311405A1/">US20240311405A1</a>]</li>
+                            <li>New patent on <em>"Performing classification tasks using post-hoc estimators for expert deferral"</em>. [<a href="https://patents.google.com/patent/US20240135254A1/">US20240135254A1</a>]</li>
+                        </ul>
+                    </li>
+                    <li class="news-year-item">
+                        <span class="news-year-text">2023</span>
+                        <ul class="news-items-for-year">
+                            <li>Serving as Area Chair for ICML 2023.</li>
+                            <li>Invited talk on <em>"Learning to abstain and beyond"</em> at the <a href="https://sites.google.com/corp/view/dai-2023">1st AAAI Workshop on Deployable AI (DAI)</a>. [<a href="documents/slides_learning_to_abstain_dai_aaai_23.pdf">slides</a>]</li>
+                        </ul>
+                    </li>
+                    <li class="news-year-item">
+                        <span class="news-year-text">2022</span>
+                        <ul class="news-items-for-year">
+                            <li>New patent on <em>"Systems and Methods for Implicit Rate-Constrained Optimization of Non-Decomposable Objectives"</em>. [<a href="https://patents.google.com/patent/US20220398506A1">US20220398506A1</a>]</li>
+                            <li>Co-organized <a href="https://libauc.org/cvpr2022/">tutorial</a> on <em>"Deep AUC Maximization: From Algorithms to Practice"</em> at CVPR 2022.</li>
+                        </ul>
+                    </li>
+                    <li class="news-year-item">
+                        <span class="news-year-text">2021</span>
+                        <ul class="news-items-for-year">
+                            <li>Serving as Area Chair for NeurIPS 2021.</li>
+                        </ul>
+                    </li>
+                    <li class="news-year-item">
+                        <span class="news-year-text">2020</span>
+                        <ul class="news-items-for-year">
+                            <li>Four papers accepted at NeurIPS 2020.</li>
+                            <li>One among top 10% reviewers in NeurIPS 2020.</li>
+                            <li>One among top 33% reviewers in ICML 2020.</li>
+                            <li>Guest lecture on <em>"Fairness Goals through Constrained Optimization"</em> in the AI and Ethics course at IIT Kharagpur.</li>
+                            <li>Co-authored Google <a href = "https://ai.googleblog.com/2020/02/setting-fairness-goals-with-tensorflow.html">blogpost</a> on <em>"Setting Fairness Goals with the TensorFlow Constrained Optimization Library"</em>.</li>
+                        </ul>
+                    </li>
+                    <li class="news-year-item">
+                        <span class="news-year-text">2019</span>
+                        <ul class="news-items-for-year">
+                            <li>Two papers accepted at NeurIPS for Oral Presentation (0.5% of submissions).</li>
+                            <li>One paper accepted at ICML for Oral Presentation (&lt;5% of submissions).</li>
+                            <li>One among top 400 reviewers in NeurIPS 2019.</li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
 
@@ -716,7 +745,6 @@
                  </ul>
                  <p>In the past, I have worked on applying machine learning techniques to the design of auctions and other economic mechanisms.</p>
 
-                 <!-- Selected Publications Subsection -->
                  <h3>Selected Publications</h3>
                  <div class="publications">
                      <div class="publication-item">
@@ -766,6 +794,7 @@
                           <br>
                           <span class="highlight-oral">Oral Presentation</span>
                           <br>
+                          Invited Research Highlight, <em>Communications of the ACM (CACM)</em>, 64(8):109-116, 2021.
                           Longer version in the <em>Journal of the ACM (JACM)</em>, 71(1): 1-53, 2024. [<a href="https://arxiv.org/pdf/1706.03459">pdf</a>]
                           <br>
                           <span class="comment-text">
@@ -816,7 +845,6 @@
                           </span></p>
                      </div>
                  </div>
-                 <!-- End Selected Publications Subsection -->
             </section>
 
             <hr>
@@ -1252,9 +1280,8 @@
         </main>
 
         <footer>
-            <!-- Optional footer content -->
         </footer>
-    </div> <!-- /container -->
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -1263,17 +1290,12 @@
                                          .filter(section => !section.classList.contains('profile-section'));
             const pageNavElement = document.querySelector('.page-nav');
 
-            // Find all HR elements within the main content area, but excluding the first one after the profile section
-            // The first HR after the profile section is now after the social icons and before the page nav
             const allHrsInMain = document.querySelectorAll('main > hr');
             let firstHrAfterProfile = null;
             let interstitialHrs = [];
 
             if (allHrsInMain.length > 0) {
-                // The first HR immediately after the social-icons div
                  firstHrAfterProfile = document.querySelector('.social-icons + hr');
-
-                 // The HRs *between* the navigable sections start after the page-nav
                  if (pageNavElement) {
                      let currentElement = pageNavElement.nextElementSibling;
                      while (currentElement) {
@@ -1284,7 +1306,6 @@
                      }
                  }
             }
-
 
             function updateActiveLink(activeLink) {
                 navLinks.forEach(link => {
@@ -1300,7 +1321,6 @@
                     section.style.display = 'none';
                 });
 
-                // Hide all interstitial HRs between sections
                 interstitialHrs.forEach(hr => {
                     hr.style.display = 'none';
                 });
@@ -1309,26 +1329,21 @@
 
                 if (targetSection) {
                     targetSection.style.display = 'block';
-
-                    // Show the HR *before* the target section if it's an interstitial one
                      if (interstitialHrs.length > 0) {
                           let currentElement = targetSection.previousElementSibling;
-                          while (currentElement && currentElement !== pageNavElement && currentElement !== firstHrAfterProfile) { // Stop searching before the page-nav and the first HR
+                          while (currentElement && currentElement !== pageNavElement && currentElement !== firstHrAfterProfile) {
                                if (currentElement.tagName === 'HR' && interstitialHrs.includes(currentElement)) {
                                     currentElement.style.display = 'block';
-                                    break; // Found the HR directly before the section
+                                    break;
                                }
                                currentElement = currentElement.previousElementSibling;
                           }
                      }
-
                 }
 
-                // The first HR (after social icons, before nav) should always be visible
                 if (firstHrAfterProfile) {
                      firstHrAfterProfile.style.display = 'block';
                 }
-
                 updateActiveLink(clickedLink);
             }
 
@@ -1339,32 +1354,24 @@
                     showSection(targetId, link);
 
                     if (pageNavElement) {
-                        // Scrolls the pageNavElement to be aligned with the scroll-padding-top
-                        // defined on the html element (20px in this case).
                         pageNavElement.scrollIntoView({ behavior: 'auto', block: 'start' });
                     }
 
                     if (history.pushState) {
                         history.pushState(null, null, `#${targetId}`);
                     } else {
-                        // Fallback for older browsers that don't support pushState.
-                        // This will cause a page jump.
                         window.location.hash = `#${targetId}`;
                     }
                 });
             });
 
-            // Initial state handling:
-            // Try to show section from URL hash, or default to the first nav link's section.
             let initialSectionId = null;
             let initialLink = null;
-
             const defaultFirstLink = (navLinks.length > 0) ? navLinks[0] : null;
             let defaultSectionId = defaultFirstLink ? defaultFirstLink.getAttribute('href').substring(1) : null;
 
             if (window.location.hash) {
                 const hashId = window.location.hash.substring(1);
-                // Check if the hash corresponds to a valid content section
                 const isValidSection = contentSections.some(s => s.id === hashId);
                 if (isValidSection) {
                     initialSectionId = hashId;
@@ -1373,7 +1380,6 @@
             }
 
             if (!initialSectionId && defaultSectionId) {
-                // If no valid hash, or no hash at all, use the default section
                 initialSectionId = defaultSectionId;
                 initialLink = defaultFirstLink;
             }
@@ -1381,22 +1387,17 @@
             if (initialSectionId) {
                 showSection(initialSectionId, initialLink);
             } else {
-                // If no sections could be determined (e.g., no nav links, no valid hash)
-                // or if you specifically wanted to start with nothing visible except profile/nav
-                // show the first section by default if there's one.
                 if (defaultSectionId) {
                      showSection(defaultSectionId, defaultFirstLink);
                 } else {
-                    // Really nothing to show, hide dynamic sections and HRs
                     contentSections.forEach(section => section.style.display = 'none');
                     interstitialHrs.forEach(hr => hr.style.display = 'none');
                      if (firstHrAfterProfile) {
-                         firstHrAfterProfile.style.display = 'block'; // Keep the profile/nav separator visible
+                         firstHrAfterProfile.style.display = 'block';
                      }
                 }
             }
 
-            // Fix the invalid attribute in the title tag if it exists (already done in provided code)
             const titleTag = document.querySelector('title');
             if (titleTag && titleTag.hasAttribute('font-size')) {
                 titleTag.removeAttribute('font-size');
