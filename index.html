@@ -286,6 +286,12 @@
             transform: scale(1.1);
         }
 
+        .social-icon-cv { /* Style for the new CV icon link */
+            font-weight: 700; /* Make CV text bold */
+            font-size: 26px; /* Slightly smaller font size for CV icon */
+            /* Inherits color, line-height, margins, etc., from .social-icons a */
+        }
+
         .social-icons + hr {
             margin-top: 20px;
             margin-bottom: 20px;
@@ -544,6 +550,9 @@
                 margin: 0 8px;
                 font-size: 24px;
              }
+             .social-icon-cv { /* Responsive CV icon size */
+                font-size: 22px;
+             }
              .social-icons + hr {
                 margin-top: 15px;
                 margin-bottom: 15px;
@@ -619,6 +628,9 @@
                 margin: 0 6px;
                 font-size: 22px;
              }
+             .social-icon-cv { /* Responsive CV icon size for smaller screens */
+                 font-size: 20px;
+             }
              .social-icons + hr {
                 margin-top: 10px;
                 margin-bottom: 10px;
@@ -681,6 +693,7 @@
 
             <div class="social-icons">
                  <a href="mailto:hnarasimhan@google.com" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+                 <a href="documents/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="CV / Resume" title="CV / Resume" class="social-icon-cv">CV</a>
                  <a href="https://scholar.google.com/citations?user=7X_oT4YAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                  <a href="https://www.linkedin.com/in/harikrishna-narasimhan-942b18156/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                  <a href="https://x.com/HariNarasim" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter (X)"><i class="fab fa-twitter"></i></a>
